@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: Googlebot
+Disallow: /admin
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.gophoenixmoving.com/sitemap.xml
+
