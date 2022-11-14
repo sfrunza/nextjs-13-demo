@@ -2,7 +2,7 @@ export default function Head({ params }) {
   console.log(params);
   return (
     <>
-      <meta charset="UTF-8" />
+      <meta charSet="UTF-8" />
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       <title>Pricing - Phoenix Moving Boston (FREE ESTIMATE)</title>
       <meta

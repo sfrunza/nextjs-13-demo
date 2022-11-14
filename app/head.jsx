@@ -1,7 +1,7 @@
 export default function Head() {
   return (
     <>
-      <meta charset="UTF-8" />
+      <meta charSet="UTF-8" />
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       <title>
         Phoenix Moving Boston - 🚚 Make Moving Chill (Free Estimate)
