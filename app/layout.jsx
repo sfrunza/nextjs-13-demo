@@ -1,5 +1,5 @@
 import '@/styles/tailwind.css';
-import GlobalNav from './GlobalNav';
+// import GlobalNav from './GlobalNav';
 import Footer from './Footer';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';

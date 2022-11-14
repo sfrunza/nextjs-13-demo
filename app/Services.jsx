@@ -11,7 +11,7 @@ const features = [
   {
     name: 'Interstate Moving',
     description:
-      'Moving accross United States with Fuly Licensed and Insured Moving Company',
+      'Moving across United States with Fuly Licensed and Insured Moving Company',
   },
   {
     name: 'Packing Services',

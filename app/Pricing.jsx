@@ -26,7 +26,7 @@ const tiers = [
     priceMonthly: 109,
     description: 'Starting at',
     includedFeatures: [
-      '2 Proffesional Movers.',
+      '2 Professional Movers.',
       'Clean, fully stocked moving trucks.',
       'Delicate handling of your stuff.',
       'All taxes included in the price.',
@@ -38,7 +38,7 @@ const tiers = [
     priceMonthly: 149,
     description: 'Starting at',
     includedFeatures: [
-      '3 Proffesional Movers.',
+      '3 Professional Movers.',
       'Clean, fully stocked moving trucks.',
       'Delicate handling of your stuff.',
       'All taxes included in the price.',
@@ -50,7 +50,7 @@ const tiers = [
     priceMonthly: 189,
     description: 'Starting at',
     includedFeatures: [
-      '4 Proffesional Movers.',
+      '4 Professional Movers.',
       'Clean, fully stocked moving trucks.',
       'Delicate handling of your stuff.',
       'All taxes included in the price.',
