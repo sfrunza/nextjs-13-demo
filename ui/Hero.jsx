@@ -23,7 +23,7 @@ export default function Hero({ image, title, children }) {
           </div>
           {title && (
             <div className="relative">
-              <h1 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
+              <h1 className="text-center text-2xl font-bold tracking-tight sm:text-4xl">
                 <span className="block text-white">{title}</span>
               </h1>
             </div>

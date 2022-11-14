@@ -46,9 +46,9 @@ export default function Services() {
                 className="rounded-2xl border border-gray-200 p-8 flex flex-col h-full hover:bg-palette-background hover:shadow-lg hover:shadow-gray-900/5"
                 title={feature.name}
               >
-                <h3 className="font-semibold text-gray-900 text-lg">
+                <p className="font-semibold text-gray-900 text-lg">
                   {feature.name}
-                </h3>
+                </p>
                 <p className="mt-2 text-gray-700">{feature.description}</p>
               </Link>
             </li>

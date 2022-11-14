@@ -97,9 +97,9 @@ export default function Pricing() {
               className="divide-y divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5"
             >
               <div className="p-6">
-                <h2 className="text-lg font-medium leading-6 text-gray-900">
+                <p className="text-lg font-medium leading-6 text-gray-900">
                   {tier.name}
-                </h2>
+                </p>
                 <p className="mt-4 text-sm text-gray-500">{tier.description}</p>
                 <p className="mt-4">
                   <span className="text-4xl font-bold tracking-tight text-gray-900">
@@ -117,9 +117,9 @@ export default function Pricing() {
                 </a>
               </div>
               <div className="px-6 pt-6 pb-8">
-                <h3 className="text-sm font-medium text-gray-900">
+                <p className="text-sm font-medium text-gray-900">
                   What's included
-                </h3>
+                </p>
                 <ul role="list" className="mt-6 space-y-4">
                   {tier.includedFeatures.map((feature) => (
                     <li key={feature} className="flex space-x-3">
@@ -137,9 +137,9 @@ export default function Pricing() {
           <div className="flex flex-col gap-4">
             <div className="divide-y divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5">
               <div className="p-6">
-                <h2 className="text-lg font-medium leading-6 text-gray-900">
+                <p className="text-lg font-medium leading-6 text-gray-900">
                   Additional mover
-                </h2>
+                </p>
                 <p className="mt-4">
                   <span className="text-4xl font-bold tracking-tight text-gray-900">
                     $40
@@ -164,9 +164,9 @@ export default function Pricing() {
             </div>
             <div className="divide-y divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5">
               <div className="p-6">
-                <h2 className="text-lg font-medium leading-6 text-gray-900">
+                <p className="text-lg font-medium leading-6 text-gray-900">
                   Additional truck
-                </h2>
+                </p>
                 <p className="mt-4">
                   <span className="text-4xl font-bold tracking-tight text-gray-900">
                     $40
