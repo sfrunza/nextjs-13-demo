@@ -105,8 +105,8 @@ export default function GlobalNav() {
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
         <div className="flex items-center justify-between py-3 xl:justify-start xl:space-x-4">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
-              <span className="sr-only">Your Company</span>
+            <a href="#" title="Phoenix Moving">
+              <span className="sr-only">Phoenix Moving</span>
               <Image
                 src={active ? '/logos/logo.png' : '/logos/logo-white.png'}
                 alt="Phoenix Moving Logo"
@@ -156,6 +156,7 @@ export default function GlobalNav() {
                             <a
                               key={item.name}
                               href={item.href}
+                              title={item.name}
                               className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
                             >
                               {/* <item.icon
@@ -178,6 +179,7 @@ export default function GlobalNav() {
                             <div key={item.name} className="flow-root">
                               <a
                                 href={item.href}
+                                title={item.name}
                                 className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100"
                               >
                                 <item.icon
@@ -220,6 +222,7 @@ export default function GlobalNav() {
                             <a
                               key={item.name}
                               href={item.href}
+                              title={item.name}
                               className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
                             >
                               <item.icon
@@ -250,6 +253,7 @@ export default function GlobalNav() {
                                 >
                                   <a
                                     href={post.href}
+                                    title={post.name}
                                     className="font-medium text-gray-900 hover:text-gray-700"
                                   >
                                     {post.name}
@@ -261,6 +265,7 @@ export default function GlobalNav() {
                           <div className="mt-5 text-sm">
                             <a
                               href="#"
+                              title="View all posts"
                               className="font-medium text-indigo-600 hover:text-indigo-500"
                             >
                               View all posts
@@ -276,6 +281,7 @@ export default function GlobalNav() {
             </Popover>
             <a
               href="tel:(508) 315-9458"
+              title="(508) 315-9458"
               className={clsx('text-base font-medium hover:underline', {
                 'text-palette-primary-500 hover:text-palette-primary-900':
                   active,
@@ -288,6 +294,7 @@ export default function GlobalNav() {
           <div className="hidden items-center justify-end xl:flex xl:flex-1 lg:w-0">
             <a
               href="#"
+              title="Client Login"
               //   className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100"
               className={clsx(
                 'group inline-flex items-center rounded-md text-base font-medium',
@@ -313,6 +320,7 @@ export default function GlobalNav() {
             </a>
             <a
               href="#"
+              title="Book a move"
               className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-xl border border-transparent bg-palette-secondary-500 px-4 py-2 text-base font-medium text-black shadow-sm hover:bg-palette-secondary-900"
             >
               Book a move
@@ -365,6 +373,7 @@ export default function GlobalNav() {
                     <a
                       key={item.name}
                       href={item.href}
+                      title={item.name}
                       className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
                     >
                       <item.icon
@@ -383,6 +392,7 @@ export default function GlobalNav() {
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <a
                   href="#"
+                  title="Pricing"
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
                   Pricing
@@ -390,6 +400,7 @@ export default function GlobalNav() {
 
                 <a
                   href="#"
+                  title="Docs"
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
                   Docs
@@ -398,6 +409,7 @@ export default function GlobalNav() {
                   <a
                     key={item.name}
                     href={item.href}
+                    title={item.name}
                     className="text-base font-medium text-gray-900 hover:text-gray-700"
                   >
                     {item.name}
@@ -407,13 +419,18 @@ export default function GlobalNav() {
               <div>
                 <a
                   href="#"
+                  title="Book a move"
                   className="flex w-full items-center justify-center rounded-xl border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                 >
                   Book a move
                 </a>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   Existing customer?{' '}
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
+                  <a
+                    href="#"
+                    title="Sign in"
+                    className="text-indigo-600 hover:text-indigo-500"
+                  >
                     Sign in
                   </a>
                 </p>
