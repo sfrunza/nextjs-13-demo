@@ -1,5 +1,4 @@
 import { CheckIcon } from '@heroicons/react/20/solid';
-import SectionHeader from '@/ui/SectionHeader';
 import Container from '@/ui/Container';
 
 function SwirlyDoodle({ className }) {
@@ -65,18 +64,6 @@ export default function Pricing() {
       className="py-20 sm:py-32 bg-palette-background"
     >
       <Container>
-        {/* <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-blue-400" /> */}
-        {/* <SectionHeader
-          // title="Affordable prices, for everyone."
-          title={
-            <>
-              Affordable prices, for everyone.
-              <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-blue-400" />
-            </>
-          }
-          subtitle="Professional furniture protection with no extra charge. No hidden
-        fees! If payment is made in cash we offer 5% off the bill."
-        /> */}
         <div className="md:text-center">
           <h2 className="text-3xl font-medium tracking-tight text-gray-900">
             <span className="relative whitespace-nowrap">

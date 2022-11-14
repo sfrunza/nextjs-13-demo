@@ -197,7 +197,7 @@ export default function GlobalNav() {
             </Popover>
             <NavLink label="About" href="#" />
             <NavLink label="Pricing" href="/pricing" />
-            <NavLink label="FAQ" href="#" />
+            {/* <NavLink label="FAQ" href="#" /> */}
 
             <Popover className="relative">
               {({ open }) => (
@@ -313,7 +313,7 @@ export default function GlobalNav() {
             </a>
             <a
               href="#"
-              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-palette-secondary-500 px-4 py-2 text-base font-medium text-black shadow-sm hover:bg-palette-secondary-900"
+              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-xl border border-transparent bg-palette-secondary-500 px-4 py-2 text-base font-medium text-black shadow-sm hover:bg-palette-secondary-900"
             >
               Book a move
             </a>
@@ -407,7 +407,7 @@ export default function GlobalNav() {
               <div>
                 <a
                   href="#"
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                  className="flex w-full items-center justify-center rounded-xl border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                 >
                   Book a move
                 </a>

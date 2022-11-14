@@ -10,6 +10,21 @@ export default function Head() {
         name="description"
         content="Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states."
       />
+
+      <meta name="robots" content="index,follow" />
+      <meta
+        name="keywords"
+        content="boston to ny moving company, from boston to new york moving, Boston movers, Boston moving company, Boston moving services, moving company in boston, boston moving storage company, Boston relocation company, Boston relocation service, Boston office relocation, ma relocation, massachusets relocation, massachusets relocation company, Massachusetts storage, boston storage company, massachusets moving, massachusets moving company, moving boston storage, moving companies in boston, commercial boston movers, moving packing supplies, student moving discounts, affordable moving company"
+      />
+
+      {/* Twitter Card */}
+      {/* <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@nytimesbits" />
+      <meta name="twitter:creator" content="@nickbilton" />
+      <meta
+        property="og:url"
+        content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/"
+      />
       <meta
         property="og:title"
         content="Phoenix Moving Boston - 🚚 Make Moving Chill (FREE ESTIMATE)"
@@ -18,12 +33,9 @@ export default function Head() {
         property="og:description"
         content="Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states."
       />
+      <meta property="og:image" content="/twittercard.png" /> */}
+      {/* End Twitter Card */}
 
-      <meta name="robots" content="index,follow" />
-      <meta
-        name="keywords"
-        content="boston to ny moving company, from boston to new york moving, Boston movers, Boston moving company, Boston moving services, moving company in boston, boston moving storage company, Boston relocation company, Boston relocation service, Boston office relocation, ma relocation, massachusets relocation, massachusets relocation company, Massachusetts storage, boston storage company, massachusets moving, massachusets moving company, moving boston storage, moving companies in boston, commercial boston movers, moving packing supplies, student moving discounts, affordable moving company"
-      />
       <link rel="icon" href="/favicon.ico" precedence="true" />
       <link
         rel="canonical"

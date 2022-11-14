@@ -9,6 +9,7 @@ import Faqs from '@/ui/Faqs';
 import Features from '@/ui/Features';
 // import Reviews from '@/ui/Reviews';
 import dynamic from 'next/dynamic';
+import CallToAction from '@/ui/CallToAction';
 
 const DynamicReviews = dynamic(() => import('@/ui/Reviews'), {
   suspense: true,
@@ -24,11 +25,12 @@ export default function Home() {
       <Divider />
       <Services />
       {/* <Features /> */}
+      <CTA />
       <Suspense fallback="loading...">
         <DynamicReviews />
       </Suspense>
-      <CTA />
       <Faqs />
+      <CallToAction />
     </>
   );
 }

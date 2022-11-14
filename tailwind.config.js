@@ -44,7 +44,7 @@ module.exports = {
         palette: {
           pink: '#FF0080',
           blue: '#0070F3',
-          cyan: '#50E3C2',
+          cyan: '#0c6',
           orange: '#F5A623',
           primary: { 500: '#7900ff', 900: '#5400b2' },
           secondary: { 500: '#FFC600', 900: '#b28a00' },

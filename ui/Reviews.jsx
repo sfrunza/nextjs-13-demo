@@ -9,5 +9,10 @@ export async function getData() {
 
 export default async function Reviews() {
   const data = await getData();
-  return <Testimonials reviews={data?.result?.reviews} />;
+  return (
+    <Testimonials
+      reviews={data?.result?.reviews}
+      totalReviews={data?.result?.user_ratings_total}
+    />
+  );
 }

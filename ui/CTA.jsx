@@ -51,7 +51,7 @@ export default function CTA() {
             {/* <AppStoreLink color="white" /> */}
             <a
               href="#"
-              className="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto"
+              className="inline-flex w-full items-center justify-center rounded-xl border border-transparent bg-white px-5 py-3 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto"
             >
               Request Your Move Online
             </a>

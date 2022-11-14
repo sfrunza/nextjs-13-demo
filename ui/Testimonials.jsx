@@ -13,6 +13,7 @@ import {
 import Image from 'next/image';
 
 import Container from '@/ui/Container';
+import Link from 'next/link';
 
 function SwirlyDoodle({ className }) {
   return (
@@ -58,6 +59,7 @@ function StarRating({ rating }) {
 function Review({
   text,
   author_name,
+  author_url,
   rating,
   profile_photo_url,
   relative_time_description,
@@ -113,15 +115,17 @@ function Review({
             {relative_time_description || ''}
           </div>
         </div>
-        <div className="overflow-hidden rounded-full bg-slate-50">
-          <Image
-            className="h-14 w-14 object-cover"
-            src={profile_photo_url || ''}
-            alt={author_name || ''}
-            width={56}
-            height={56}
-          />
-        </div>
+        <Link href={author_url} target="_blank">
+          <div className="overflow-hidden rounded-full bg-slate-50">
+            <Image
+              className="h-14 w-14 object-cover"
+              src={profile_photo_url || ''}
+              alt={author_name || ''}
+              width={56}
+              height={56}
+            />
+          </div>
+        </Link>
       </figcaption>
     </figure>
   );
@@ -225,7 +229,7 @@ function ReviewGrid({ reviews }) {
   );
 }
 
-export default function Testimonials({ reviews }) {
+export default function Testimonials({ reviews, totalReviews }) {
   // console.log(reviews);
   return (
     <section
@@ -246,6 +250,21 @@ export default function Testimonials({ reviews }) {
           Thousands of people have doubled their net-worth in the last 30 days.
         </p> */}
         {reviews && reviews.length > 0 && <ReviewGrid reviews={reviews} />}
+        <div className="flex justify-center mt-10">
+          {/* <button
+            type="button"
+            className="inline-flex items-center rounded border border-gray-300 bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          >
+            View all {totalReviews} reviews on Google
+          </button> */}
+          <Link
+            target="_blank"
+            href="https://www.google.com/search?q=phoenix+moving&sxsrf=ALiCzsYeGb8LJVe_ytmpCRRlfpA9-CrhvA%3A1668395468331&source=hp&ei=zLFxY7nIEO-gptQP2rWL4AI&iflsig=AJiK0e8AAAAAY3G_3HHOK9PAba9aeK4hg_rW7ucHEWVn&ved=0ahUKEwi53uy52az7AhVvkIkEHdraAiwQ4dUDCAo&uact=5&oq=phoenix+moving&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBAgjECcyCwguEIAEEMcBEK8BMgUIABCRAjIFCAAQgAQyCwguEIAEEMcBEK8BMgUIABCABDIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjoHCCMQ6gIQJzoLCC4QgAQQsQMQgwE6CAguELEDEIMBOggIABCxAxCDAToLCAAQgAQQsQMQgwE6BAgAEEM6CAguEIAEELEDOhQILhCABBCxAxCDARDHARDRAxDUAjoECC4QQzoNCC4QxwEQrwEQ1AIQQzoKCC4QxwEQrwEQQzoKCC4QsQMQ1AIQQzoKCC4Q1AIQsQMQQzoKCC4QsQMQgwEQQzoNCC4Q1AIQsQMQgAQQQzoQCC4QgwEQ1AIQsQMQgAQQQzoLCC4QxwEQrwEQkQI6BwguELEDEEM6EAguEIAEEIcCEMcBEK8BEBQ6CAgAEIAEELEDOgoIABCABBCHAhAUOgUILhCABFCyA1jlEGCdEmgBcAB4AIABjgGIAbMMkgEEMy4xMZgBAKABAbABCg&sclient=gws-wiz#lrd=0x89e387680ffe9aeb:0x4651b1e640f15b41,1,,,"
+            className="inline-flex items-center rounded-xl border border-transparent px-4 py-3 text-sm font-medium leading-4 text-blue-500 hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          >
+            {totalReviews} Google Reviews
+          </Link>
+        </div>
       </Container>
     </section>
   );

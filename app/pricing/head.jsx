@@ -1,5 +1,4 @@
-export default function Head({ params }) {
-  console.log(params);
+export default function Head() {
   return (
     <>
       <meta charSet="UTF-8" />
