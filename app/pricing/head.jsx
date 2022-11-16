@@ -15,12 +15,12 @@ export default function Head() {
       />
       <meta
         property="og:description"
-        content="Phoneix Moving provides the best moving prices and services  in Greater Boston Area"
+        content="Phoneix Moving provides the best moving prices and services in Greater Boston Area"
       />
 
       <link
         rel="canonical"
-        href="http://localhost:3000/pricing"
+        href="https://nextjs-13-demo-psi.vercel.app/pricing"
         precedence="true"
       />
 

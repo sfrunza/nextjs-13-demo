@@ -98,7 +98,7 @@ export default function Pricing() {
                 </p>
                 <a
                   href={tier.href}
-                  className="mt-8 block w-full rounded-xl border border-palette-primary-500 bg-palette-primary-500 py-2 text-center text-sm font-semibold text-white hover:bg-palette-primary-900"
+                  className="mt-8 block w-full rounded-md border border-palette-primary-500 bg-palette-primary-500 py-2 text-center text-medium font-medium text-white hover:bg-palette-primary-900"
                 >
                   Book {tier.name}
                 </a>

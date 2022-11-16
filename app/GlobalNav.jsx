@@ -114,6 +114,7 @@ export default function GlobalNav() {
                 height={150}
                 priority
                 className="h-8 w-auto sm:h-10"
+                title="Phoenix Moving"
               />
             </a>
           </div>
@@ -150,14 +151,14 @@ export default function GlobalNav() {
                     leaveTo="opacity-0 translate-y-1"
                   >
                     <Popover.Panel className="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
-                      <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                      <div className="overflow-hidden rounded-xl shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {services.map((item) => (
-                            <a
+                            <Link
                               key={item.name}
                               href={item.href}
                               title={item.name}
-                              className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                              className="-m-3 flex items-start rounded-md p-3 hover:bg-gray-50"
                             >
                               {/* <item.icon
                                 className="h-6 w-6 flex-shrink-0 text-indigo-600"
@@ -171,7 +172,7 @@ export default function GlobalNav() {
                                   {item.description}
                                 </p>
                               </div>
-                            </a>
+                            </Link>
                           ))}
                         </div>
                         <div className="space-y-6 bg-gray-50 px-5 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
@@ -216,14 +217,14 @@ export default function GlobalNav() {
                     leaveTo="opacity-0 translate-y-1"
                   >
                     <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
-                      <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                      <div className="overflow-hidden rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {resources.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
                               title={item.name}
-                              className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                              className="-m-3 flex items-start rounded-md p-3 hover:bg-gray-50"
                             >
                               <item.icon
                                 className="h-6 w-6 flex-shrink-0 text-indigo-600"
@@ -321,7 +322,7 @@ export default function GlobalNav() {
             <a
               href="#"
               title="Book a move"
-              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-xl border border-transparent bg-palette-secondary-500 px-4 py-2 text-base font-medium text-black shadow-sm hover:bg-palette-secondary-900"
+              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-palette-secondary-500 px-4 py-2 text-base font-medium text-black shadow-sm hover:bg-palette-secondary-900"
             >
               Book a move
             </a>
@@ -342,7 +343,7 @@ export default function GlobalNav() {
           focus
           className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition xl:hidden"
         >
-          <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+          <div className="divide-y-2 divide-gray-50 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -358,6 +359,7 @@ export default function GlobalNav() {
                     height={150}
                     priority
                     className="h-8 w-auto sm:h-10"
+                    title="Phoenix Moving Logo"
                   />
                 </div>
                 <div className="-mr-2">
@@ -420,7 +422,7 @@ export default function GlobalNav() {
                 <a
                   href="#"
                   title="Book a move"
-                  className="flex w-full items-center justify-center rounded-xl border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                 >
                   Book a move
                 </a>

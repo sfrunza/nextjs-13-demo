@@ -66,6 +66,7 @@ export default function Faqs() {
         width={1558}
         height={946}
         unoptimized
+        title="background image"
       />
       <Container className="relative">
         <div className="mx-auto max-w-2xl lg:mx-0">

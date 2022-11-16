@@ -12,7 +12,7 @@ export async function getData() {
 export default async function PricingTable() {
   const prices = await getData();
 
-  const tiers = ['Discounted Rates', 'Regular Rates', 'Peak Season Rates'];
+  const tiers = ['Discounted Rates', 'Regular Rates', 'Peak Rates'];
   const data = [
     {
       crew: '2 Movers & truck',
@@ -53,6 +53,49 @@ export default async function PricingTable() {
             </>
           }
         />
+        {/* xs to lg */}
+        <div className="space-y-12 lg:hidden">
+          {tiers.map((tier, tierIndex) => (
+            <section key={tier}>
+              <div className="mb-8 px-4">
+                <h2
+                  // className="text-2xl font-medium leading-6 text-gray-900"
+                  className={clsx(
+                    'text-2xl font-medium leading-6 text-gray-900',
+                    {
+                      'text-palette-cyan': tierIndex === 0,
+                      'text-palette-blue': tierIndex === 1,
+                      'text-palette-pink': tierIndex === 2,
+                    }
+                  )}
+                >
+                  {tier}
+                </h2>
+              </div>
+              <table className="w-full bg-white">
+                <tbody className="divide-y divide-gray-200">
+                  {data.map((row, rowIndex) => (
+                    <tr key={rowIndex} className="border-t border-gray-200">
+                      <th
+                        className="py-5 px-4 text-left text-sm font-normal text-gray-500"
+                        scope="row"
+                      >
+                        {row.crew}
+                      </th>
+                      <td className="py-5 pr-4">
+                        <span className="block text-right text-xl font-semibold text-gray-900">
+                          ${row.prices[tierIndex]}
+                          {/* <span className="text-sm text-gray-500">/hour</span> */}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </section>
+          ))}
+        </div>
+
         {/* lg+ */}
         <div className="hidden lg:block">
           <table className="h-px w-full table-fixed">

@@ -1,5 +1,7 @@
+import Divider from '@/ui/Divider';
 import Hero from '@/ui/Hero';
 import { Suspense } from 'react';
+import InterstatePrices from './InterstatePrices';
 import PricingTable from './PricingTable';
 
 export default async function PricingPage() {
@@ -9,6 +11,8 @@ export default async function PricingPage() {
       <Suspense fallback="loading...">
         <PricingTable />
       </Suspense>
+      <Divider />
+      <InterstatePrices />
     </>
   );
 }
