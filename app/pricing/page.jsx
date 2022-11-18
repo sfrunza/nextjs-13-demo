@@ -6,8 +6,6 @@ import Reviews from '@/ui/Reviews';
 import InterstatePrices from './InterstatePrices';
 import PricingTable from './PricingTable';
 
-export const revalidate = 60;
-
 export default async function PricingPage() {
   return (
     <>
