@@ -18,8 +18,11 @@ module.exports = {
         'spin-reverse-slow': 'spin-reverse 4s linear infinite',
         'spin-reverse-slower': 'spin-reverse 6s linear infinite',
       },
+      // fontFamily: {
+      //   sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      // },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['var(--font-inter)'],
       },
       borderRadius: {
         '4xl': '2rem',

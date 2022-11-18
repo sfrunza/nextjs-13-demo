@@ -35,24 +35,32 @@ function MenuIcon(props) {
 export default function GlobalNav() {
   const [active, setActive] = useState(false);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', changeNavColor);
+  const changeBackground = () => {
+    // console.log(window.scrollY);
+    if (window.scrollY >= 80) {
+      setActive(true);
+    } else {
+      setActive(false);
     }
+  };
 
-    return () => {
-      window.removeEventListener('scroll', changeNavColor);
-    };
+  useEffect(() => {
+    changeBackground();
+    // adding the event when scroll change background
+    window.addEventListener('scroll', changeBackground);
   }, []);
 
   const NavLink = ({ label, href }) => {
     return (
       <Link
         href={href}
-        className={clsx('text-base font-medium', {
-          'text-gray-500 hover:text-gray-900': active,
-          'text-white hover:text-gray-500': !active,
-        })}
+        className={clsx(
+          'text-base font-medium hover:text-palette-secondary-500',
+          {
+            'text-gray-500': active,
+            'text-white': !active,
+          }
+        )}
         title={label}
       >
         {label}
@@ -64,11 +72,11 @@ export default function GlobalNav() {
     return (
       <Popover.Button
         className={clsx(
-          'group inline-flex items-center rounded-md text-base font-medium',
+          'group inline-flex items-center rounded-md text-base font-medium hover:text-palette-secondary-500',
           {
-            'text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2':
+            'text-gray-500  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2':
               active,
-            'text-white hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2':
+            'text-white  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2':
               !active,
           }
         )}
@@ -76,23 +84,13 @@ export default function GlobalNav() {
         <span>{label}</span>
         <ChevronDownIcon
           className={classNames(
-            active
-              ? 'text-gray-500 group-hover:text-gray-900'
-              : 'text-white group-hover:text-gray-500',
-            'ml-2 h-5 w-5'
+            active ? 'text-gray-500' : 'text-white',
+            'ml-2 h-5 w-5 group-hover:text-palette-secondary-500'
           )}
           aria-hidden="true"
         />
       </Popover.Button>
     );
-  };
-
-  const changeNavColor = () => {
-    if (typeof window !== 'undefined' && window.scrollY >= 80) {
-      setActive(true);
-    } else {
-      setActive(false);
-    }
   };
 
   return (
@@ -158,7 +156,7 @@ export default function GlobalNav() {
                               key={item.name}
                               href={item.href}
                               title={item.name}
-                              className="-m-3 flex items-start rounded-md p-3 hover:bg-gray-50"
+                              className="-m-3 flex items-start rounded-md p-3 hover:bg-palette-background"
                             >
                               {/* <item.icon
                                 className="h-6 w-6 flex-shrink-0 text-indigo-600"
@@ -198,7 +196,6 @@ export default function GlobalNav() {
                 </>
               )}
             </Popover>
-            <NavLink label="About" href="#" />
             <NavLink label="Pricing" href="/pricing" />
             {/* <NavLink label="FAQ" href="#" /> */}
 
@@ -298,11 +295,11 @@ export default function GlobalNav() {
               title="Client Login"
               //   className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100"
               className={clsx(
-                'group inline-flex items-center rounded-md text-base font-medium',
+                'group inline-flex items-center rounded-md text-base font-medium hover:text-palette-secondary-500',
                 {
-                  'text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2':
+                  'text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2':
                     active,
-                  'text-white hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2':
+                  'text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2':
                     !active,
                 }
               )}
@@ -310,10 +307,8 @@ export default function GlobalNav() {
             >
               <UserIcon
                 className={classNames(
-                  active
-                    ? 'text-gray-500 group-hover:text-gray-900'
-                    : 'text-white group-hover:text-gray-500',
-                  'h-5 w-5'
+                  active ? 'text-gray-500' : 'text-white',
+                  'h-5 w-5 group-hover:text-palette-secondary-500'
                 )}
                 aria-hidden="true"
               />

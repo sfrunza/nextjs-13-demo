@@ -3,7 +3,9 @@ export default function Head() {
     <>
       <meta charSet="UTF-8" />
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-      <title>Pricing - Phoenix Moving Boston (FREE ESTIMATE)</title>
+      <title>
+        Moving Prices & Rates - Phoenix Moving Boston (Free Estimate)
+      </title>
       <meta
         name="description"
         content="Phoneix Moving provides the best moving prices and services in Greater Boston Area"
@@ -11,7 +13,7 @@ export default function Head() {
       <meta name="keywords" content="" />
       <meta
         property="og:title"
-        content="Pricing - Phoenix Moving Boston (FREE ESTIMATE)"
+        content="Moving Prices & Rates - Phoenix Moving Boston (Free Estimate)"
       />
       <meta
         property="og:description"
