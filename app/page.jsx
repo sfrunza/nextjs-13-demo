@@ -3,17 +3,12 @@ import Hero from '@/ui/Hero';
 import Pricing from './Pricing';
 import CTA from '@/ui/CTA';
 import Services from './Services';
-import Test from './Test';
-import Divider from '@/ui/Divider';
+// import Test from './Test';
+// import Divider from '@/ui/Divider';
 import Faqs from '@/ui/Faqs';
-import Features from '@/ui/Features';
-// import Reviews from '@/ui/Reviews';
-import dynamic from 'next/dynamic';
+// import Features from '@/ui/Features';
+import Reviews from '@/ui/Reviews';
 import CallToAction from '@/ui/CallToAction';
-
-const DynamicReviews = dynamic(() => import('@/ui/Reviews'), {
-  suspense: true,
-});
 
 export default function Home() {
   return (
@@ -27,7 +22,7 @@ export default function Home() {
       {/* <Features /> */}
       <CTA />
       <Suspense fallback="loading...">
-        <DynamicReviews />
+        <Reviews />
       </Suspense>
       <Faqs />
       <CallToAction />
