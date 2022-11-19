@@ -283,7 +283,7 @@ export default function GlobalNav() {
               className={clsx('text-base font-medium hover:underline', {
                 'text-palette-primary-500 hover:text-palette-primary-900':
                   active,
-                'text-white hover:text-gray-500': !active,
+                'text-white hover:text-palette-primary-500': !active,
               })}
             >
               (508) 315-9458

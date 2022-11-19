@@ -6,13 +6,13 @@ import Reviews from '@/ui/Reviews';
 import InterstatePrices from './InterstatePrices';
 import PricingTable from './PricingTable';
 
+export const runtime = 'experimental-edge';
+
 export default async function PricingPage() {
   return (
     <>
       <Hero image="/prices.jpg" title="Moving Prices & Rates" />
-      <Suspense fallback="loading...">
-        <PricingTable />
-      </Suspense>
+      <PricingTable />
       <Divider />
       <InterstatePrices />
       <Suspense fallback="loading...">

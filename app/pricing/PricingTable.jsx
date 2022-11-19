@@ -4,7 +4,8 @@ import clsx from 'clsx';
 
 export async function getData() {
   const res = await fetch(
-    'https://phoenixmoving-app.herokuapp.com/api/v1/prices'
+    'https://phoenixmoving-app.herokuapp.com/api/v1/prices',
+    { cache: 'no-store' }
   );
   return res.json();
 }
@@ -17,23 +18,23 @@ export default async function PricingTable() {
     {
       crew: '2 Movers & truck',
       //   prices: [123, 345, 567],
-      prices: prices[0].two_men,
+      prices: prices[0].two_men || ['', '', ''],
     },
     {
       crew: '3 Movers & truck',
-      prices: prices[0].three_men,
+      prices: prices[0].three_men || ['', '', ''],
     },
     {
       crew: '4 Movers & truck',
-      prices: prices[0].four_men,
+      prices: prices[0].four_men || ['', '', ''],
     },
     {
       crew: 'Additional mover',
-      prices: prices[0].add_men,
+      prices: prices[0].add_men || ['', '', ''],
     },
     {
       crew: 'Additional truck',
-      prices: prices[0].add_truck,
+      prices: prices[0].add_truck || ['', '', ''],
     },
   ];
 

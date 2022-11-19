@@ -10,6 +10,8 @@ import Faqs from '@/ui/Faqs';
 import Reviews from '@/ui/Reviews';
 import CallToAction from '@/ui/CallToAction';
 
+export const runtime = 'experimental-edge';
+
 export default function Home() {
   return (
     <>
