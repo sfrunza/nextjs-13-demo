@@ -3,7 +3,6 @@ const nextConfig = {
   experimental: {
     appDir: true,
     optimizeCss: true,
-    runtime: 'experimental-edge',
     fontLoaders: [
       { loader: '@next/font/google', options: { subsets: ['latin'] } },
     ],

@@ -6,8 +6,6 @@ import Reviews from '@/ui/Reviews';
 import InterstatePrices from './InterstatePrices';
 import PricingTable from './PricingTable';
 
-export const runtime = 'experimental-edge';
-
 export default async function PricingPage() {
   return (
     <>
