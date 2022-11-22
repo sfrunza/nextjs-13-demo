@@ -36,11 +36,11 @@ export default function Head() {
       <meta property="og:image" content="/twittercard.png" /> */}
       {/* End Twitter Card */}
 
-      <link rel="icon" href="/favicon.ico" precedence="true" />
+      <link rel="icon" href="/favicon.ico" precedence="default" />
       <link
         rel="canonical"
         href="https://nextjs-13-demo-psi.vercel.app/"
-        precedence="true"
+        precedence="default"
       />
       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -84,7 +84,7 @@ export default function Head() {
         sizes="180x180"
         href="/apple-touch-icon-180x180.png"
       />
-      <link rel="manifest" href="/manifest.json" precedence="true" />
+      <link rel="manifest" href="/manifest.json" precedence="default" />
     </>
   );
 }

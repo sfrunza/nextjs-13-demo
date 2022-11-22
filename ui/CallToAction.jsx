@@ -3,9 +3,9 @@ export default function CallToAction() {
     <section className="bg-[#f2e7ff]">
       <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-12 lg:px-8">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900 md:text-3xl text-center">
-          <span className="block">Contact us Now</span>
+          <span className="block">Got a question?</span>
           <span className="block text-palette-primary-500 text-lg md:text-xl font-medium">
-            Talk to our team to book your move
+            Contact us for a free consultation
           </span>
         </h2>
         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0 justify-center">

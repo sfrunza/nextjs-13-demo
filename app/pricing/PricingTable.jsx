@@ -154,6 +154,18 @@ export default async function PricingTable() {
             </tbody>
           </table>
         </div>
+        <div className="flex gap-4 justify-between items-baseline flex-col lg:flex-row mt-10">
+          <p className="w-full lg:max-w-[550px] text-sm text-gray-500">
+            <b>40 min Travel Time</b> is applied to all jobs in Metro Boston
+            area. (approx 20 min for our movers to get to you address from our
+            office plus approx 20 min to get back when the move is finished).
+          </p>
+          <p className="w-full lg:max-w-[550px] text-sm text-gray-500">
+            We have a <b>2 hours minimum Labour Time</b>, plus fixed Travel
+            Time, charge policy. After first 2 hours of labor, the move time is
+            prorated every 15 min.
+          </p>
+        </div>
       </Container>
     </section>
   );

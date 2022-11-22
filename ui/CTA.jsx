@@ -31,7 +31,7 @@ export default function CTA() {
       id="get-free-shares-today"
       className="relative overflow-hidden bg-palette-primary-900 py-20 sm:py-28"
     >
-      <div className="absolute top-1/2 left-20 -translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2">
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2">
         <CircleBackground
           color="#fff"
           className="animate-spin-slower"
@@ -39,13 +39,12 @@ export default function CTA() {
         />
       </div>
       <Container className="relative">
-        <div className="mx-auto max-w-md sm:text-center">
-          <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl">
+        <div className="mx-auto max-w-md text-center">
+          <h2 className="text-xl font-medium tracking-tight text-white sm:text-2xl uppercase">
             Get a Moving Quote for your Local Move!
           </h2>
-          <p className="mt-4 text-lg text-gray-300">
-            Our Professional movers make sure that everything is placed right
-            where you want it at your new place.
+          <p className="mt-4 text-lg text-gray-300 uppercase">
+            No Credit Card Required
           </p>
           <div className="mt-8 flex justify-center">
             {/* <AppStoreLink color="white" /> */}

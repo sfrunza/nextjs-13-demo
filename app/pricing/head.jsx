@@ -23,7 +23,7 @@ export default function Head() {
       <link
         rel="canonical"
         href="https://nextjs-13-demo-psi.vercel.app/pricing"
-        precedence="true"
+        precedence="default"
       />
 
       <meta name="robots" content="index,follow" />

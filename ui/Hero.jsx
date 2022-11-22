@@ -5,7 +5,7 @@ export default function Hero({ image, title, children }) {
     <section className="relative">
       {/* <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" /> */}
       <div className="mx-auto w-full">
-        <div className="relative shadow-xl sm:overflow-hidden min-h-[600px] flex justify-center items-center">
+        <div className="relative sm:overflow-hidden min-h-[600px] flex justify-center items-center">
           <div className="absolute inset-0 min-h-[600px]">
             {/* <img
                 className="h-full w-full object-cover"
@@ -18,7 +18,7 @@ export default function Hero({ image, title, children }) {
               className="object-cover"
               fill
               priority
-              title={`${title} Phoneix Moving`}
+              title="Bostom Moving Company"
             />
             <div className="absolute inset-0 bg-gray-900/30 mix-blend-multiply" />
           </div>

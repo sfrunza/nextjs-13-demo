@@ -121,8 +121,8 @@ export default function Pricing() {
               </div>
             </div>
           ))}
-          <div className="flex flex-col gap-4">
-            <div className="divide-y divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5">
+          <div className="flex flex-col sm:gap-6 justify-between">
+            <div className="divide-y h-full divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5">
               <div className="p-6">
                 <p className="text-lg font-medium leading-6 text-gray-900">
                   Additional mover
@@ -149,7 +149,7 @@ export default function Pricing() {
                 </p>
               </div>
             </div>
-            <div className="divide-y divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5">
+            <div className="divide-y h-full divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5">
               <div className="p-6">
                 <p className="text-lg font-medium leading-6 text-gray-900">
                   Additional truck

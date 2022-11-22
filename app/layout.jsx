@@ -1,6 +1,6 @@
 import '@/styles/tailwind.css';
 // import localFont from '@next/font/local';
-import GlobalNav from './GlobalNav';
+import GlobalNav from '@/ui/GlobalNav';
 import Footer from './Footer';
 import { Inter } from '@next/font/google';
 
