@@ -6,6 +6,7 @@ import CallToAction from '@/ui/CallToAction';
 import Reviews from '@/ui/Reviews';
 import CTA from '@/ui/CTA';
 import CitiesSection from '@/ui/CitiesSection';
+import Divider  from '@/ui/Divider';
 
 export default function LocalMoving() {
   return (
@@ -13,6 +14,7 @@ export default function LocalMoving() {
       <Hero image="/prices.jpg" title="Local Moving" />
       <Included />
       <Info />
+      <Divider />
       <CitiesSection />
       <CTA />
       <Suspense fallback="loading...">

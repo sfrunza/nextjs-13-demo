@@ -64,16 +64,16 @@ export default function Pricing() {
       className="py-20 sm:py-32 bg-palette-background"
     >
       <Container>
-        <div className="md:text-center">
-          <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+        <div className="mx-auto max-w-3xl text-center mb-16 sm:mb-20">
+          <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900">
             <span className="relative whitespace-nowrap">
               <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-palette-primary-500" />
-              <span className="relative">Simple pricing,</span>
+              <span className="relative">Best prices,</span>
             </span>{' '}
             for everyone.
           </h2>
-          <p className="mt-2 text-lg text-gray-600">
-            It doesn’t matter what size your business is, our software won’t
+          <p className="mt-2 text-md sm:text-lg text-gray-700">
+            It doesn't matter what size your business is, our software won't
             work well for you.
           </p>
         </div>
@@ -121,7 +121,7 @@ export default function Pricing() {
               </div>
             </div>
           ))}
-          <div className="flex flex-col sm:gap-6 justify-between">
+          <div className="flex flex-col gap-4 sm:gap-6 justify-between">
             <div className="divide-y h-full divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5">
               <div className="p-6">
                 <p className="text-lg font-medium leading-6 text-gray-900">

@@ -31,7 +31,7 @@ export default function Services({ city }) {
             <h2 className="text-md md:text-lg font-semibold leading-8 tracking-tight text-indigo-600">
               Everything you need
             </h2>
-            <p className="mt-2 text-2xl md:text-3xl font-semibold tracking-tight text-gray-900">
+            <p className="mt-2 text-2xl md:text-3xl font-medium tracking-tight text-gray-900">
               Moving Services
             </p>
             <p className="mt-6 text-base leading-7 text-gray-600">
@@ -52,7 +52,7 @@ export default function Services({ city }) {
                       className="absolute mt-1 h-6 w-6 text-indigo-600"
                       aria-hidden="true"
                     />
-                    <p className="ml-10 text-lg font-semibold leading-8 text-gray-900">
+                    <p className="ml-10 text-lg font-medium leading-8 text-gray-900">
                       {feature.name}
                     </p>
                   </dt>

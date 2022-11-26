@@ -1,18 +1,20 @@
-import { InboxIcon, SparklesIcon } from '@heroicons/react/24/outline';
 import Container from '@/ui/Container';
 
 export default function Info() {
   return (
-    <Container>
-      <div className="overflow-hidden py-16">
+    <section
+      aria-label="boston-local-moving-information"
+      className="py-20 sm:py-32"
+    >
+      <Container className="overflow-hidden">
         <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-prose text-base lg:max-w-none">
-            <h2 className="text-3xl font-semibold text-gray-900">
+            <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900">
               Boston Local Moving
             </h2>
           </div>
           <div className="relative z-10 mx-auto max-w-prose text-base lg:mx-0 lg:max-w-5xl lg:pr-72">
-            <p className="text-lg text-gray-500">
+            <p className="text-md text-gray-500">
               <b>We are a local moving company in Boston, Massachusetts</b>. If
               you're looking for local movers in Boston MA, see if we operate in
               your area, and then contact us for a quote.
@@ -23,12 +25,12 @@ export default function Info() {
               <div className="prose prose-indigo mx-auto text-gray-500 lg:max-w-none">
                 <p>
                   We service all the biggest and most popular locations in the
-                  area, including <b>Boston</b>, <b>Newton</b>, <b>Natick</b>,{' '}
-                  <b>Brookline</b>, <b>Wellesley</b>, <b>Needham</b>,{' '}
-                  <b>Cambridge</b> and other. We also perform local services in
-                  the entire Greater Boston area and throughout New England. If
-                  you're located somewhere along Interstate 95 in Massachusetts,
-                  your relocation needs are within our scope of service.
+                  area, including Boston, Newton, Natick, Brookline, Wellesley,
+                  Needham, Cambridge and other. We also perform local services
+                  in the entire Greater Boston area and throughout New England.
+                  If you're located somewhere along Interstate 95 in
+                  Massachusetts, your relocation needs are within our scope of
+                  service.
                 </p>
 
                 <ul role="list">
@@ -110,7 +112,7 @@ export default function Info() {
             </div>
           </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </section>
   );
 }

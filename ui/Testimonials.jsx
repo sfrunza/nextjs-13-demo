@@ -240,8 +240,8 @@ export default function Testimonials({ reviews, totalReviews }) {
       className="pt-20 pb-16 sm:pt-32 sm:pb-24 bg-palette-background"
     >
       <Container>
-        <div className="md:text-center">
-          <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+        <div className="mx-auto max-w-3xl text-center mb-16 sm:mb-20">
+          <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900">
             <span className="relative whitespace-nowrap">
               <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-palette-primary-500" />
               <span className="relative">Testimonials</span>

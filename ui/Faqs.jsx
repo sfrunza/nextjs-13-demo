@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import Container from '@/ui/Container';
+import SectionHeader from './SectionHeader';
 
 const faqs = [
   [
@@ -69,24 +70,21 @@ export default function Faqs() {
         title="background image"
       />
       <Container className="relative">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2
-            id="faqs-title"
-            className="text-3xl font-medium tracking-tight text-gray-900"
-          >
-            Frequently asked questions
-          </h2>
-          <p className="mt-2 text-lg text-gray-600">
-            If you have anything else you want to ask,{' '}
-            <Link
-              href="mailto:info@gophoenixmoving.com"
-              className="text-gray-900 underline"
-            >
-              reach out to us
-            </Link>
-            .
-          </p>
-        </div>
+        <SectionHeader
+          title="Frequently asked questions"
+          subtitle={
+            <>
+              If you have anything else you want to ask,{' '}
+              <Link
+                href="mailto:info@gophoenixmoving.com"
+                className="text-gray-900 underline"
+              >
+                reach out to us
+              </Link>
+              .
+            </>
+          }
+        />
         <ul
           role="list"
           className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:max-w-none lg:grid-cols-3"

@@ -9,11 +9,11 @@ const SectionHeader = ({
   subtitle,
 }) => {
   return (
-    <div className="mx-auto max-w-2xl sm:text-center mb-16 sm:mb-20">
-      <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+    <div className="mx-auto max-w-3xl text-center mb-16 sm:mb-20">
+      <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900">
         {title}
       </h2>
-      <p className="mt-2 text-lg text-gray-600">{subtitle}</p>
+      <p className="mt-2 text-md sm:text-lg text-gray-700">{subtitle}</p>
     </div>
     // <div className="max-w-2xl m-auto text-center mb-12 sm:mb-16">
     //   <h2

@@ -55,8 +55,8 @@ const cities = [
 
 const features = [
   {
-    name: 'Fuel',
-    description: 'Mileage and tolls',
+    name: 'Included Fuel',
+    description: 'mileage and tolls',
   },
   {
     name: 'Transportation',
@@ -68,15 +68,15 @@ const features = [
   },
   {
     name: 'Moving certificates',
-    description: 'of insurance for the building',
+    description: 'Insurance for the building',
   },
   {
     name: 'Furniture disassembly',
     description: 'and reassembly',
   },
   {
-    name: 'Furniture',
-    description: 'blanket wrapping',
+    name: 'Furniture protection',
+    description: 'blankets, bubble wrap',
   },
 ];
 
@@ -127,7 +127,7 @@ export default function InterstatePrices() {
             </div>
           ))}
         </div>
-        <h3 className="text-xl font-semibold tracking-tight text-gray-900 mt-16">
+        <h3 className="text-xl font-medium tracking-tight text-gray-900 mt-16">
           What is included in standard long distance move?
         </h3>
         <dl className="mt-12 space-y-10 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8 p-8 bg-palette-background rounded-2xl">
