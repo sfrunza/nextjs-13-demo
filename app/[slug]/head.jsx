@@ -1,16 +1,42 @@
 import { cities } from '@/lib/citiesData';
+import { states } from '@/lib/statesData';
 
 export async function getCity(slug) {
   return cities.find((city) => city.slug === slug);
 }
 
+export async function getCityState(slug) {
+  const filterdStates = states.filter((s) => s.cities && s.cities.length > 0);
+  let interstateCity = null;
+  filterdStates.map((s) => {
+    s.cities.find((c) => {
+      if (c.slug === slug) {
+        interstateCity = c;
+      }
+    });
+  });
+  return interstateCity;
+}
+
 export default async function Head({ params }) {
-  const city = await getCity(params.slug);
+  const { slug } = params;
+  let city = {};
+
+  if (slug.includes('boston-')) {
+    city = await getCityState(slug);
+  } else {
+    city = await getCity(slug);
+  }
+
   return (
     <>
       <meta charSet="UTF-8" />
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-      <title>{`${city?.fullName} - Phoenix Moving Boston (Free Estimate)`}</title>
+      {city && city.interstate ? (
+        <title>{`Movers from Boston to ${city.name} | Boston to ${city.name} moving Company`}</title>
+      ) : (
+        <title>{`${city?.fullName} - Phoenix Moving Boston (Free Estimate)`}</title>
+      )}
       <meta
         name="description"
         content="Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states."

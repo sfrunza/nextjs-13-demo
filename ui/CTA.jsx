@@ -24,6 +24,7 @@
 // import { AppStoreLink } from '@/components/AppStoreLink';
 import CircleBackground from '@/ui/CircleBackground';
 import Container from '@/ui/Container';
+import Button from '@/ui/Button';
 
 export default function CTA() {
   return (
@@ -36,7 +37,7 @@ export default function CTA() {
               className="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0"
             >
               <svg
-                className="absolute inset-0 h-full w-full"
+                className="absolute inset-0 h-full w-full rounded-2xl"
                 preserveAspectRatio="xMidYMid slice"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -60,16 +61,18 @@ export default function CTA() {
                   Get a Moving Quote for your Local Move!
                 </h2>
                 <p className="mx-auto mt-4 max-w-2xl text-lg text-white">
-                  Get a Moving Quote for your Local Move!
+                No credit card required
                 </p>
               </div>
               <div className="mt-8 flex justify-center">
-                <a
+                <Button
                   href="#"
-                  className="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto"
+                  size="large"
+                  variant="outline"
+                  className="w-full sm:w-auto"
                 >
                   Request Your Move Online
-                </a>
+                </Button>
               </div>
             </div>
           </div>

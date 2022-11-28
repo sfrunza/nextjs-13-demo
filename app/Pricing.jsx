@@ -1,5 +1,6 @@
 import { CheckIcon } from '@heroicons/react/20/solid';
-import Container from '@/ui/Container';
+import Section from '@/ui/Section';
+import Button from '@/ui/Button';
 
 function SwirlyDoodle({ className }) {
   return (
@@ -59,126 +60,118 @@ const tiers = [
 
 export default function Pricing() {
   return (
-    <section
-      aria-label="moving-rates"
-      className="py-20 sm:py-32 bg-palette-background"
-    >
-      <Container>
-        <div className="mx-auto max-w-3xl text-center mb-16 sm:mb-20">
-          <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900">
-            <span className="relative whitespace-nowrap">
-              <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-palette-primary-500" />
-              <span className="relative">Best prices,</span>
-            </span>{' '}
-            for everyone.
-          </h2>
-          <p className="mt-2 text-md sm:text-lg text-gray-700">
-            It doesn't matter what size your business is, our software won't
-            work well for you.
-          </p>
-        </div>
-        <div className="mt-12 space-y-4 sm:mt-16 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:mx-auto lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">
-          {tiers.map((tier) => (
-            <div
-              key={tier.name}
-              className="divide-y divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5"
-            >
-              <div className="p-6">
-                <p className="text-lg font-medium leading-6 text-gray-900">
-                  {tier.name}
-                </p>
-                <p className="mt-4 text-sm text-gray-500">{tier.description}</p>
-                <p className="mt-4">
-                  <span className="text-4xl font-bold tracking-tight text-gray-900">
-                    ${tier.priceMonthly}
-                  </span>{' '}
-                  <span className="text-base font-medium text-gray-500">
-                    per hour
-                  </span>
-                </p>
-                <a
-                  href={tier.href}
-                  className="mt-8 block w-full rounded-md border border-palette-primary-500 bg-palette-primary-500 py-2 text-center text-medium font-medium text-white hover:bg-palette-primary-900"
-                >
-                  Book {tier.name}
-                </a>
-              </div>
-              <div className="px-6 pt-6 pb-8">
-                <p className="text-sm font-medium text-gray-900">
-                  What's included
-                </p>
-                <ul role="list" className="mt-6 space-y-4">
-                  {tier.includedFeatures.map((feature) => (
-                    <li key={feature} className="flex space-x-3">
-                      <CheckIcon
-                        className="h-5 w-5 flex-shrink-0 text-green-500"
-                        aria-hidden="true"
-                      />
-                      <span className="text-sm text-gray-500">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+    <Section label="phoenix-moving-rates" className="bg-palette-background">
+      <div className="mx-auto max-w-3xl text-center mb-16 sm:mb-20">
+        <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900">
+          <span className="relative whitespace-nowrap">
+            <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-palette-primary-500" />
+            <span className="relative">Best prices,</span>
+          </span>{' '}
+          for everyone.
+        </h2>
+        <p className="mt-2 text-md sm:text-lg text-gray-700">
+          It doesn't matter what size your business is, our software won't work
+          well for you.
+        </p>
+      </div>
+      <div className="mt-12 space-y-4 sm:mt-16 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:mx-auto lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">
+        {tiers.map((tier) => (
+          <div
+            key={tier.name}
+            className="divide-y divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5"
+          >
+            <div className="p-6">
+              <p className="text-lg font-medium leading-6 text-gray-900">
+                {tier.name}
+              </p>
+              <p className="mt-4 text-sm text-gray-500">{tier.description}</p>
+              <p className="mt-4">
+                <span className="text-4xl font-bold tracking-tight text-gray-900">
+                  ${tier.priceMonthly}
+                </span>{' '}
+                <span className="text-base font-medium text-gray-500">
+                  per hour
+                </span>
+              </p>
+              <Button href={tier.href} color="primary" className="mt-8 w-full">
+                Book {tier.name}
+              </Button>
             </div>
-          ))}
-          <div className="flex flex-col gap-4 sm:gap-6 justify-between">
-            <div className="divide-y h-full divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5">
-              <div className="p-6">
-                <p className="text-lg font-medium leading-6 text-gray-900">
-                  Additional mover
-                </p>
-                <p className="mt-4">
-                  <span className="text-4xl font-bold tracking-tight text-gray-900">
-                    $40
-                  </span>{' '}
-                  <span className="text-base font-medium text-gray-500">
-                    per hour
-                  </span>
-                </p>
-              </div>
-              <div className="px-6 pt-6 pb-8">
-                <p className="flex space-x-3">
-                  <CheckIcon
-                    className="h-5 w-5 flex-shrink-0 text-green-500"
-                    aria-hidden="true"
-                  />
-                  <span className="text-sm text-gray-500">
-                    Rate per hour per moving added to your quoted houry rate if
-                    you request it
-                  </span>
-                </p>
-              </div>
+            <div className="px-6 pt-6 pb-8">
+              <p className="text-sm font-medium text-gray-900">
+                What's included
+              </p>
+              <ul role="list" className="mt-6 space-y-4">
+                {tier.includedFeatures.map((feature) => (
+                  <li key={feature} className="flex space-x-3">
+                    <CheckIcon
+                      className="h-5 w-5 flex-shrink-0 text-green-500"
+                      aria-hidden="true"
+                    />
+                    <span className="text-sm text-gray-500">{feature}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="divide-y h-full divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5">
-              <div className="p-6">
-                <p className="text-lg font-medium leading-6 text-gray-900">
-                  Additional truck
-                </p>
-                <p className="mt-4">
-                  <span className="text-4xl font-bold tracking-tight text-gray-900">
-                    $40
-                  </span>{' '}
-                  <span className="text-base font-medium text-gray-500">
-                    per hour
-                  </span>
-                </p>
-              </div>
-              <div className="px-6 pt-6 pb-8">
-                <p className="flex space-x-3">
-                  <CheckIcon
-                    className="h-5 w-5 flex-shrink-0 text-green-500"
-                    aria-hidden="true"
-                  />
-                  <span className="text-sm text-gray-500">
-                    Rate per hour per truck added to your quoted houry rate if
-                    you requested
-                  </span>
-                </p>
-              </div>
+          </div>
+        ))}
+        <div className="flex flex-col gap-4 sm:gap-6 justify-between">
+          <div className="divide-y h-full divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5">
+            <div className="p-6">
+              <p className="text-lg font-medium leading-6 text-gray-900">
+                Additional mover
+              </p>
+              <p className="mt-4">
+                <span className="text-4xl font-bold tracking-tight text-gray-900">
+                  $40
+                </span>{' '}
+                <span className="text-base font-medium text-gray-500">
+                  per hour
+                </span>
+              </p>
+            </div>
+            <div className="px-6 pt-6 pb-8">
+              <p className="flex space-x-3">
+                <CheckIcon
+                  className="h-5 w-5 flex-shrink-0 text-green-500"
+                  aria-hidden="true"
+                />
+                <span className="text-sm text-gray-500">
+                  Rate per hour per moving added to your quoted houry rate if
+                  you request it
+                </span>
+              </p>
+            </div>
+          </div>
+          <div className="divide-y h-full divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5">
+            <div className="p-6">
+              <p className="text-lg font-medium leading-6 text-gray-900">
+                Additional truck
+              </p>
+              <p className="mt-4">
+                <span className="text-4xl font-bold tracking-tight text-gray-900">
+                  $40
+                </span>{' '}
+                <span className="text-base font-medium text-gray-500">
+                  per hour
+                </span>
+              </p>
+            </div>
+            <div className="px-6 pt-6 pb-8">
+              <p className="flex space-x-3">
+                <CheckIcon
+                  className="h-5 w-5 flex-shrink-0 text-green-500"
+                  aria-hidden="true"
+                />
+                <span className="text-sm text-gray-500">
+                  Rate per hour per truck added to your quoted houry rate if you
+                  requested
+                </span>
+              </p>
             </div>
           </div>
         </div>
-      </Container>
-    </section>
+      </div>
+    </Section>
   );
 }

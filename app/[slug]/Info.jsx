@@ -1,27 +1,13 @@
 import Container from '@/ui/Container';
-import Link from 'next/link';
+import Button from '@/ui/Button';
 
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/typography'),
-    ],
-  }
-  ```
-*/
 export default function Info({ city }) {
   return (
-    <section>
+    <section aria-labelledby={`${city.fullName} Info`}>
       <Container className="overflow-hidden py-16">
         <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-prose text-base lg:max-w-none">
-            <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 text-center">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 text-center">
               Fast, Reliable, and Affordable {city.fullName}
             </h2>
           </div>
@@ -57,25 +43,18 @@ export default function Info({ city }) {
                   stress free, convenient and safe!
                 </p>
               </div>
-              <div className="mx-auto mt-10 flex max-w-prose text-base lg:max-w-none">
-                <div className="rounded-md shadow">
-                  <Link
-                    href="#"
-                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700"
-                    title={`${city.fullName} Free Quote`}
-                  >
-                    Get a Quote
-                  </Link>
-                </div>
-                <div className="ml-4 rounded-md shadow">
-                  <Link
-                    href="/pricing"
-                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50"
-                    title={`${city.fullName} Rates`}
-                  >
-                    View Rates
-                  </Link>
-                </div>
+              <div className="mx-auto mt-10 flex max-w-prose text-base lg:max-w-none justify-between sm:justify-start">
+                <Button href="#" size="large" color="primary">
+                  Get a Quote
+                </Button>
+                <Button
+                  href="/pricing"
+                  size="large"
+                  variant="soft"
+                  className="ml-4"
+                >
+                  View Rates
+                </Button>
               </div>
             </div>
             <div className="relative mx-auto mt-12 max-w-prose text-base lg:mt-0 lg:max-w-none">

@@ -3,7 +3,7 @@ export default async function Head() {
     <>
       <meta charSet="UTF-8" />
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-      <title>Local Moving - Phoenix Moving Boston (Free Estimate)</title>
+      <title>Local Movers - Phoenix Moving Boston (Free Estimate)</title>
       <meta
         name="description"
         content="Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states."

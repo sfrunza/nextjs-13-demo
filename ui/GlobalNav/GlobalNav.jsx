@@ -17,6 +17,7 @@ import Logo from '@/ui/Logo';
 import NavLink from './components/NavLink';
 import NavButton from './components/NavButton';
 import MobileMenu from './components/MobileMenu';
+import Button from '@/ui/Button';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -84,13 +85,13 @@ export default function GlobalNav() {
                               className="-m-3 flex items-start rounded-md p-3 hover:bg-palette-background"
                               onClick={() => close()}
                             >
-                              <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p>
+                              <div>
+                              <p className="text-base font-medium text-gray-900">
+                                {item.name}
+                              </p>
+                              <p className="mt-1 text-sm text-gray-500">
+                                {item.description}
+                              </p>
                               </div>
                             </Link>
                           ))}
@@ -138,21 +139,21 @@ export default function GlobalNav() {
                       <div className="overflow-hidden rounded-xl shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {resources.map((item) => (
-                            <a
+                            <Link
                               key={item.name}
                               href={item.href}
                               title={item.name}
                               className="-m-3 flex items-start rounded-md p-3 hover:bg-gray-50"
                             >
-                              <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p>
+                              <div>
+                              <p className="text-base font-medium text-gray-900">
+                                {item.name}
+                              </p>
+                              <p className="mt-1 text-sm text-gray-500">
+                                {item.description}
+                              </p>
                               </div>
-                            </a>
+                            </Link>
                           ))}
                         </div>
                         <div className="bg-gray-50 px-5 py-5 sm:px-8 sm:py-8">
@@ -166,13 +167,13 @@ export default function GlobalNav() {
                                   key={post.id}
                                   className="truncate text-base"
                                 >
-                                  <a
+                                  <Link
                                     href={post.href}
                                     title={post.name}
                                     className="font-medium text-gray-900 hover:text-gray-700"
                                   >
                                     {post.name}
-                                  </a>
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
@@ -232,13 +233,16 @@ export default function GlobalNav() {
               />
               <span className="ml-1">Client login</span>
             </a>
-            <a
+            {/* <a
               href="#"
               title="Book a move"
               className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-palette-secondary-500 px-4 py-2 text-base font-medium text-black shadow-sm hover:bg-palette-secondary-900"
             >
               Book a move
-            </a>
+            </a> */}
+            <Button className="ml-8" color="secondary">
+              Book a move
+            </Button>
           </div>
         </div>
       </div>

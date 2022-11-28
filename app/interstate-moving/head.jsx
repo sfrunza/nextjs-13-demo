@@ -4,7 +4,7 @@ export default async function Head() {
       <meta charSet="UTF-8" />
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       <title>
-        Long Distance Moving - Phoenix Moving Boston (Free Estimate)
+        Long Distance Movers - Phoenix Moving Boston (Free Estimate)
       </title>
       <meta
         name="description"

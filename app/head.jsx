@@ -4,7 +4,8 @@ export default function Head() {
       <meta charSet="UTF-8" />
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       <title>
-        Phoenix Moving Boston - 🚚 Make Moving Chill (Free Estimate)
+        Phoenix Moving & Storage - 🚚 Make Moving in Boston Chill (Free
+        Estimate)
       </title>
       <meta
         name="description"

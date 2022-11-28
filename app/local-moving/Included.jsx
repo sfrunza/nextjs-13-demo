@@ -45,10 +45,10 @@ export default function Included() {
             >
               <dt className="flex items-center">
                 <CheckIcon
-                  className="absolute h-4 w-4 sm:h-6 sm:w-6 text-green-500"
+                  className="absolute h-6 w-6 text-green-500"
                   aria-hidden="true"
                 />
-                <p className="ml-9 text-xs sm:text-base font-medium leading-6 text-gray-900">
+                <p className="ml-9 text-base font-semibold leading-6 text-gray-900">
                   {feature.name}
                 </p>
               </dt>

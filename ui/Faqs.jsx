@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import Container from '@/ui/Container';
+import Section from '@/ui/Section';
 import SectionHeader from './SectionHeader';
 
 const faqs = [
@@ -56,11 +56,8 @@ const faqs = [
 
 export default function Faqs() {
   return (
-    <section
-      aria-labelledby="faqs-title"
-      className="relative overflow-hidden bg-slate-50 py-20 sm:py-32"
-    >
-      <Image
+    <Section label="phoenix-moving-faqs">
+      {/* <Image
         className="absolute top-0 left-1/2 max-w-none translate-x-[-30%] -translate-y-1/4"
         src="/background-faqs.jpg"
         alt="nice background image"
@@ -68,43 +65,42 @@ export default function Faqs() {
         height={946}
         unoptimized
         title="background image"
+      /> */}
+      <SectionHeader
+        title="Frequently asked questions"
+        subtitle={
+          <>
+            If you have anything else you want to ask,{' '}
+            <Link
+              title="Reach out to us"
+              href="mailto:info@gophoenixmoving.com"
+              className="text-blue-600"
+            >
+              reach out to us
+            </Link>
+            .
+          </>
+        }
       />
-      <Container className="relative">
-        <SectionHeader
-          title="Frequently asked questions"
-          subtitle={
-            <>
-              If you have anything else you want to ask,{' '}
-              <Link
-                href="mailto:info@gophoenixmoving.com"
-                className="text-gray-900 underline"
-              >
-                reach out to us
-              </Link>
-              .
-            </>
-          }
-        />
-        <ul
-          role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:max-w-none lg:grid-cols-3"
-        >
-          {faqs.map((column, columnIndex) => (
-            <li key={columnIndex}>
-              <ul role="list" className="space-y-10">
-                {column.map((faq, faqIndex) => (
-                  <li key={faqIndex}>
-                    <h3 className="text-lg font-semibold leading-6 text-gray-900">
-                      {faq.question}
-                    </h3>
-                    <p className="mt-4 text-sm text-gray-700">{faq.answer}</p>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </Container>
-    </section>
+      <ul
+        role="list"
+        className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:max-w-none lg:grid-cols-3"
+      >
+        {faqs.map((column, columnIndex) => (
+          <li key={columnIndex}>
+            <ul role="list" className="space-y-10">
+              {column.map((faq, faqIndex) => (
+                <li key={faqIndex}>
+                  <h3 className="text-lg font-semibold leading-6 text-gray-900">
+                    {faq.question}
+                  </h3>
+                  <p className="mt-4 text-sm text-gray-700">{faq.answer}</p>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </Section>
   );
 }

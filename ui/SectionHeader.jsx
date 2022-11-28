@@ -1,38 +1,35 @@
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
+import clsx from 'clsx';
 
 const SectionHeader = ({
   titleClassName,
   subtitleClassName,
   title,
   subtitle,
+  start,
 }) => {
   return (
-    <div className="mx-auto max-w-3xl text-center mb-16 sm:mb-20">
-      <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900">
+    <div
+      className={
+        start ? 'mb-8' : 'mx-auto max-w-3xl text-center mb-16 sm:mb-20'
+      }
+    >
+      <h2
+        className={clsx(
+          'text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900',
+          titleClassName
+        )}
+      >
         {title}
       </h2>
-      <p className="mt-2 text-md sm:text-lg text-gray-700">{subtitle}</p>
+      <p
+        className={clsx(
+          'mt-2 text-md sm:text-lg text-gray-700',
+          subtitleClassName
+        )}
+      >
+        {subtitle}
+      </p>
     </div>
-    // <div className="max-w-2xl m-auto text-center mb-12 sm:mb-16">
-    //   <h2
-    //     className={classNames(
-    //       'text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 sm:text-center',
-    //       titleClassName
-    //     )}
-    //   >
-    //     {title}
-    //   </h2>
-    //   <p
-    //     className={classNames(
-    //       'mt-2.5 text-lg text-gray-500',
-    //       subtitleClassName
-    //     )}
-    //   >
-    //     {subtitle}
-    //   </p>
-    // </div>
   );
 };
 

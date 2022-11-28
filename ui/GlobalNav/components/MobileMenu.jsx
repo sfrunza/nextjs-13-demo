@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { services, resources } from '@/lib/navigation';
 import Logo from '@/ui/Logo';
+import Button from '@/ui/Button';
 
 function MenuIcon(props) {
   return (
@@ -90,33 +91,28 @@ export default function MobileMenu({ invert }) {
                     >
                       Pricing
                     </Link>
-
-                    <a
-                      href="#"
-                      title="Docs"
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
-                    >
-                      Docs
-                    </a>
                     {resources.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
                         title={item.name}
                         className="text-base font-medium text-gray-900 hover:text-gray-700"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                   <div>
-                    <a
+                    {/* <a
                       href="#"
                       title="Book a move"
                       className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                     >
                       Book a move
-                    </a>
+                    </a> */}
+                    <Button href="#" color='primary' className='w-full'>
+                    Book a move
+                      </Button>
                     <p className="mt-6 text-center text-base font-medium text-gray-500">
                       Existing customer?{' '}
                       <a
