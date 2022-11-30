@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import Section from '@/ui/Section';
 import SectionHeader from '@/ui/SectionHeader';
 import Map from './Map';
@@ -73,7 +73,7 @@ export default function Info() {
               ))}
             </dl>
             <div className="mt-10 mb-2">
-              <Link
+              <a
                 href="/pricing"
                 title="Moving Pricing Plans"
                 className="inline-flex items-center rounded-md border border-transparent px-4 py-3 text-base font-medium leading-4 text-blue-600 hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -83,7 +83,7 @@ export default function Info() {
                   {' '}
                   &rarr;
                 </span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

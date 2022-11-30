@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { services, resources } from '@/lib/navigation';
 import Logo from '@/ui/Logo';
 import Button from '@/ui/Button';
@@ -67,7 +67,7 @@ export default function MobileMenu({ invert }) {
                   <div className="mt-6">
                     <nav className="grid gap-y-8">
                       {services.map((item) => (
-                        <Link
+                        <a
                           key={item.name}
                           href={item.href}
                           title={item.name}
@@ -77,29 +77,29 @@ export default function MobileMenu({ invert }) {
                           <span className="ml-3 text-base font-medium text-gray-900">
                             {item.name}
                           </span>
-                        </Link>
+                        </a>
                       ))}
                     </nav>
                   </div>
                 </div>
                 <div className="space-y-6 py-6 px-5">
                   <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                    <Link
+                    <a
                       href="#"
                       title="Pricing"
                       className="text-base font-medium text-gray-900 hover:text-gray-700"
                     >
                       Pricing
-                    </Link>
+                    </a>
                     {resources.map((item) => (
-                      <Link
+                      <a
                         key={item.name}
                         href={item.href}
                         title={item.name}
                         className="text-base font-medium text-gray-900 hover:text-gray-700"
                       >
                         {item.name}
-                      </Link>
+                      </a>
                     ))}
                   </div>
                   <div>
@@ -110,9 +110,9 @@ export default function MobileMenu({ invert }) {
                     >
                       Book a move
                     </a> */}
-                    <Button href="#" color='primary' className='w-full'>
-                    Book a move
-                      </Button>
+                    <Button href="#" color="primary" className="w-full">
+                      Book a move
+                    </Button>
                     <p className="mt-6 text-center text-base font-medium text-gray-500">
                       Existing customer?{' '}
                       <a

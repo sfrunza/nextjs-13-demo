@@ -1,9 +1,9 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import Image from 'next/image';
 
 const Logo = ({ invert = true, width = 150, height = 150 }) => {
   return (
-    <Link href="/" title="Phoenix Moving">
+    <a href="/" title="Phoenix Moving">
       <span className="sr-only">Phoenix Moving Boston</span>
       <Image
         src={invert ? '/logos/logo.png' : '/logos/logo-white.png'}
@@ -14,7 +14,7 @@ const Logo = ({ invert = true, width = 150, height = 150 }) => {
         className="h-8 w-auto sm:h-10"
         title="Phoenix Moving Boston"
       />
-    </Link>
+    </a>
   );
 };
 

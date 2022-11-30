@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
 import clsx from 'clsx';
 
 const sizeStyles = {
@@ -57,7 +57,7 @@ const Button = forwardRef(function Button(
   );
 
   return href ? (
-    <Link ref={ref} href={href} className={className} {...props} />
+    <a ref={ref} href={href} className={className} {...props} />
   ) : (
     <button ref={ref} className={className} {...props} />
   );

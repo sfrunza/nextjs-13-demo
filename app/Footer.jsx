@@ -1,12 +1,8 @@
+import { services } from '@/lib/navigation';
 const navigation = {
-  services: [
-    { name: 'Loacl Moving', href: '#' },
-    { name: 'Interstate Moving', href: '#' },
-    { name: 'Packing Services', href: '#' },
-    { name: 'Storage Solution', href: '#' },
-  ],
+  services,
   support: [
-    { name: 'Pricing', href: '#' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'FAQ', href: '#' },
     { name: 'Our Work', href: '#' },
   ],

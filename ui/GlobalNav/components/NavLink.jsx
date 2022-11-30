@@ -1,9 +1,9 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import clsx from 'clsx';
 
 export default function NavLink({ label, href, invert }) {
   return (
-    <Link
+    <a
       href={href}
       className={clsx(
         'text-base font-medium hover:text-palette-secondary-500 transition-all duration-150 ease-in',
@@ -15,6 +15,6 @@ export default function NavLink({ label, href, invert }) {
       title={label}
     >
       {label}
-    </Link>
+    </a>
   );
 }

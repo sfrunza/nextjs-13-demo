@@ -129,7 +129,7 @@ export default async function PricingTable() {
           <tbody className="divide-y divide-gray-200 border-t border-gray-200">
             {data.map((row) => {
               return (
-                <tr>
+                <tr key={row.crew}>
                   <th
                     className="py-8 px-6 text-left align-top text-md font-medium text-gray-900"
                     scope="row"

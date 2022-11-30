@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import { cities } from '@/lib/citiesData';
 import Section from './Section';
 import SectionHeader from '@/ui/SectionHeader';
@@ -14,13 +14,13 @@ export default async function CitiesSection() {
               key={i}
               className="col-span-1 flex justify-center bg-gray-50 py-1 px-1"
             >
-              <Link
+              <a
                 href={`/${city.slug}`}
                 title={city.fullName}
                 className="hover:underline text-xs sm:text-sm text-gray-700"
               >
                 {city.shortName}
-              </Link>
+              </a>
             </div>
           );
         })}

@@ -2,11 +2,9 @@
 
 import { Fragment, useState, useEffect } from 'react';
 import { Popover, Transition } from '@headlessui/react';
-import { XMarkIcon, UserIcon } from '@heroicons/react/24/outline';
-import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import { UserIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
-import Link from 'next/link';
-import Image from 'next/image';
+// import Link from 'next/link';
 import {
   services,
   callsToAction,
@@ -78,7 +76,7 @@ export default function GlobalNav() {
                       <div className="overflow-hidden rounded-xl shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {services.map((item) => (
-                            <Link
+                            <a
                               key={item.name}
                               href={item.href}
                               title={item.name}
@@ -86,14 +84,14 @@ export default function GlobalNav() {
                               onClick={() => close()}
                             >
                               <div>
-                              <p className="text-base font-medium text-gray-900">
-                                {item.name}
-                              </p>
-                              <p className="mt-1 text-sm text-gray-500">
-                                {item.description}
-                              </p>
+                                <p className="text-base font-medium text-gray-900">
+                                  {item.name}
+                                </p>
+                                <p className="mt-1 text-sm text-gray-500">
+                                  {item.description}
+                                </p>
                               </div>
-                            </Link>
+                            </a>
                           ))}
                         </div>
                         <div className="space-y-6 bg-gray-50 px-5 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
@@ -139,21 +137,21 @@ export default function GlobalNav() {
                       <div className="overflow-hidden rounded-xl shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {resources.map((item) => (
-                            <Link
+                            <a
                               key={item.name}
                               href={item.href}
                               title={item.name}
                               className="-m-3 flex items-start rounded-md p-3 hover:bg-gray-50"
                             >
                               <div>
-                              <p className="text-base font-medium text-gray-900">
-                                {item.name}
-                              </p>
-                              <p className="mt-1 text-sm text-gray-500">
-                                {item.description}
-                              </p>
+                                <p className="text-base font-medium text-gray-900">
+                                  {item.name}
+                                </p>
+                                <p className="mt-1 text-sm text-gray-500">
+                                  {item.description}
+                                </p>
                               </div>
-                            </Link>
+                            </a>
                           ))}
                         </div>
                         <div className="bg-gray-50 px-5 py-5 sm:px-8 sm:py-8">
@@ -167,13 +165,13 @@ export default function GlobalNav() {
                                   key={post.id}
                                   className="truncate text-base"
                                 >
-                                  <Link
+                                  <a
                                     href={post.href}
                                     title={post.name}
                                     className="font-medium text-gray-900 hover:text-gray-700"
                                   >
                                     {post.name}
-                                  </Link>
+                                  </a>
                                 </li>
                               ))}
                             </ul>
