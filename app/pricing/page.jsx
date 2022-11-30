@@ -3,6 +3,8 @@ import Hero from '@/ui/Hero';
 import CallToAction from '@/ui/CallToAction';
 import InterstatePrices from './InterstatePrices';
 import PricingTable from './PricingTable';
+import PackingItems from '@/ui/PackingItems';
+import CTA from '@/ui/CTA';
 
 export default async function PricingPage() {
   return (
@@ -11,7 +13,8 @@ export default async function PricingPage() {
       <PricingTable />
       <Divider />
       <InterstatePrices />
-      <CallToAction />
+      <PackingItems />
+      <CTA />
     </>
   );
 }

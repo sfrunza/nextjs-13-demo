@@ -104,18 +104,20 @@ export default function Contact() {
                 </dd>
               </div>
             </dl>
+            <p className="mt-8 text-gray-500">Follow us</p>
             <ul
               role="list"
-              className="mt-8 flex space-x-3 sm:space-x-12 flex-wrap"
+              className="mt-2 flex space-x-3 sm:space-x-12 flex-wrap"
             >
               {social.map((item) => {
                 return (
                   <li key={item.name}>
                     <a
-                      className="text-gray-500 hover:text-gray-400"
+                      className="text-gray-500 hover:text-palette-primary-500 transition-all duration-150 ease-in"
                       href={item.href}
-                      target="_blank"
                       title={item.name}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <span className="sr-only">{item.name}</span>
                       <item.icon className="h-7 w-7" aria-hidden="true" />
@@ -123,6 +125,33 @@ export default function Contact() {
                   </li>
                 );
               })}
+              {/* <li>
+                <a
+                  href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fnextjs-13-demo-psi.vercel.app%2F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Share on Facebook
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fnextjs-13-demo-psi.vercel.app%2F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Share on Twitter
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/sharing/share-offsite/&url=https%3A%2F%2Fnextjs-13-demo-psi.vercel.app%2F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Share on LinkedIn
+                </a>
+              </li> */}
             </ul>
           </div>
         </div>

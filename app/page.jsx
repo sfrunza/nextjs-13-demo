@@ -109,7 +109,7 @@ const schema1 = {
 const schema2 = {
   '@context': 'http://schema.org',
   '@type': 'BreadcrumbList',
-  name: 'Phonix Moving Company',
+  name: 'Phonix Moving Boston',
   itemListElement: [
     {
       '@type': 'ListItem',

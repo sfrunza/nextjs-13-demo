@@ -2,30 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* @font-face {
-    font-family: 'Inter';
-    font-weight: 100 900;
-    font-display: block;
-    font-style: normal;
-    font-named-instance: 'Regular';
-    src: url('/fonts/Inter-roman.var.woff2') format('woff2');
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    display: none;
   }
-  @font-face {
-    font-family: 'Inter';
-    font-weight: 100 900;
-    font-display: block;
-    font-style: italic;
-    font-named-instance: 'Italic';
-    src: url('/fonts/Inter-italic.var.woff2') format('woff2');
-  }
+}
   
-  
-  #__next {
-    min-height: 100%;
-  }
-   */
-
-   body {
-    letter-spacing: 0.5px;
-   }
+body {
+  letter-spacing: 0.5px;
+}

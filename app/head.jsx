@@ -11,6 +11,22 @@ export default function Head() {
         name="description"
         content="Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states."
       />
+      <meta
+        property="og:title"
+        content="Phoenix Moving & Storage - 🚚 Make Moving in Boston Chill (FreeEstimate)"
+      />
+      <meta
+        property="og:description"
+        content="Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states."
+      />
+      <meta
+        property="og:url"
+        content="https://nextjs-13-demo-psi.vercel.app/"
+      />
+      <meta
+        property="og:image"
+        content="https://nextjs-13-demo-psi.vercel.app/_next/image?url=%2Fhome.png&w=3840&q=75"
+      />
 
       <meta name="robots" content="index,follow" />
       <meta
@@ -19,22 +35,17 @@ export default function Head() {
       />
 
       {/* Twitter Card */}
-      {/* <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@nytimesbits" />
-      <meta name="twitter:creator" content="@nickbilton" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@phoenix_moving" />
       <meta
-        property="og:url"
-        content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/"
+        name="twitter:title"
+        content="Phoenix Moving & Storage - 🚚 Make Moving in Boston Chill (FreeEstimate)"
       />
       <meta
-        property="og:title"
-        content="Phoenix Moving Boston - 🚚 Make Moving Chill (FREE ESTIMATE)"
-      />
-      <meta
-        property="og:description"
+        name="twitter:description"
         content="Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states."
       />
-      <meta property="og:image" content="/twittercard.png" /> */}
+      <meta name="twitter:image" content="/twittercard.png" />
       {/* End Twitter Card */}
 
       <link rel="icon" href="/favicon.ico" precedence="default" />
