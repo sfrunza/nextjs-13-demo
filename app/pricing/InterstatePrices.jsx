@@ -7,41 +7,49 @@ const cities = [
     name: 'New York, NY',
     price: 950,
     imageUrl: '',
+    url: '#',
   },
   {
     name: 'Charlotte, NC',
     price: 2200,
     imageUrl: '',
+    url: '#',
   },
   {
     name: 'Philadelphia, PA',
     price: 1300,
     imageUrl: '',
+    url: '#',
   },
   {
     name: 'Miami, FL',
     price: 4000,
     imageUrl: '',
+    url: '/boston-miami-movers',
   },
   {
     name: 'Washington, DC.',
     price: 1500,
     imageUrl: '',
+    url: '#',
   },
   {
     name: 'Austin, TX',
     price: 3600,
     imageUrl: '',
+    url: '#',
   },
   {
     name: 'Chicago, IL',
     price: 3200,
     imageUrl: '',
+    url: '/boston-chicago-movers',
   },
   {
     name: 'Los Angeles, CA',
     price: 8900,
     imageUrl: '',
+    url: '/boston-los-angeles-movers',
   },
 ];
 
@@ -100,7 +108,7 @@ export default function InterstatePrices() {
             {/* </div> */}
             <div className="min-w-0 flex-1">
               <a
-                href="#"
+                href={city.url}
                 className="focus:outline-none flex justify-between items-center px-6 py-6"
               >
                 <span className="absolute inset-0" aria-hidden="true" />

@@ -29,7 +29,8 @@ export default function Partners() {
                 width={90}
                 className="grayscale hover:grayscale-0 transition-all duration-150 ease-in"
                 src="/partners/google.png"
-                alt="Google"
+                alt="Google logo"
+                title="Google"
               />
               <ArrowTopRightOnSquareIcon className="w-3 h-3 ml-1 text-gray-700" />
             </a>
@@ -47,28 +48,23 @@ export default function Partners() {
                 width={80}
                 className="grayscale hover:grayscale-0 transition-all duration-150 ease-in"
                 src="/partners/yelp.png"
-                alt="Yelp"
+                alt="Yelp logo"
+                title="Better Business Bureau"
               />
               <ArrowTopRightOnSquareIcon className="w-3 h-3 ml-1 text-gray-700" />
             </a>
           </div>
           <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-            <a
-              href="#"
-              target="_blank"
-              title=""
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
+            <p className="flex items-center">
               <Image
                 height={46}
                 width={90}
                 className="grayscale hover:grayscale-0 transition-all duration-150 ease-in"
                 src="/partners/bbb.png"
                 alt="Better Business Bureau"
+                title="Better Business Bureau"
               />
-              <ArrowTopRightOnSquareIcon className="w-3 h-3 ml-1 text-gray-700" />
-            </a>
+            </p>
           </div>
           <div className="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
             <a
@@ -83,28 +79,23 @@ export default function Partners() {
                 width={110}
                 className="grayscale hover:grayscale-0 transition-all duration-150 ease-in"
                 src="/partners/thumbtack.svg"
-                alt="Thumbtack"
+                alt="Thumbtack logo"
+                title="Thumbtack"
               />
               <ArrowTopRightOnSquareIcon className="w-3 h-3 ml-1 text-gray-700" />
             </a>
           </div>
           <div className="col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
-            <a
-              href="#"
-              target="_blank"
-              title=""
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
+            <p className="flex items-center">
               <Image
-                height={23}
-                width={80}
+                height={33}
+                width={55}
                 className="grayscale hover:grayscale-0 transition-all duration-150 ease-in"
-                src="/partners/unpakt.png"
-                alt="Angi"
+                src="/partners/angi.png"
+                alt="Angi logo"
+                title="Angi"
               />
-              <ArrowTopRightOnSquareIcon className="w-3 h-3 ml-1 text-gray-700" />
-            </a>
+            </p>
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ export default async function InstagramFeeds() {
     <Section label="ig-feed">
       <SectionHeader title="Follow us on Instagram" />
       <div className="mt-6 grid grid-cols-3 gap-x-2 gap-y-2 md:gap-x-6 md:gap-y-6 md:grid-cols-4">
-        {feeds.slice(0, 6).map((feed, index) => {
+        {feeds.slice(0, 12).map((feed, index) => {
           return (
             <div key={feed.id} className="group relative">
               <div className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg bg-gray-100 h-full">
@@ -30,23 +30,38 @@ export default async function InstagramFeeds() {
                     key={index}
                     src={feed.media_url}
                     alt={feed.caption || 'instagram image'}
+                    title={feed.caption}
                   />
                 ) : (
                   <>
-                    <video
+                    {/* <video
+                      controls
+                      autoplay
                       className="object-cover object-center"
+                    >
+                      <source src={feed.media_url} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video> */}
+                    <video
+                      className="object-cover object-center rounded-lg"
                       key={index}
                       src={feed.media_url}
                       alt={feed.caption || 'instagram video'}
+                      // playsInline
                       type="video/mp4"
-                      //   autoPlay
-                      //   loop
-                      //   muted
+                      autoPlay
+                      // loop
+                      muted
                     />
                     <PlayIcon className="w-4 h-4 md:w-6 md:h-6 text-white relative float-right stroke-2" />
                   </>
                 )}
-                <a href={feed.permalink} target="_blank" rel="noreferrer">
+                <a
+                  href={feed.permalink}
+                  target="_blank"
+                  rel="noreferrer"
+                  title={feed.caption}
+                >
                   <div className="absolute bg-[#0000004d] hover:opacity-100 top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-150 ease-in-out">
                     <span className="w-full h-full flex items-center justify-center">
                       <svg

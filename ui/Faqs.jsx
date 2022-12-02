@@ -7,9 +7,9 @@ import SectionHeader from './SectionHeader';
 const faqs = [
   [
     {
-      question: 'Should I buy moving insurance?',
+      question: 'Are you licensed and insured?',
       answer:
-        'While most moving companies offer $0.60 per pound for a damaged or lost item, Phoenix Movers offer value protection up to $20,000 in household goods coverage at no extra charge.',
+        'Yes, we are fully licensed with the Massachusetts Department of Public Utilities and we carry Cargo, Motor Vehicle, and General Liability Insurance.',
     },
     {
       question: 'Is the price base on the hours?',

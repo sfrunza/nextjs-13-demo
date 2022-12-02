@@ -47,6 +47,7 @@ export default function Incentive() {
                     height={64}
                     src={incentive.imageSrc}
                     alt={incentive.name}
+                    title={incentive.name}
                   />
                 ) : (
                   <incentive.imageSrc className="mx-auto h-16 w-16 stroke-[0.7px]" />

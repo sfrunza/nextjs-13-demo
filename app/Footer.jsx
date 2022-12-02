@@ -1,6 +1,6 @@
 import { services } from '@/lib/navigation';
-import { cities } from '@/lib/citiesData';
 import { states } from '@/lib/statesData';
+import PopularCities from '@/ui/PopularCities';
 
 export async function interstateCities(s) {
   let ct = [];
@@ -91,11 +91,18 @@ export default async function Footer() {
         Footer
       </h2>
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+        <div className="flex gap-1 flex-wrap mb-4">
+          <PopularCities />
+        </div>
         <div className="flex gap-1 flex-wrap mb-8">
           <p className="text-white text-xs font-semibold"> Top Cities</p>
           {interCities.slice(0, 15).map((city) => {
             return (
-              <a className="text-gray-400 text-xs" href={city.slug}>
+              <a
+                className="text-gray-400 text-xs"
+                href={city.slug}
+                title={`Moving From Boston to ${city.name}`}
+              >
                 |<span className="hover:underline ml-1">{city.name}</span>
               </a>
             );
