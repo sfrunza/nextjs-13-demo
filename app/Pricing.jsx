@@ -94,7 +94,7 @@ export default function Pricing() {
                 </span>
               </p>
               <Button href={tier.href} color="primary" className="mt-8 w-full">
-                Book {tier.name}
+                Get a Quote
               </Button>
             </div>
             <div className="px-6 pt-6 pb-8">

@@ -21,7 +21,8 @@
     "net": "^1.0.2",
     "next": "13.0.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-ig-feed": "^1.7.0"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",

@@ -7,7 +7,7 @@ import CallToAction from '@/ui/CallToAction';
 export default function InterstateMoving() {
   return (
     <>
-      <Hero image="/prices.jpg" title="Long Disatnce Moving" />
+      <Hero image="/prices.jpg" title="Long Disatnce Movers" />
       <Info />
       <Divider />
       <Locations />

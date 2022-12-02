@@ -1,48 +1,71 @@
-export default function Head() {
+const URL = 'https://nextjs-13-demo-psi.vercel.app';
+
+export default async function Head() {
   return (
     <>
       <meta charSet="UTF-8" />
+      <meta name="theme-color" content="#fff" />
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       <title>
         Moving Prices & Rates - Phoenix Moving Boston (Free Estimate)
       </title>
       <meta
         name="description"
-        content="Phoneix Moving provides the best moving prices and services in Greater Boston Area"
+        content="Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states."
       />
-      <meta name="keywords" content="" />
       <meta
         property="og:title"
         content="Moving Prices & Rates - Phoenix Moving Boston (Free Estimate)"
       />
       <meta
         property="og:description"
-        content="Phoneix Moving provides the best moving prices and services in Greater Boston Area"
+        content="Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states."
       />
-
-      <link
-        rel="canonical"
-        href="https://nextjs-13-demo-psi.vercel.app/pricing"
-        precedence="default"
+      <meta property="og:url" content={`${URL}/pricing`} />
+      <meta
+        property="og:image"
+        content={`${URL}/_next/image?url=%2Fhome.png&w=3840&q=75`}
       />
 
       <meta name="robots" content="index,follow" />
-
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="" />
-      <meta property="og:image" content="" />
-      <meta property="og:image:secure_url" content="" />
-      <meta property="og:image:type" content="image/jpeg" />
-      <meta property="og:image:width" content="2500" />
-      <meta property="og:image:height" content="600" />
       <meta
-        property="og:image:alt"
-        content="Pricing - Phoenix Moving Boston (FREE ESTIMATE)"
+        name="keywords"
+        content="boston to ny moving company, from boston to new york moving, Boston movers, Boston moving company, Boston moving services, moving company in boston, boston moving storage company, Boston relocation company, Boston relocation service, Boston office relocation, ma relocation, massachusets relocation, massachusets relocation company, Massachusetts storage, boston storage company, massachusets moving, massachusets moving company, moving boston storage, moving companies in boston, commercial boston movers, moving packing supplies, student moving discounts, affordable moving company"
       />
+
+      {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="" />
-      <meta name="twitter:creator" content="@PhoenixMoving" />
-      <meta name="twitter:image" content="" />
+      <meta name="twitter:site" content="@phoenix_moving" />
+      <meta
+        name="twitter:title"
+        content="Moving Prices & Rates - Phoenix Moving Boston (Free Estimate)"
+      />
+      <meta
+        name="twitter:description"
+        content="Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states."
+      />
+      <meta name="twitter:image" content="/twittercard.png" />
+      {/* End Twitter Card */}
+
+      <link rel="canonical" href={`${URL}/pricing`} precedence="default" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
+      <link
+        rel="shortcut icon"
+        type="image/x-icon"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <link
+        rel="shortcut icon"
+        type="image/x-icon"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
+      <link rel="manifest" href="/site.webmanifest" />
     </>
   );
 }

@@ -27,12 +27,16 @@ const incentives = [
 export default function Incentive() {
   return (
     <Section label="phoenix-moving-incentives">
-      <SectionHeader title="We built our business on customer service" />
+      <SectionHeader title="Why book with Phoenix Moving Boston?" />
       <div className="mx-auto mt-12 grid max-w-sm grid-cols-1 gap-y-10 gap-x-8 sm:max-w-none lg:grid-cols-3">
         {incentives.map((incentive, i) => (
           <div
             key={incentive.name}
-            className="text-center sm:flex sm:text-left lg:block lg:text-center"
+            className={
+              i === 1
+                ? 'text-center sm:flex sm:text-left lg:block lg:text-center lg:relative bottom-[4px]'
+                : 'text-center sm:flex sm:text-left lg:block lg:text-center'
+            }
           >
             <div className="sm:flex-shrink-0">
               <div className="flow-root">
@@ -50,7 +54,13 @@ export default function Incentive() {
               </div>
             </div>
             <div className="mt-3 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0">
-              <h3 className="text-base font-semibold text-gray-900">
+              <h3
+                className={
+                  i === 1
+                    ? 'text-xl font-semibold text-gray-900'
+                    : 'text-base font-semibold text-gray-900'
+                }
+              >
                 {incentive.name}
               </h3>
               {/* <p className="mt-2 text-sm text-gray-500">

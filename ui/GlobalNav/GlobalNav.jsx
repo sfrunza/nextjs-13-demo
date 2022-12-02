@@ -147,9 +147,9 @@ export default function GlobalNav() {
                                 <p className="text-base font-medium text-gray-900">
                                   {item.name}
                                 </p>
-                                <p className="mt-1 text-sm text-gray-500">
+                                {/* <p className="mt-1 text-sm text-gray-500">
                                   {item.description}
-                                </p>
+                                </p> */}
                               </div>
                             </a>
                           ))}

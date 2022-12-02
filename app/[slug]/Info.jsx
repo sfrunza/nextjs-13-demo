@@ -12,7 +12,7 @@ export default function Info({ city }) {
             </h2>
           </div>
           <div className="relative z-10 mx-auto max-w-prose text-base lg:mx-0 lg:max-w-5xl lg:pr-72">
-            <p className="text-lg text-gray-500">
+            <p className="text-gray-500">
               <b>Phoenix Moving</b> team is covering end-to-end moving and
               storage services in <b>{`${city.shortName}, ${city.state}`}</b>{' '}
               and entire state of Massachusetts.

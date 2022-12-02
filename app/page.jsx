@@ -13,6 +13,8 @@ import Contact from '@/ui/Contact';
 import Script from 'next/script';
 import CitiesSection from '@/ui/CitiesSection';
 import Incentive from '@/ui/Incentive';
+import Partners from '@/ui/Partners';
+import InstagramFeeds from '@/ui/InstagramFeed';
 
 const schema1 = {
   '@context': 'https://schema.org',
@@ -159,9 +161,9 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema3) }}
       />
       <Hero image={'/home.png'} title="Boston Moving Company" />
+      <Partners />
       <Incentive />
       <Pricing />
-      {/* <Divider /> */}
       {/* <Test /> */}
       <Services />
       {/* <Features /> */}
@@ -169,6 +171,10 @@ export default function Home() {
       <Suspense fallback="loading...">
         <Reviews />
       </Suspense>
+      <Suspense fallback="loading...">
+        <InstagramFeeds />
+      </Suspense>
+      <Divider />
       <Faqs />
       <Divider />
       <CitiesSection />

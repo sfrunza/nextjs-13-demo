@@ -1,4 +1,16 @@
 import { services } from '@/lib/navigation';
+import { cities } from '@/lib/citiesData';
+import { states } from '@/lib/statesData';
+
+export async function interstateCities(s) {
+  let ct = [];
+
+  let f = states.filter((s) => s.cities);
+  f.map((c) => c.cities.map((s) => ct.push(s)));
+
+  return ct;
+}
+
 const navigation = {
   services,
   support: [
@@ -71,13 +83,24 @@ const navigation = {
   ],
 };
 
-export default function Footer() {
+export default async function Footer() {
+  let interCities = await interstateCities(states);
   return (
     <footer className="bg-gray-900" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+        <div className="flex gap-1 flex-wrap mb-8">
+          <p className="text-white text-xs font-semibold"> Top Cities</p>
+          {interCities.slice(0, 15).map((city) => {
+            return (
+              <a className="text-gray-400 text-xs" href={city.slug}>
+                |<span className="hover:underline ml-1">{city.name}</span>
+              </a>
+            );
+          })}
+        </div>
         <div className="pb-8 xl:grid xl:grid-cols-4 xl:gap-8">
           <div className="grid grid-cols-2 gap-8 xl:col-span-4">
             <div className="md:grid md:grid-cols-2 md:gap-8">

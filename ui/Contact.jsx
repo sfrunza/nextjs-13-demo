@@ -104,7 +104,7 @@ export default function Contact() {
                 </dd>
               </div>
             </dl>
-            <p className="mt-8 text-gray-500">Follow us</p>
+            <p className="mt-8 text-gray-500">Follow us on Social Media</p>
             <ul
               role="list"
               className="mt-2 flex space-x-3 sm:space-x-12 flex-wrap"
@@ -125,7 +125,7 @@ export default function Contact() {
                   </li>
                 );
               })}
-              <li>
+              {/* <li>
                 <a
                   href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fnextjs-13-demo-psi.vercel.app%2F"
                   target="_blank"
@@ -151,7 +151,7 @@ export default function Contact() {
                 >
                   Share on LinkedIn
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

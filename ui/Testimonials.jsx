@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import clsx from 'clsx';
 import { useInView } from 'framer-motion';
 import Image from 'next/image';
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 // import Link from 'next/link';
 import Section from '@/ui/Section';
 
@@ -241,7 +242,7 @@ export default function Testimonials({ reviews, totalReviews }) {
         </h2>
       </div>
       {reviews && reviews.length > 0 && <ReviewGrid reviews={reviews} />}
-      <div className="flex justify-center mt-10">
+      <div className="flex items-center justify-center mt-10">
         <a
           title="Google Reviews"
           target="_blank"
@@ -249,10 +250,11 @@ export default function Testimonials({ reviews, totalReviews }) {
           className="inline-flex items-center rounded-md border border-transparent px-4 py-3 text-base font-medium leading-4 text-blue-600 hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
         >
           {totalReviews} Google Reviews
-          <span aria-hidden="true" className="ml-2">
+          <ArrowTopRightOnSquareIcon className="w-3 h-3 ml-1 text-blue-600" />
+          {/* <span aria-hidden="true" className="ml-2">
             {' '}
             &rarr;
-          </span>
+          </span> */}
         </a>
       </div>
     </Section>
