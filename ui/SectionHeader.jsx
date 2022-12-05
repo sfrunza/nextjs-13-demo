@@ -21,12 +21,7 @@ const SectionHeader = ({
       >
         {title}
       </h2>
-      <p
-        className={clsx(
-          'mt-2 text-md sm:text-lg text-gray-700',
-          subtitleClassName
-        )}
-      >
+      <p className={clsx('mt-2  sm:text-lg text-gray-700', subtitleClassName)}>
         {subtitle}
       </p>
     </div>

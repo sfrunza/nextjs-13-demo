@@ -10,7 +10,7 @@ export default function NavButton({ label, href, invert }) {
   return (
     <Popover.Button
       className={clsx(
-        'group inline-flex items-center rounded-md text-base font-medium hover:text-palette-secondary-500 transition-all duration-150 ease-in',
+        'group inline-flex items-center rounded-md  font-medium hover:text-palette-secondary-500 transition-all duration-150 ease-in',
         {
           'text-gray-900  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2':
             invert,

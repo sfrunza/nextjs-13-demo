@@ -20,7 +20,7 @@ const incentives = [
     name: 'Licensed, Bonded and Insured',
     imageSrc: ClipboardDocumentCheckIcon,
     description:
-      'Phoenix Moving is Fully Licensed and Insured and carries a <a href="#" class="mt-2 text-sm text-blue-600">United States Department of Transportation</a>.',
+      'Phoenix Moving is Fully Licensed and Insured and carries a <a href="#" title="United States Department of Transportation" class="mt-2 text-sm text-blue-600">United States Department of Transportation</a>.',
   },
 ];
 
@@ -59,7 +59,7 @@ export default function Incentive() {
                 className={
                   i === 1
                     ? 'text-xl font-semibold text-gray-900'
-                    : 'text-base font-semibold text-gray-900'
+                    : ' font-semibold text-gray-900'
                 }
               >
                 {incentive.name}

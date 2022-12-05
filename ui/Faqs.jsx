@@ -72,7 +72,7 @@ export default function Faqs() {
           <>
             If you have anything else you want to ask,{' '}
             <Link
-              title="Reach out to us"
+              title="Email us"
               href="mailto:info@gophoenixmoving.com"
               className="text-blue-600"
             >

@@ -6,7 +6,7 @@ export default function NavLink({ label, href, invert }) {
     <a
       href={href}
       className={clsx(
-        'text-base font-medium hover:text-palette-secondary-500 transition-all duration-150 ease-in',
+        ' font-medium hover:text-palette-secondary-500 transition-all duration-150 ease-in',
         {
           'text-gray-900': invert,
           'text-white': !invert,

@@ -2,7 +2,7 @@ import SectionHeader from '@/ui/SectionHeader';
 
 export default function Stats() {
   return (
-    <section className="bg-palette-background pt-12 sm:pt-16">
+    <section className="bg-palette-background pt-12 sm:pt-16 px-4 sm:px-6 lg:px-8">
       <SectionHeader
         title="Trusted by thousands of people"
         subtitle="The most Trusted and Reliable Moving Company in Boston"

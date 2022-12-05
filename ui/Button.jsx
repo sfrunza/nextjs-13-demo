@@ -4,16 +4,16 @@ import clsx from 'clsx';
 
 const sizeStyles = {
   small: 'py-2 px-3 text-sm',
-  medium: 'py-2 px-4 text-base',
-  large: 'py-3 px-6 text-base',
+  medium: 'py-2 px-4 ',
+  large: 'py-3 px-6 ',
 };
 
 const baseStyles = {
   solid:
-    'inline-flex justify-center rounded-lg font-medium outline-2 outline-offset-2 transition-colors',
-  soft: 'inline-flex justify-center rounded-lg font-medium outline-2 outline-offset-2 transition-colors',
+    'inline-flex justify-center rounded-xl outline-2 outline-offset-2 transition-colors',
+  soft: 'inline-flex justify-center rounded-xl outline-2 outline-offset-2 transition-colors',
   outline:
-    'inline-flex justify-center rounded-lg font-medium outline-2 outline-offset-2 transition-colors',
+    'inline-flex justify-center rounded-xl outline-2 outline-offset-2 transition-colors',
 };
 
 const variantStyles = {

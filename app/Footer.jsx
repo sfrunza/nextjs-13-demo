@@ -95,7 +95,7 @@ export default async function Footer() {
           <PopularCities />
         </div>
         <div className="flex gap-1 flex-wrap mb-8">
-          <p className="text-white text-xs font-semibold"> Top Cities</p>
+          <p className="text-white text-xs font-semibold">Top Cities</p>
           {interCities.slice(0, 15).map((city) => {
             return (
               <a
@@ -112,13 +112,14 @@ export default async function Footer() {
           <div className="grid grid-cols-2 gap-8 xl:col-span-4">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-base font-medium text-white">Services</h3>
+                <h3 className=" font-medium text-white">Services</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.services.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-base text-gray-300 hover:text-white"
+                        className="text-gray-400 hover:underline"
+                        title={item.name}
                       >
                         {item.name}
                       </a>
@@ -127,13 +128,14 @@ export default async function Footer() {
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-base font-medium text-white">Support</h3>
+                <h3 className=" font-medium text-white">Support</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-base text-gray-300 hover:text-white"
+                        className="text-gray-400 hover:underline"
+                        title={item.name}
                       >
                         {item.name}
                       </a>
@@ -144,13 +146,14 @@ export default async function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-base font-medium text-white">Company</h3>
+                <h3 className=" font-medium text-white">Company</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-base text-gray-300 hover:text-white"
+                        className="text-gray-400 hover:underline"
+                        title={item.name}
                       >
                         {item.name}
                       </a>
@@ -159,13 +162,14 @@ export default async function Footer() {
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-base font-medium text-white">Legal</h3>
+                <h3 className=" font-medium text-white">Legal</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-base text-gray-300 hover:text-white"
+                        className="text-gray-400 hover:underline"
+                        title={item.name}
                       >
                         {item.name}
                       </a>
@@ -176,12 +180,12 @@ export default async function Footer() {
             </div>
           </div>
           {/* <div className="mt-12 xl:mt-0">
-            <h3 className="text-base font-medium text-white">Contacts</h3>
+            <h3 className=" font-medium text-white">Contacts</h3>
             <ul role="list" className="mt-4 space-y-4">
               <li>
                 <a
                   href="mailto:info@gophoenixmoving.com"
-                  className="text-base text-gray-300 hover:text-white"
+                  className=" text-gray-300 hover:text-white"
                 >
                   info@gophoenixmoving.com
                 </a>
@@ -189,7 +193,7 @@ export default async function Footer() {
               <li>
                 <a
                   href="tel:(508) 315-9458"
-                  className="text-base text-gray-300 hover:text-white"
+                  className=" text-gray-300 hover:text-white"
                 >
                   (508) 315-9458
                 </a>
@@ -199,19 +203,19 @@ export default async function Footer() {
         </div>
         <div className="border-t border-gray-700 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
           <div>
-            <h3 className="text-base font-medium text-white">© Copyright</h3>
-            <p className="mt-2 text-base text-gray-300">
+            <h3 className=" font-medium text-white">© Copyright</h3>
+            <p className="mt-2  text-gray-300">
               Phoenix Moving Inc. is fully licensed, bonded and insured.
             </p>
-            <p className="mt-2 text-base text-gray-300">
+            <p className="mt-2  text-gray-300">
               We carry general liability, cargo and workers' compensation.
             </p>
-            <p className="mt-2 text-base text-gray-300">
+            <p className="mt-2  text-gray-300">
               Phoenix Moving Inc. is licensed by the Massachusetts Department of
               Public Utilities, Transportation Oversight Division, certificate
               number 32054 (MA).
             </p>
-            <p className="mt-2 text-base text-gray-300">
+            <p className="mt-2  text-gray-300">
               Phoenix Moving Inc. is licensed by the Federal Motor Carrier
               Safety Administration U.S. DOT# 3868109, MC# 01415308. Phoenix
               Moving Inc.
@@ -233,12 +237,12 @@ export default async function Footer() {
               </a>
             ))}
           </div> */}
-          <p className="mt-8 text-base text-gray-400 md:order-1 md:mt-0">
-            &copy; 2022 Phoenix Moving, Inc. All rights reserved
+          <p className="mt-8  text-gray-400 md:order-1 md:mt-0">
+            &copy; 2022 Phoenix Moving, Inc. Make moving chill
           </p>
-          <p className="mt-8 text-base text-gray-400 md:order-1 md:mt-0">
+          {/* <p className="mt-8  text-gray-400 md:order-1 md:mt-0">
             Make moving chill
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>

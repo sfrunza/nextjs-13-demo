@@ -26,7 +26,7 @@ const schema1 = {
   image: [
     'https://www.gophoenixmoving.com/_next/image?url=%2Fhome.png&w=2048&q=75',
   ],
-  telephone: '(617) 319-5700',
+  telephone: '(508) 315-9458',
   openingHours: 'Mo, Tu, We, Th, Fr, Sa 8am-8pm',
   description:
     'Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states.',

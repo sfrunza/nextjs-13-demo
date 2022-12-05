@@ -1,48 +1,103 @@
 'use client';
 import { cities } from '@/lib/citiesData';
-import { Disclosure } from '@headlessui/react';
+import { Disclosure, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import clsx from 'clsx';
+import { useState } from 'react';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
 export default function PopularCities() {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen((prev) => !prev);
   return (
-    <Disclosure as="div" className="pt-6 border-b border-gray-700 w-full">
-      {({ open }) => (
-        <>
-          <Disclosure.Button className="w-full pb-4">
-            <p className="text-white text-xs font-semibold flex items-center justify-between w-full">
-              Popular Cities
-              <ChevronDownIcon
-                className={classNames(
-                  open ? '-rotate-180' : 'rotate-0',
-                  'h-4 w-4 transform'
-                )}
-                aria-hidden="true"
-              />
-            </p>
-          </Disclosure.Button>
-          <Disclosure.Panel as="dd" className="mb-6">
-            <div className="grid grid-cols-3 gap-1 md:grid-cols-6">
-              {cities.map((city, i) => {
-                return (
-                  <div key={i} className="col-span-1 flex justify-start">
-                    <a
-                      href={`/${city.slug}`}
-                      title={`${city.fullName} near me`}
-                      className="hover:underline text-xs text-gray-400"
-                    >
-                      {city.fullName} near me
-                    </a>
-                  </div>
-                );
-              })}
-            </div>
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
+    <>
+      <div
+        onClick={() => handleOpen()}
+        className={clsx('pt-6 w-full hover:cursor-pointer', {
+          'border-b border-gray-700': !open,
+        })}
+      >
+        <div className="w-full pb-4">
+          <p className="text-white text-xs font-semibold flex items-center justify-between w-full">
+            Popular Cities
+            <ChevronDownIcon
+              className={classNames(
+                open ? '-rotate-180' : 'rotate-0',
+                'h-4 w-4 transform'
+              )}
+            />
+          </p>
+        </div>
+      </div>
+      <div
+        className={clsx(
+          'pb-4 grid grid-cols-3 gap-1 md:grid-cols-6 border-b border-gray-700',
+          {
+            hidden: !open,
+          }
+        )}
+      >
+        {cities.map((city) => {
+          return (
+            <a
+              key={city.fullName}
+              href={`/${city.slug}`}
+              title={`${city.fullName} near me`}
+              className="hover:underline text-xs text-gray-400 col-span-1 flex justify-start"
+            >
+              {city.fullName} near me
+            </a>
+          );
+        })}
+      </div>
+    </>
+    // <Disclosure as="div" className="pt-6 border-b border-gray-700 w-full">
+    //   {({ open }) => (
+    //     <>
+    //       <Disclosure.Button className="w-full pb-4">
+    //         <p className="text-white text-xs font-semibold flex items-center justify-between w-full">
+    //           Popular Cities
+    //           <ChevronDownIcon
+    //             className={classNames(
+    //               open ? '-rotate-180' : 'rotate-0',
+    //               'h-4 w-4 transform'
+    //             )}
+    //             // aria-hidden="true"
+    //           />
+    //         </p>
+    //       </Disclosure.Button>
+    //       <Transition
+    //         show={open}
+    //         enter="transition ease-out duration-100"
+    //         enterFrom="transform opacity-0 scale-95"
+    //         enterTo="transform opacity-100 scale-100"
+    //         leave="transition ease-in duration-75"
+    //         leaveFrom="transform opacity-100 scale-100"
+    //         leaveTo="transform opacity-0 scale-95"
+    //       >
+    //         <Disclosure.Panel
+    //           as="dd"
+    //           className="mb-6 grid grid-cols-3 gap-1 md:grid-cols-6"
+    //         >
+    //           {cities.map((city) => {
+    //             return (
+    //               <a
+    //                 key={city.fullName}
+    //                 href={`/${city.slug}`}
+    //                 title={`${city.fullName} near me`}
+    //                 className="hover:underline text-xs text-gray-400 col-span-1 flex justify-start"
+    //               >
+    //                 {city.fullName} near me
+    //               </a>
+    //             );
+    //           })}
+    //         </Disclosure.Panel>
+    //       </Transition>
+    //     </>
+    //   )}
+    // </Disclosure>
   );
 }

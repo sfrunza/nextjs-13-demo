@@ -113,7 +113,7 @@ export default function InterstatePrices() {
               >
                 <span className="absolute inset-0" aria-hidden="true" />
                 <p className="text-sm font-medium text-gray-900">{city.name}</p>
-                <p className="truncate text-md text-gray-500">
+                <p className="truncate text-gray-500">
                   <span className="text-sm text-gray-400 mr-2">
                     Starting at
                   </span>
@@ -135,7 +135,7 @@ export default function InterstatePrices() {
                 className="absolute h-6 w-6 text-green-500"
                 aria-hidden="true"
               />
-              <p className="ml-9 text-base font-semibold leading-6 text-gray-900">
+              <p className="ml-9  font-semibold leading-6 text-gray-900">
                 {feature.name}
               </p>
             </dt>

@@ -13,7 +13,7 @@ const services = [
     name: 'Interstate Moving',
     href: 'interstate-moving',
     description:
-      'Moving across United States with Fuly Licensed and Insured Moving Company',
+      'Moving across United States with Fully Licensed and Insured Moving Company',
   },
   {
     name: 'Packing Services',

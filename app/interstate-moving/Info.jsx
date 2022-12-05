@@ -38,7 +38,7 @@ export default function Info() {
 
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
           <SectionHeader title="Long Distance Interstate Moving" start />
-          <div className="mt-6 space-y-6 text-md text-gray-500">
+          <div className="mt-6 space-y-6 text-gray-500">
             <p>
               Moving across the state? Across the country? We'll get you there!
               Phoenix Moving here to help with a variety of long-distance
@@ -63,9 +63,7 @@ export default function Info() {
                   key={stat.label}
                   className="border-t-2 border-gray-100 pt-6"
                 >
-                  <dt className="text-base font-medium text-gray-500">
-                    {stat.label}
-                  </dt>
+                  <dt className=" font-medium text-gray-500">{stat.label}</dt>
                   <dd className="text-3xl font-bold tracking-tight text-gray-900">
                     {stat.value}
                   </dd>
@@ -76,7 +74,7 @@ export default function Info() {
               <a
                 href="/pricing"
                 title="Moving Pricing Plans"
-                className="inline-flex items-center rounded-md border border-transparent px-4 py-3 text-base font-medium leading-4 text-blue-600 hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="inline-flex items-center rounded-xl border border-transparent px-4 py-3  font-medium leading-4 text-blue-600 hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 View Pricing Plans
                 <span aria-hidden="true" className="ml-2">

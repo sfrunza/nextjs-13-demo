@@ -19,6 +19,7 @@ export default function Item({ item }) {
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-contain object-center"
+          title={item.name}
         />
       </div>
       <div className="px-4 py-4 sm:px-6">

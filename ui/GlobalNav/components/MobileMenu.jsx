@@ -74,7 +74,7 @@ export default function MobileMenu({ invert }) {
                           className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
                           onClick={() => close()}
                         >
-                          <span className="ml-3 text-base font-medium text-gray-900">
+                          <span className="ml-3  font-medium text-gray-900">
                             {item.name}
                           </span>
                         </a>
@@ -87,7 +87,7 @@ export default function MobileMenu({ invert }) {
                     <a
                       href="/pricing"
                       title="Pricing"
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
+                      className=" font-medium text-gray-900 hover:text-gray-700"
                     >
                       Pricing
                     </a>
@@ -96,7 +96,7 @@ export default function MobileMenu({ invert }) {
                         key={item.name}
                         href={item.href}
                         title={item.name}
-                        className="text-base font-medium text-gray-900 hover:text-gray-700"
+                        className=" font-medium text-gray-900 hover:text-gray-700"
                       >
                         {item.name}
                       </a>
@@ -106,14 +106,19 @@ export default function MobileMenu({ invert }) {
                     {/* <a
                       href="#"
                       title="Book a move"
-                      className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                      className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2  font-medium text-white shadow-sm hover:bg-indigo-700"
                     >
                       Book a move
                     </a> */}
-                    <Button href="#" color="primary" className="w-full">
+                    <Button
+                      href="#"
+                      color="primary"
+                      className="w-full"
+                      title="Book a move"
+                    >
                       Book a move
                     </Button>
-                    <p className="mt-6 text-center text-base font-medium text-gray-500">
+                    <p className="mt-6 text-center  font-medium text-gray-500">
                       Existing customer?{' '}
                       <a
                         href="#"

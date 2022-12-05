@@ -131,7 +131,7 @@ export default async function PricingTable() {
               return (
                 <tr key={row.crew}>
                   <th
-                    className="py-8 px-6 text-left align-top text-md font-medium text-gray-900"
+                    className="py-8 px-6 text-left align-top font-medium text-gray-900"
                     scope="row"
                   >
                     {row.crew}

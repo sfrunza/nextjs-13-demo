@@ -31,10 +31,23 @@ export default function Services({ city }) {
     >
       <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-3 lg:gap-x-12">
         <div>
-          <p className="text-md md:text-lg font-semibold leading-8 tracking-tight text-palette-primary-500">
+          <p className="md:text-lg font-semibold leading-8 tracking-tight text-palette-primary-500">
             Everything you need
           </p>
-          <SectionHeader
+          <div className="mx-auto max-w-3xl mb-16">
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900">
+              Moving Services
+            </h2>
+            <p className="mt-2 text-sm sm: text-gray-700">
+              Among all of {city.shortName}, {city.state} moving companies there
+              is good reputable movers and shall we say. Phoenix Moving is fully
+              Licensed and Insured moving company with great reputation and
+              affordable rates. So if you are planning to move in{' '}
+              {city.shortName} you can consider Phoenix Moving as your{' '}
+              {city.shortName} Movers.
+            </p>
+          </div>
+          {/* <SectionHeader
             title="Moving Services"
             subtitle={
               <>
@@ -47,11 +60,11 @@ export default function Services({ city }) {
               </>
             }
             start
-          />
+          /> */}
           {/* <p className="mt-2 text-2xl md:text-3xl font-medium tracking-tight text-gray-900">
             Moving Services
           </p>
-          <p className="mt-6 text-base leading-7 text-gray-600">
+          <p className="mt-6  leading-7 text-gray-600">
             Among all of {city.shortName}, {city.state} moving companies there
             is good reputable movers and shall we say. Phoenix Moving is fully
             Licensed and Insured moving company with great reputation and
@@ -68,7 +81,7 @@ export default function Services({ city }) {
                     className="absolute h-6 w-6 text-green-500"
                     aria-hidden="true"
                   />
-                  <p className="ml-9 text-base font-semibold leading-6 text-gray-900">
+                  <p className="ml-9  font-semibold leading-6 text-gray-900">
                     {feature.name}
                   </p>
                 </dt>

@@ -94,13 +94,13 @@ function Review({
             title="Google"
           />
         </div>
-        <p className="mt-3 text-base leading-7">{text || ''}</p>
+        <p className="mt-3  leading-7">{text || ''}</p>
       </blockquote>
 
       <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
         <div>
           <a
-            className="font-display text-base text-blue-600 font-medium"
+            className="font-display  text-blue-600 font-medium"
             href={author_url}
             target="_blank"
             title={author_name}
@@ -247,7 +247,7 @@ export default function Testimonials({ reviews, totalReviews }) {
           title="Google Reviews"
           target="_blank"
           href="https://www.google.com/search?q=phoenix+moving&sxsrf=ALiCzsYeGb8LJVe_ytmpCRRlfpA9-CrhvA%3A1668395468331&source=hp&ei=zLFxY7nIEO-gptQP2rWL4AI&iflsig=AJiK0e8AAAAAY3G_3HHOK9PAba9aeK4hg_rW7ucHEWVn&ved=0ahUKEwi53uy52az7AhVvkIkEHdraAiwQ4dUDCAo&uact=5&oq=phoenix+moving&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBAgjECcyCwguEIAEEMcBEK8BMgUIABCRAjIFCAAQgAQyCwguEIAEEMcBEK8BMgUIABCABDIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjoHCCMQ6gIQJzoLCC4QgAQQsQMQgwE6CAguELEDEIMBOggIABCxAxCDAToLCAAQgAQQsQMQgwE6BAgAEEM6CAguEIAEELEDOhQILhCABBCxAxCDARDHARDRAxDUAjoECC4QQzoNCC4QxwEQrwEQ1AIQQzoKCC4QxwEQrwEQQzoKCC4QsQMQ1AIQQzoKCC4Q1AIQsQMQQzoKCC4QsQMQgwEQQzoNCC4Q1AIQsQMQgAQQQzoQCC4QgwEQ1AIQsQMQgAQQQzoLCC4QxwEQrwEQkQI6BwguELEDEEM6EAguEIAEEIcCEMcBEK8BEBQ6CAgAEIAEELEDOgoIABCABBCHAhAUOgUILhCABFCyA1jlEGCdEmgBcAB4AIABjgGIAbMMkgEEMy4xMZgBAKABAbABCg&sclient=gws-wiz#lrd=0x89e387680ffe9aeb:0x4651b1e640f15b41,1,,,"
-          className="inline-flex items-center rounded-md border border-transparent px-4 py-3 text-base font-medium leading-4 text-blue-600 hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          className="inline-flex items-center rounded-xl border border-transparent px-4 py-3 font-medium leading-4 text-blue-600 hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
         >
           {totalReviews} Google Reviews
           <ArrowTopRightOnSquareIcon className="w-3 h-3 ml-1 text-blue-600" />

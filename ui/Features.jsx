@@ -7,7 +7,6 @@ const features = [
   {
     name: 'Assembling/Reassembling furniture',
   },
-
   {
     name: 'Professional team',
   },

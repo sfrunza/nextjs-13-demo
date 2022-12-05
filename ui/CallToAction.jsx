@@ -15,17 +15,16 @@ export default function CallToAction() {
           </span>
         </h2>
         <div className="mt-8 flex justify-center">
-          <div className="inline-flex rounded-md shadow">
-            <Button
-              href="tel:(508) 315-9458"
-              size="large"
-              variant="solid"
-              color="primary"
-              className="w-full sm:w-auto"
-            >
-              +1 (508) 315-9458
-            </Button>
-          </div>
+          <Button
+            href="tel:(508) 315-9458"
+            size="large"
+            variant="solid"
+            color="primary"
+            className="w-full sm:w-auto"
+            title="Call us now"
+          >
+            +1 (508) 315-9458
+          </Button>
         </div>
       </Container>
     </section>

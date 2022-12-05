@@ -6,8 +6,8 @@ export default function Info() {
     <Section label="boston-local-moving-information">
       <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
         <SectionHeader title="Boston Local Moving" start />
-        <div className="relative z-10 mx-auto max-w-prose text-base lg:mx-0 lg:max-w-5xl lg:pr-72">
-          <p className="text-md text-gray-500">
+        <div className="relative z-10 mx-auto max-w-prose  lg:mx-0 lg:max-w-5xl lg:pr-72">
+          <p className="text-gray-500">
             <b>We are a local moving company in Boston, Massachusetts</b>. If
             you're looking for local movers in Boston MA, see if we operate in
             your area, and then contact us for a quote.
@@ -60,7 +60,7 @@ export default function Info() {
               </p>
             </div>
           </div>
-          <div className="relative mx-auto mt-12 max-w-prose text-base lg:mt-0 lg:max-w-none mb-7 lg:mb-0">
+          <div className="relative mx-auto mt-12 max-w-prose  lg:mt-0 lg:max-w-none mb-7 lg:mb-0">
             <img
               src="/local.jpeg"
               alt="Movers and customer in front of the house"

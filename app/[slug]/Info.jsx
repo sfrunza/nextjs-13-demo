@@ -6,12 +6,12 @@ export default function Info({ city }) {
     <section aria-labelledby={`${city.fullName} Info`}>
       <Container className="overflow-hidden py-16">
         <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-prose text-base lg:max-w-none">
+          <div className="mx-auto max-w-prose  lg:max-w-none">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 text-center">
               Fast, Reliable, and Affordable {city.fullName}
             </h2>
           </div>
-          <div className="relative z-10 mx-auto max-w-prose text-base lg:mx-0 lg:max-w-5xl lg:pr-72">
+          <div className="relative z-10 mx-auto max-w-prose  lg:mx-0 lg:max-w-5xl lg:pr-72">
             <p className="text-gray-500">
               <b>Phoenix Moving</b> team is covering end-to-end moving and
               storage services in <b>{`${city.shortName}, ${city.state}`}</b>{' '}
@@ -43,8 +43,13 @@ export default function Info({ city }) {
                   stress free, convenient and safe!
                 </p>
               </div>
-              <div className="mx-auto mt-10 flex max-w-prose text-base lg:max-w-none justify-between sm:justify-start">
-                <Button href="#" size="large" color="primary">
+              <div className="mx-auto mt-10 flex max-w-prose lg:max-w-none justify-between sm:justify-start">
+                <Button
+                  href="#"
+                  size="large"
+                  color="primary"
+                  title="Get a Quote"
+                >
                   Get a Quote
                 </Button>
                 <Button
@@ -52,12 +57,13 @@ export default function Info({ city }) {
                   size="large"
                   variant="soft"
                   className="ml-4"
+                  title="View Rates"
                 >
                   View Rates
                 </Button>
               </div>
             </div>
-            <div className="relative mx-auto mt-12 max-w-prose text-base lg:mt-0 lg:max-w-none">
+            <div className="relative mx-auto mt-12 max-w-prose lg:mt-0 lg:max-w-none">
               <img
                 src={city.icon}
                 alt={`${city.shortName} ${city.state} image`}

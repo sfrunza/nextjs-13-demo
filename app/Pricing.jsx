@@ -69,7 +69,7 @@ export default function Pricing() {
           </span>{' '}
           for everyone.
         </h2>
-        <p className="mt-2 text-md sm:text-lg text-gray-700">
+        <p className="mt-2 sm:text-lg text-gray-700">
           It doesn't matter what size your business is, our software won't work
           well for you.
         </p>
@@ -89,11 +89,14 @@ export default function Pricing() {
                 <span className="text-4xl font-bold tracking-tight text-gray-900">
                   ${tier.priceMonthly}
                 </span>{' '}
-                <span className="text-base font-medium text-gray-500">
-                  per hour
-                </span>
+                <span className=" font-medium text-gray-500">per hour</span>
               </p>
-              <Button href={tier.href} color="primary" className="mt-8 w-full">
+              <Button
+                href={tier.href}
+                color="primary"
+                className="mt-8 w-full"
+                title="Get a Quote"
+              >
                 Get a Quote
               </Button>
             </div>
@@ -125,9 +128,7 @@ export default function Pricing() {
                 <span className="text-4xl font-bold tracking-tight text-gray-900">
                   $40
                 </span>{' '}
-                <span className="text-base font-medium text-gray-500">
-                  per hour
-                </span>
+                <span className=" font-medium text-gray-500">per hour</span>
               </p>
             </div>
             <div className="px-6 pt-6 pb-8">
@@ -152,9 +153,7 @@ export default function Pricing() {
                 <span className="text-4xl font-bold tracking-tight text-gray-900">
                   $40
                 </span>{' '}
-                <span className="text-base font-medium text-gray-500">
-                  per hour
-                </span>
+                <span className=" font-medium text-gray-500">per hour</span>
               </p>
             </div>
             <div className="px-6 pt-6 pb-8">

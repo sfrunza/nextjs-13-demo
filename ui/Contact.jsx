@@ -61,7 +61,7 @@ export default function Contact() {
             <h2 className="text-2xl font-semibold tracking-tight text-gray-900 sm:text-3xl">
               Get in touch
             </h2>
-            <dl className="mt-8 text-base text-gray-500">
+            <dl className="mt-8  text-gray-500">
               <div>
                 <dt className="sr-only">Postal address</dt>
                 <dd>
@@ -125,15 +125,16 @@ export default function Contact() {
                   </li>
                 );
               })}
-              {/* <li>
+              <li>
                 <a
-                  href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fnextjs-13-demo-psi.vercel.app%2F"
+                  href="https://www.facebook.com/like.php?u=https%3A%2F%2Fnextjs-13-demo-psi.vercel.app%2F"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Share on Facebook
                 </a>
               </li>
+              {/*
               <li>
                 <a
                   href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fnextjs-13-demo-psi.vercel.app%2F"

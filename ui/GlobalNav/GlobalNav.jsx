@@ -84,7 +84,7 @@ export default function GlobalNav() {
                               onClick={() => close()}
                             >
                               <div>
-                                <p className="text-base font-medium text-gray-900">
+                                <p className=" font-medium text-gray-900">
                                   {item.name}
                                 </p>
                                 <p className="mt-1 text-sm text-gray-500">
@@ -100,7 +100,7 @@ export default function GlobalNav() {
                               <a
                                 href={item.href}
                                 title={item.name}
-                                className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100"
+                                className="-m-3 flex items-center rounded-md p-3  font-medium text-gray-900 hover:bg-gray-100"
                               >
                                 <item.icon
                                   className="h-6 w-6 flex-shrink-0 text-gray-400"
@@ -144,7 +144,7 @@ export default function GlobalNav() {
                               className="-m-3 flex items-start rounded-md p-3 hover:bg-gray-50"
                             >
                               <div>
-                                <p className="text-base font-medium text-gray-900">
+                                <p className=" font-medium text-gray-900">
                                   {item.name}
                                 </p>
                                 {/* <p className="mt-1 text-sm text-gray-500">
@@ -156,15 +156,12 @@ export default function GlobalNav() {
                         </div>
                         <div className="bg-gray-50 px-5 py-5 sm:px-8 sm:py-8">
                           <div>
-                            <h3 className="text-base font-medium text-gray-500">
+                            <h3 className=" font-medium text-gray-500">
                               Recent Posts
                             </h3>
                             <ul role="list" className="mt-4 space-y-4">
                               {recentPosts.map((post) => (
-                                <li
-                                  key={post.id}
-                                  className="truncate text-base"
-                                >
+                                <li key={post.id} className="truncate ">
                                   <a
                                     href={post.href}
                                     title={post.name}
@@ -197,7 +194,7 @@ export default function GlobalNav() {
               href="tel:(508) 315-9458"
               title="(508) 315-9458"
               className={clsx(
-                'text-base font-medium transition-all duration-150 ease-in',
+                ' font-medium transition-all duration-150 ease-in',
                 {
                   'text-palette-primary-500 hover:text-palette-primary-900':
                     active,
@@ -213,7 +210,7 @@ export default function GlobalNav() {
               href="#"
               title="Client Login"
               className={clsx(
-                'group inline-flex items-center rounded-md text-base font-medium hover:text-palette-secondary-500 transition-all duration-150 ease-in',
+                'group inline-flex items-center rounded-md  font-medium hover:text-palette-secondary-500 transition-all duration-150 ease-in',
                 {
                   'text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2':
                     active,
@@ -231,14 +228,7 @@ export default function GlobalNav() {
               />
               <span className="ml-1">Client login</span>
             </a>
-            {/* <a
-              href="#"
-              title="Book a move"
-              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-palette-secondary-500 px-4 py-2 text-base font-medium text-black shadow-sm hover:bg-palette-secondary-900"
-            >
-              Book a move
-            </a> */}
-            <Button className="ml-8" color="secondary">
+            <Button className="ml-8" color="secondary" title="Book a move">
               Book a move
             </Button>
           </div>
