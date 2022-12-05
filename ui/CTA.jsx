@@ -46,7 +46,7 @@ export default function CTA() {
                   className="w-full sm:w-auto border-0"
                   title="Reques tFree Estimate Online"
                 >
-                  Reques tFree Estimate Online
+                  Request Free Estimate Online
                 </Button>
               </div>
             </div>
