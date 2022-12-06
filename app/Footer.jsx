@@ -14,7 +14,7 @@ export async function interstateCities(s) {
 const navigation = {
   services,
   support: [
-    { name: 'Pricing', href: '/pricing' },
+    { name: 'Prices', href: '/pricing' },
     { name: 'FAQ', href: '#' },
     { name: 'Our Work', href: '#' },
   ],

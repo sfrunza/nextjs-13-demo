@@ -49,7 +49,7 @@ export default function Info() {
               </p>
             </div>
           </div>
-          <div className="relative mx-auto mt-12 max-w-prose lg:mt-0 mb-7 lg:mb-0 w-full h-[25rem] lg:h-[80%]">
+          <div className="relative mx-auto mt-12 max-w-prose lg:mt-0 mb-7 lg:mb-0 w-full lg:w-[80%] h-[25rem] lg:h-[70%]">
             <Image
               src="/two-movers-packing-kitchen.jpeg"
               alt="Two movers packing dishes"

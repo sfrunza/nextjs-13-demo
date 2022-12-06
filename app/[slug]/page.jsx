@@ -9,6 +9,8 @@ import Services from './Services';
 import CTA from '@/ui/CTA';
 import Advantages from './Advantages';
 import Divider from '@/ui/Divider';
+import Partners from '@/ui/Partners';
+import Photos from '@/ui/Photos';
 
 export const dynamicParams = true;
 
@@ -68,7 +70,7 @@ export default async function CityPage({ params }) {
       {city?.interstate ? (
         <>
           <Hero
-            image={'/home.png'}
+            image={'/mover-pushing-dolly.png'}
             title={`Movers from Boston to ${city.name}`}
           />
           {/* <Info city={city} /> */}
@@ -81,10 +83,12 @@ export default async function CityPage({ params }) {
         </>
       ) : (
         <>
-          <Hero image={'/home.png'} title={city.fullName} />
+          <Hero image={'/mover-pushing-dolly.png'} title={city.fullName} />
+          <Partners />
           <Info city={city} />
           <Stats />
           <Advantages city={city} />
+          <Photos />
           <Services city={city} />
           <Faqs />
           <CTA />

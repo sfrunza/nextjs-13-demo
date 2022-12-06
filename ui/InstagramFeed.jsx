@@ -26,22 +26,22 @@ export default async function InstagramFeeds() {
               <div className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg bg-gray-100 h-full relative">
                 {feed.media_type === 'IMAGE' ||
                 feed.media_type === 'CAROUSEL_ALBUM' ? (
-                  // <img
-                  //   className="object-cover object-center"
-                  //   key={index}
-                  //   src={feed.media_url}
-                  //   alt={feed.caption || 'instagram image'}
-                  //   title={feed.caption}
-                  // />
-                  <Image
+                  <img
+                    className="object-cover object-center"
+                    key={index}
                     src={feed.media_url}
                     alt={feed.caption || 'instagram image'}
-                    className="object-cover"
                     title={feed.caption}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 ) : (
+                  // <Image
+                  //   src={feed.media_url}
+                  //   alt={feed.caption || 'instagram image'}
+                  //   className="object-cover relative object-center"
+                  //   title={feed.caption}
+                  //   fill
+                  //   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  // />
                   <>
                     {/* <video
                       controls

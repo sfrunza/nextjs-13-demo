@@ -24,7 +24,7 @@ const schema1 = {
   url: 'https://www.gophoenixmoving.com/',
   logo: 'https://www.gophoenixmoving.com/_next/image?url=%2Flogos%2Flogo.png&w=384&q=75',
   image: [
-    'https://www.gophoenixmoving.com/_next/image?url=%2Fhome.png&w=2048&q=75',
+    'https://www.gophoenixmoving.com/_next/image?url=%2Fmover-pushing-dolly.png&w=2048&q=75',
   ],
   telephone: '(508) 315-9458',
   openingHours: 'Mo, Tu, We, Th, Fr, Sa 8am-8pm',
@@ -160,7 +160,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema3) }}
       />
-      <Hero image={'/home.png'} title="Boston Moving Company" />
+      <Hero image={'/mover-pushing-dolly.png'} title="Boston Moving Company" />
       <Partners />
       <Services />
       <Pricing />

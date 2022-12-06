@@ -23,10 +23,10 @@ export default function Info({ city }) {
               <div className="prose prose-indigo mx-auto text-gray-500 lg:max-w-none">
                 <p>
                   This is possible by hiring a reputable and trusted{' '}
-                  <b>{`${city.shortName} Moving Company`}</b> that provides
-                  residential and commercial moving services, small/large office
-                  moves, packing services, storage solutions and more. We also
-                  offer express interstate moving solutions:
+                  {`${city.shortName} Moving Company`} that provides residential
+                  and commercial moving services, small/large office moves,
+                  packing services, storage solutions and more. We also offer
+                  express interstate moving solutions:
                 </p>
                 <ul role="list">
                   <li>Quis elit egestas venenatis mattis dignissim.</li>
@@ -39,8 +39,8 @@ export default function Info({ city }) {
                   We provide and manage moving solutions for thousands of
                   customers every year - from the small move to the large
                   relocations. Moving to/from{' '}
-                  <b>{`${city.shortName}, ${city.state}`}</b> must be easy and
-                  stress free, convenient and safe!
+                  {`${city.shortName}, ${city.state}`} must be easy and stress
+                  free, convenient and safe!
                 </p>
               </div>
               <div className="mx-auto mt-10 flex max-w-prose lg:max-w-none justify-between sm:justify-start">

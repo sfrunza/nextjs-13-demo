@@ -11,7 +11,7 @@ import InstagramFeeds from '@/ui/InstagramFeed';
 export default function LocalMoving() {
   return (
     <>
-      <Hero image="/prices.jpg" title="Local Moving" />
+      <Hero image="/two-movers-and-dresses.jpeg" title="Local Moving" />
       <Included />
       <Info />
       {/* <Divider /> */}
