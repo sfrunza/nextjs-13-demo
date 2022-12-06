@@ -1,5 +1,6 @@
 import Section from '@/ui/Section';
 import SectionHeader from '@/ui/SectionHeader';
+import { ChevronRightIcon } from '@heroicons/react/24/outline';
 // import Link from 'next/link';
 
 const services = [
@@ -46,12 +47,14 @@ export default function Services() {
           <li key={service.name}>
             <a
               href={service.href}
-              className="rounded-2xl border border-gray-200 p-8 flex flex-col h-full hover:bg-palette-background hover:shadow-lg hover:shadow-gray-900/5 transition-all duration-150 ease-in"
+              className="rounded-2xl border border-gray-200 p-8 flex flex-col h-full hover:shadow-lg hover:shadow-gray-900/5 transition-all duration-150 ease-in"
               title={service.name}
             >
-              <p className="font-semibold text-gray-900 text-lg">
+              <p className="font-semibold text-gray-900 text-lg flex justify-between items-center">
                 {service.name}
+                <ChevronRightIcon className="w-4 h-4" />
               </p>
+
               <p className="mt-2 text-gray-700">{service.description}</p>
             </a>
           </li>

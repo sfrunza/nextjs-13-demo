@@ -125,7 +125,7 @@ export default function Contact() {
                   </li>
                 );
               })}
-              <li>
+              {/* <li>
                 <a
                   href="https://www.facebook.com/like.php?u=https%3A%2F%2Fnextjs-13-demo-psi.vercel.app%2F"
                   target="_blank"
@@ -133,7 +133,7 @@ export default function Contact() {
                 >
                   Share on Facebook
                 </a>
-              </li>
+              </li> */}
               {/*
               <li>
                 <a

@@ -99,6 +99,7 @@ export default async function Footer() {
           {interCities.slice(0, 15).map((city) => {
             return (
               <a
+                key={city.slug}
                 className="text-gray-400 text-xs"
                 href={city.slug}
                 title={`Moving From Boston to ${city.name}`}

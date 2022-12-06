@@ -162,10 +162,10 @@ export default function Home() {
       />
       <Hero image={'/home.png'} title="Boston Moving Company" />
       <Partners />
-      <Incentive />
-      <Pricing />
-      {/* <Test /> */}
       <Services />
+      <Pricing />
+      <Incentive />
+      {/* <Test /> */}
       {/* <Features /> */}
       <CTA />
       <Suspense fallback="loading...">
