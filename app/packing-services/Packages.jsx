@@ -123,7 +123,10 @@ const Card = ({ houseSize }) => {
         <tbody>
           {Object.entries(houseSize.items).map((material, i) => {
             return (
-              <tr key={i} className="border-b border-gray-200">
+              <tr
+                key={`${material[0]}-${i}`}
+                className="border-b border-gray-200"
+              >
                 <td className="text-xs text-left pl-4 py-2 font-medium text-gray-900">
                   {material[0]}
                 </td>

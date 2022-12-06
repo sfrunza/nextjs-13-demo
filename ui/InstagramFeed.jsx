@@ -1,6 +1,7 @@
 import { PlayIcon } from '@heroicons/react/24/outline';
 import SectionHeader from '@/ui/SectionHeader';
 import Section from '@/ui/Section';
+import Image from 'next/image';
 
 export async function getFeeds() {
   let url = `https://graph.instagram.com/me/media?fields=media_count,media_type,permalink,media_url,caption&&access_token=${process.env.NEXT_PUBLIC_IG_TOKEN}`;
@@ -22,15 +23,23 @@ export default async function InstagramFeeds() {
         {feeds.slice(0, 12).map((feed, index) => {
           return (
             <div key={feed.id} className="group relative">
-              <div className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg bg-gray-100 h-full">
+              <div className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg bg-gray-100 h-full relative">
                 {feed.media_type === 'IMAGE' ||
                 feed.media_type === 'CAROUSEL_ALBUM' ? (
-                  <img
-                    className="object-cover object-center"
-                    key={index}
+                  // <img
+                  //   className="object-cover object-center"
+                  //   key={index}
+                  //   src={feed.media_url}
+                  //   alt={feed.caption || 'instagram image'}
+                  //   title={feed.caption}
+                  // />
+                  <Image
                     src={feed.media_url}
                     alt={feed.caption || 'instagram image'}
+                    className="object-cover"
                     title={feed.caption}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 ) : (
                   <>

@@ -1,5 +1,5 @@
-const URL = 'https://nextjs-13-demo-psi.vercel.app/pricing';
-const title = 'Moving Prices & Rates - Phoenix Moving Boston (Free Estimate)';
+const URL = 'https://nextjs-13-demo-psi.vercel.app/packing-services';
+const title = 'Packing Services - Phoenix Moving Boston (Free Estimate)';
 const description =
   'Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states.';
 

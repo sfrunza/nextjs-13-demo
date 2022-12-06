@@ -1,57 +1,40 @@
-const URL = 'https://nextjs-13-demo-psi.vercel.app';
+const URL = 'https://nextjs-13-demo-psi.vercel.app/interstate-moving';
+const title = 'Long Distance Movers - Phoenix Moving Boston (Free Estimate)';
+const description =
+  'Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states.';
 
-export default async function Head() {
+const keywords =
+  'boston to ny moving company, from boston to new york moving, Boston movers, Boston moving company, Boston moving services, moving company in boston, boston moving storage company, Boston relocation company, Boston relocation service, Boston office relocation, ma relocation, massachusets relocation, massachusets relocation company, Massachusetts storage, boston storage company, massachusets moving, massachusets moving company, moving boston storage, moving companies in boston, commercial boston movers, moving packing supplies, student moving discounts, affordable moving company';
+
+export default function Head() {
   return (
     <>
       <meta charSet="UTF-8" />
       <meta name="theme-color" content="#fff" />
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-      <title>
-        Long Distance Movers - Phoenix Moving Boston (Free Estimate)
-      </title>
-      <meta
-        name="description"
-        content="Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states."
-      />
-      <meta
-        property="og:title"
-        content="Long Distance Movers - Phoenix Moving Boston (Free Estimate)"
-      />
-      <meta
-        property="og:description"
-        content="Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states."
-      />
-      <meta property="og:url" content={`${URL}/interstate-moving`} />
-      <meta
-        property="og:image"
-        content={`${URL}/_next/image?url=%2Fhome.png&w=3840&q=75`}
-      />
+      <title>{title}</title>
+      <meta name="description" content={description} />
 
-      <meta name="robots" content="index,follow" />
-      <meta
-        name="keywords"
-        content="boston to ny moving company, from boston to new york moving, Boston movers, Boston moving company, Boston moving services, moving company in boston, boston moving storage company, Boston relocation company, Boston relocation service, Boston office relocation, ma relocation, massachusets relocation, massachusets relocation company, Massachusetts storage, boston storage company, massachusets moving, massachusets moving company, moving boston storage, moving companies in boston, commercial boston movers, moving packing supplies, student moving discounts, affordable moving company"
-      />
+      {/* OG Card */}
+      <meta property="og:url" content={URL} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content="/twittercard.png" />
+      {/* End OG Card */}
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@phoenix_moving" />
-      <meta
-        name="twitter:title"
-        content="Long Distance Movers - Phoenix Moving Boston (Free Estimate)"
-      />
-      <meta
-        name="twitter:description"
-        content="Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states."
-      />
+      <meta property="twitter:domain" content={URL} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content="/twittercard.png" />
       {/* End Twitter Card */}
 
-      <link
-        rel="canonical"
-        href={`${URL}/interstate-moving`}
-        precedence="default"
-      />
+      <meta name="robots" content="index,follow" />
+      <meta name="keywords" content={keywords} />
+      <link rel="canonical" href={URL} precedence="default" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"

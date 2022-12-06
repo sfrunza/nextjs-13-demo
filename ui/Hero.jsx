@@ -14,11 +14,11 @@ export default function Hero({ image, title, children }) {
               /> */}
             <Image
               src={image}
-              alt="Bostom Moving Company"
+              alt={title}
               className="object-cover"
               fill
               priority
-              title="Bostom Moving Company"
+              title={title}
             />
             <div className="absolute inset-0 bg-gray-900/30 mix-blend-multiply" />
           </div>

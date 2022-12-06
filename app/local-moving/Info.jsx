@@ -1,5 +1,6 @@
 import Section from '@/ui/Section';
 import SectionHeader from '@/ui/SectionHeader';
+import Image from 'next/image';
 
 export default function Info() {
   return (
@@ -60,12 +61,14 @@ export default function Info() {
               </p>
             </div>
           </div>
-          <div className="relative mx-auto mt-12 max-w-prose  lg:mt-0 lg:max-w-none mb-7 lg:mb-0">
-            <img
+          <div className="relative mx-auto mt-12 max-w-prose lg:mt-0 mb-7 lg:mb-0 w-full h-[25rem] lg:h-[65%]">
+            <Image
               src="/local.jpeg"
-              alt="Movers and customer in front of the house"
-              className="relative rounded-2xl bg-white shadow-lg rotate-2"
-              title="Boston Local Moving Company"
+              alt="Two movers packing dishes"
+              className="rounded-2xl bg-white shadow-lg rotate-2 object-cover"
+              title="Full Packing Services"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         </div>

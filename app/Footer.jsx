@@ -94,17 +94,22 @@ export default async function Footer() {
         <div className="flex gap-1 flex-wrap mb-4">
           <PopularCities />
         </div>
-        <div className="flex gap-1 flex-wrap mb-8">
-          <p className="text-white text-xs font-semibold">Top Cities</p>
-          {interCities.slice(0, 15).map((city) => {
+        <div className="flex gap-1 flex-wrap mb-8 items-center">
+          <p className="text-white text-xs font-semibold p-2 sm:p-1">
+            Top Cities
+          </p>
+          {interCities.slice(0, 15).map((city, i) => {
             return (
               <a
-                key={city.slug}
-                className="text-gray-400 text-xs"
+                key={`${city.slug}-${i}`}
+                className="text-gray-400 text-xs p-2 sm:p-1"
                 href={city.slug}
                 title={`Moving From Boston to ${city.name}`}
               >
-                |<span className="hover:underline ml-1">{city.name}</span>
+                <span className="text-gray-400 text-xs">|</span>
+                <span className="hover:underline ml-4 sm:ml-2">
+                  {city.name}
+                </span>
               </a>
             );
           })}
@@ -180,27 +185,6 @@ export default async function Footer() {
               </div>
             </div>
           </div>
-          {/* <div className="mt-12 xl:mt-0">
-            <h3 className=" font-medium text-white">Contacts</h3>
-            <ul role="list" className="mt-4 space-y-4">
-              <li>
-                <a
-                  href="mailto:info@gophoenixmoving.com"
-                  className=" text-gray-300 hover:text-white"
-                >
-                  info@gophoenixmoving.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:(508) 315-9458"
-                  className=" text-gray-300 hover:text-white"
-                >
-                  (508) 315-9458
-                </a>
-              </li>
-            </ul>
-          </div> */}
         </div>
         <div className="border-t border-gray-700 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
           <div>
@@ -224,26 +208,9 @@ export default async function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
-          {/* <div className="flex space-x-6 md:order-2">
-            {navigation.social.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-400 hover:text-gray-300"
-                target="_blank"
-                title={item.name}
-              >
-                <span className="sr-only">{item.name}</span>
-                <item.icon className="h-6 w-6" aria-hidden="true" />
-              </a>
-            ))}
-          </div> */}
           <p className="mt-8  text-gray-400 md:order-1 md:mt-0">
             &copy; 2022 Phoenix Moving, Inc. Make moving chill
           </p>
-          {/* <p className="mt-8  text-gray-400 md:order-1 md:mt-0">
-            Make moving chill
-          </p> */}
         </div>
       </div>
     </footer>

@@ -8,7 +8,11 @@ const nextConfig = {
     ],
   },
   images: {
-    domains: ['s3-media3.fl.yelpcdn.com', 'lh3.googleusercontent.com'],
+    domains: [
+      'scontent-bos5-1.cdninstagram.com',
+      's3-media3.fl.yelpcdn.com',
+      'lh3.googleusercontent.com',
+    ],
   },
   async headers() {
     return [

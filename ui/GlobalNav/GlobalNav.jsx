@@ -73,14 +73,14 @@ export default function GlobalNav() {
                     leaveTo="opacity-0 translate-y-1"
                   >
                     <Popover.Panel className="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
-                      <div className="overflow-hidden rounded-xl shadow-lg ring-1 ring-black ring-opacity-5">
+                      <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {services.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
                               title={item.name}
-                              className="-m-3 flex items-start rounded-md p-3 hover:bg-palette-background"
+                              className="-m-3 flex items-start rounded-xl p-3 hover:bg-palette-background"
                               onClick={() => close()}
                             >
                               <div>
@@ -100,7 +100,7 @@ export default function GlobalNav() {
                               <a
                                 href={item.href}
                                 title={item.name}
-                                className="-m-3 flex items-center rounded-md p-3  font-medium text-gray-900 hover:bg-gray-100"
+                                className="-m-3 flex items-center rounded-xl p-3  font-medium text-gray-900 hover:bg-gray-100"
                               >
                                 <item.icon
                                   className="h-6 w-6 flex-shrink-0 text-gray-400"
@@ -134,14 +134,14 @@ export default function GlobalNav() {
                     leaveTo="opacity-0 translate-y-1"
                   >
                     <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
-                      <div className="overflow-hidden rounded-xl shadow-lg ring-1 ring-black ring-opacity-5">
+                      <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {resources.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
                               title={item.name}
-                              className="-m-3 flex items-start rounded-md p-3 hover:bg-gray-50"
+                              className="-m-3 flex items-start rounded-xl p-3 hover:bg-gray-50"
                             >
                               <div>
                                 <p className=" font-medium text-gray-900">
