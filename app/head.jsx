@@ -1,8 +1,8 @@
 const URL = 'https://nextjs-13-demo-psi.vercel.app';
 const title =
-  'Phoenix Moving & Storage - 🚚 Make Moving in Boston Chill (FreeEstimate)';
+  'Phoenix Moving & Storage - 🚚 Boston Moving Compnay (FreeEstimate)';
 const description =
-  'Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states.';
+  "Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states. Full Service, Local Residential & Commercial Moving. Long Distance Moving. Request a FREE QUOTE NOW! Don't pay too much for moving.";
 
 const keywords =
   'boston to ny moving company, from boston to new york moving, Boston movers, Boston moving company, Boston moving services, moving company in boston, boston moving storage company, Boston relocation company, Boston relocation service, Boston office relocation, ma relocation, massachusets relocation, massachusets relocation company, Massachusetts storage, boston storage company, massachusets moving, massachusets moving company, moving boston storage, moving companies in boston, commercial boston movers, moving packing supplies, student moving discounts, affordable moving company';

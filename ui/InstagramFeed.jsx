@@ -1,7 +1,7 @@
 import { PlayIcon } from '@heroicons/react/24/outline';
 import SectionHeader from '@/ui/SectionHeader';
 import Section from '@/ui/Section';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export async function getFeeds() {
   let url = `https://graph.instagram.com/me/media?fields=media_count,media_type,permalink,media_url,caption&&access_token=${process.env.NEXT_PUBLIC_IG_TOKEN}`;
@@ -17,7 +17,7 @@ export default async function InstagramFeeds() {
   const ig = await getFeeds();
   const feeds = ig.data;
   return (
-    <Section label="ig-feed">
+    <Section>
       <SectionHeader title="Follow us on Instagram" />
       <div className="mt-6 grid grid-cols-3 gap-x-2 gap-y-2 md:gap-x-6 md:gap-y-6 md:grid-cols-4">
         {feeds.slice(0, 12).map((feed, index) => {
@@ -55,9 +55,7 @@ export default async function InstagramFeeds() {
                       className="object-cover object-center rounded-lg"
                       key={index}
                       src={feed.media_url}
-                      alt={feed.caption || 'instagram video'}
                       // playsInline
-                      type="video/mp4"
                       autoPlay
                       // loop
                       muted

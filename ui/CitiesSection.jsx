@@ -5,7 +5,7 @@ import SectionHeader from '@/ui/SectionHeader';
 
 export default async function CitiesSection() {
   return (
-    <Section label="massachusetts-serving-area">
+    <Section>
       <SectionHeader title="Phoenix Moving Massachusetts Serving Areas" />
       <div className="grid grid-cols-3 gap-1 md:grid-cols-6">
         {cities.map((city, i) => {

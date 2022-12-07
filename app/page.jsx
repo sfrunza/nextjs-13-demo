@@ -14,7 +14,8 @@ import Script from 'next/script';
 import CitiesSection from '@/ui/CitiesSection';
 import Incentive from '@/ui/Incentive';
 import Partners from '@/ui/Partners';
-import InstagramFeeds from '@/ui/InstagramFeed';
+// import InstagramFeeds from '@/ui/InstagramFeed';
+import Photos from '@/ui/Photos';
 
 const schema1 = {
   '@context': 'https://schema.org',
@@ -64,21 +65,6 @@ const schema1 = {
       '@type': 'City',
       name: 'Natick',
       '@id': 'https://en.wikipedia.org/wiki/Natick,_Massachusetts',
-    },
-    {
-      '@type': 'County',
-      name: 'Essex County',
-      '@id': 'https://en.wikipedia.org/wiki/Essex_County,_Massachusetts',
-    },
-    {
-      '@type': 'County',
-      name: 'Norfolk County',
-      '@id': 'https://en.wikipedia.org/wiki/Norfolk_County,_Massachusetts',
-    },
-    {
-      '@type': 'County',
-      name: 'Suffolk County',
-      '@id': 'https://en.wikipedia.org/wiki/Suffolk_County,_Massachusetts',
     },
     {
       '@type': 'State',
@@ -160,9 +146,10 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema3) }}
       />
-      <Hero image={'/mover-pushing-dolly.png'} title="Boston Moving Company" />
+      <Hero image={'/mover-pushing-dolly.jpg'} title="Boston Moving Company" />
       <Partners />
       <Services />
+      <Photos />
       <Pricing />
       <Incentive />
       {/* <Test /> */}
@@ -171,10 +158,10 @@ export default function Home() {
       <Suspense fallback="loading...">
         <Reviews />
       </Suspense>
-      <Suspense fallback="loading...">
+      {/* <Suspense fallback="loading...">
         <InstagramFeeds />
-      </Suspense>
-      <Divider />
+      </Suspense> */}
+      {/* <Divider /> */}
       <Faqs />
       <Divider />
       <CitiesSection />

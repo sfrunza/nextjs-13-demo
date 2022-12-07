@@ -157,12 +157,9 @@ const Card = ({ houseSize }) => {
 
 export default function Packages() {
   return (
-    <Section label="Packages">
+    <Section>
       <SectionHeader title="Packages" />
-      <ul
-        role="list"
-        className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-      >
+      <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {data.map((houseSize, i) => (
           <Card key={i} houseSize={houseSize} />
         ))}

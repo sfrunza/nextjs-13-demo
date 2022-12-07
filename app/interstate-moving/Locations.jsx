@@ -8,12 +8,9 @@ function classNames(...classes) {
 
 export default function Locations() {
   return (
-    <Section label="long-distance-locations">
+    <Section>
       <SectionHeader title="All Long Distance Moving destinations from Boston" />
-      <ul
-        role="list"
-        className="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3"
-      >
+      <ul className="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
         {states.map((state) => (
           <li
             key={state.name}

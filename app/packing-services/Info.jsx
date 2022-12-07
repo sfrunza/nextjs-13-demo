@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Info() {
   return (
-    <Section label="boston-local-moving-information">
+    <Section>
       <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
         <SectionHeader title="Packing and Unpacking Services" start />
         <div className="relative z-10 mx-auto max-w-prose lg:mx-0 lg:max-w-5xl lg:pr-72">
@@ -41,9 +41,9 @@ export default function Info() {
               <h3>Self Packing</h3>
               <p>
                 If you choose to pack yourself, we offer boxes delivery starting
-                at $45.00 in the Greater Boston area when you move with
-                Raimond's, one week notice required. You pay only for the boxes
-                you use, and we will collect any unused boxes on the day of your
+                at $35.00 in the Greater Boston area when you move with Phoenix
+                Moving, one week notice required. You pay only for the boxes you
+                use, and we will collect any unused boxes on the day of your
                 move. Dont't know how many boxes you need for your move size?
                 Check our PACKAGES.
               </p>

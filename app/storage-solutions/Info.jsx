@@ -1,13 +1,13 @@
 // import Link from 'next/link';
 import Section from '@/ui/Section';
 import SectionHeader from '@/ui/SectionHeader';
-import Map from './Map';
+// import Map from './Map';
 
 const stats = [
-  { label: 'Reliable', value: '100%' },
-  { label: 'Satisfaction', value: '24/7' },
+  { label: 'Affordable Rates and Discounts', value: '100%' },
+  { label: 'Online and On-site Free Estamates', value: '24/7' },
   { label: 'Guaranteed Price', value: '100%' },
-  { label: 'Legit', value: '100%' },
+  { label: 'Fully Licensed and Insured', value: '100%' },
 ];
 
 export default function Info() {
@@ -17,7 +17,8 @@ export default function Info() {
         <div className="relative py-0">
           <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0">
             <div className="relative overflow-hidden rounded-2xl lg:pt-24">
-              <Map />
+              {/* <Map /> */}
+              <img src="" />
             </div>
             <div className="pb-10 text-sm text-gray-500">
               <p className="flex items-center">
@@ -37,7 +38,7 @@ export default function Info() {
         </div>
 
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
-          <SectionHeader title="Long Distance Interstate Moving" start />
+          <SectionHeader title="Moving and Storage Boston" start />
           <div className="mt-6 space-y-6 text-gray-500">
             <p>
               Moving across the state? Across the country? We'll get you there!

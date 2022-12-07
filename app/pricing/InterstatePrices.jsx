@@ -82,7 +82,7 @@ const features = [
 
 export default function InterstatePrices() {
   return (
-    <Section label="phoenix-moving-rates">
+    <Section>
       <SectionHeader
         title="Our Rates for Common Destinations"
         subtitle="Is based upon the mileage from the origin to the destination, and the cubic footage of your belongings."

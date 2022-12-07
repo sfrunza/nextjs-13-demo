@@ -19,7 +19,7 @@ export default function Photos() {
     <section aria-labelledby="phoenix-moving-in-action-images">
       <div className="-mb-10 relative z-[1] flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
         {[
-          '/mover-pushing-dolly.png',
+          '/wrapped-furniture.jpeg',
           '/two-movers-and-tv.jpeg',
           '/two-movers-and-dresses.jpeg',
           '/two-movers-packing-kitchen.jpeg',

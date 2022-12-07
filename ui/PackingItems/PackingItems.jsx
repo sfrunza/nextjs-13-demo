@@ -49,7 +49,7 @@ const items = [
 
 export default function PackingItems() {
   return (
-    <Section label="packing-supplies" className="bg-palette-background">
+    <Section className="bg-palette-background">
       <SectionHeader title="Packing Supplies" />
       <div className="flex overflow-x-scroll w-full scrollbar pb-6">
         {items.map((item) => (

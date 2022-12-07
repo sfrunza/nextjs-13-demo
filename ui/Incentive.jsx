@@ -26,7 +26,7 @@ const incentives = [
 
 export default function Incentive() {
   return (
-    <Section label="phoenix-moving-incentives">
+    <Section>
       <SectionHeader title="Why book with Phoenix Moving Boston?" />
       <div className="mx-auto mt-12 grid max-w-sm grid-cols-1 gap-y-10 gap-x-8 sm:max-w-none lg:grid-cols-3">
         {incentives.map((incentive, i) => (

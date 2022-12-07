@@ -73,7 +73,7 @@ export default function Contact() {
                 <dt className="sr-only">Phone number</dt>
                 <dd className="flex">
                   <a
-                    href="tel:(508) 315-9458"
+                    href="tel:(508)315-9458"
                     className="flex items-center"
                     title="Phoenix Moving Phone"
                   >
@@ -105,10 +105,7 @@ export default function Contact() {
               </div>
             </dl>
             <p className="mt-8 text-gray-500">Follow us on Social Media</p>
-            <ul
-              role="list"
-              className="mt-2 flex space-x-3 sm:space-x-12 flex-wrap"
-            >
+            <ul className="mt-2 flex space-x-3 sm:space-x-12 flex-wrap">
               {social.map((item) => {
                 return (
                   <li key={item.name}>
@@ -156,10 +153,10 @@ export default function Contact() {
             </ul>
           </div>
         </div>
-        <div className="lg:col-span-3 w-full">
+        <div className="lg:col-span-3 w-full flex justify-center items-center">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6632.333964508115!2d-71.3619223197594!3d42.29110984850568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e387680ffe9aeb%3A0x4651b1e640f15b41!2sPhoenix%20Moving%20%26%20Storage!5e0!3m2!1sen!2sus!4v1669569264639!5m2!1sen!2sus"
-            height={'100%'}
+            height={400}
             style={{ border: 0 }}
             allowFullScreen={false}
             className="w-full"

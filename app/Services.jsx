@@ -32,17 +32,14 @@ const services = [
 
 export default function Services() {
   return (
-    <Section label="phoenix-moving-services">
+    <Section>
       <SectionHeader
         title="Phoenix Moving Services"
         subtitle="Phoenix Moving Boston offers local, residential and commercial, moving
               services, corporate relocation for busy professionals, and
               companies as well."
       />
-      <ul
-        role="list"
-        className="mx-auto grid max-w-2xl grid-cols-1 gap-6 text-sm sm:grid-cols-2 md:gap-y-6 lg:max-w-none lg:grid-cols-3"
-      >
+      <ul className="mx-auto grid max-w-2xl grid-cols-1 gap-6 text-sm sm:grid-cols-2 md:gap-y-6 lg:max-w-none lg:grid-cols-3">
         {services.map((service) => (
           <li key={service.name}>
             <a

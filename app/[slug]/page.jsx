@@ -70,7 +70,7 @@ export default async function CityPage({ params }) {
       {city?.interstate ? (
         <>
           <Hero
-            image={'/mover-pushing-dolly.png'}
+            image={'/mover-pushing-dolly.jpg'}
             title={`Movers from Boston to ${city.name}`}
           />
           {/* <Info city={city} /> */}
@@ -83,7 +83,7 @@ export default async function CityPage({ params }) {
         </>
       ) : (
         <>
-          <Hero image={'/mover-pushing-dolly.png'} title={city.fullName} />
+          <Hero image={'/mover-pushing-dolly.jpg'} title={city.fullName} />
           <Partners />
           <Info city={city} />
           <Stats />

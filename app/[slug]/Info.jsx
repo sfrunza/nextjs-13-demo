@@ -1,5 +1,6 @@
 import Container from '@/ui/Container';
 import Button from '@/ui/Button';
+import Image from 'next/image';
 
 export default function Info({ city }) {
   return (
@@ -28,7 +29,7 @@ export default function Info({ city }) {
                   packing services, storage solutions and more. We also offer
                   express interstate moving solutions:
                 </p>
-                <ul role="list">
+                <ul>
                   <li>Quis elit egestas venenatis mattis dignissim.</li>
                   <li>
                     Cras cras lobortis vitae vivamus ultricies facilisis tempus.
@@ -63,12 +64,14 @@ export default function Info({ city }) {
                 </Button>
               </div>
             </div>
-            <div className="relative mx-auto mt-12 max-w-prose lg:mt-0 lg:max-w-none">
-              <img
+            <div className="relative mx-auto mt-12 max-w-prose lg:mt-0 mb-7 lg:mb-0 w-[200px] lg:w-[200px] h-[200px] lg:h-[200px]">
+              <Image
                 src={city.icon}
                 alt={`${city.shortName} ${city.state} image`}
-                className="h-[100%] m-auto"
                 title={`Boston to ${city.fullName}`}
+                className="object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           </div>

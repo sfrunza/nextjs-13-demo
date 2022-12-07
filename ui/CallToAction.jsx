@@ -16,7 +16,7 @@ export default function CallToAction() {
         </h2>
         <div className="mt-8 flex justify-center">
           <Button
-            href="tel:(508) 315-9458"
+            href="tel:(508)315-9458"
             size="large"
             variant="solid"
             color="primary"

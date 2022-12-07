@@ -159,7 +159,7 @@ export default function GlobalNav() {
                             <h3 className=" font-medium text-gray-500">
                               Recent Posts
                             </h3>
-                            <ul role="list" className="mt-4 space-y-4">
+                            <ul className="mt-4 space-y-4">
                               {recentPosts.map((post) => (
                                 <li key={post.id} className="truncate ">
                                   <a
@@ -191,7 +191,7 @@ export default function GlobalNav() {
               )}
             </Popover>
             <a
-              href="tel:(508) 315-9458"
+              href="tel:(508)315-9458"
               title="(508) 315-9458"
               className={clsx(
                 ' font-medium transition-all duration-150 ease-in',

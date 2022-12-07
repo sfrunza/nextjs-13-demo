@@ -3,7 +3,7 @@ import SectionHeader from '@/ui/SectionHeader';
 
 export default function Advantages({ city }) {
   return (
-    <Section label={city.fullName}>
+    <Section>
       <SectionHeader
         title={`Advantages of Living in ${city.shortName}, ${city.state}`}
         start

@@ -56,7 +56,7 @@ const faqs = [
 
 export default function Faqs() {
   return (
-    <Section label="phoenix-moving-faqs">
+    <Section>
       {/* <Image
         className="absolute top-0 left-1/2 max-w-none translate-x-[-30%] -translate-y-1/4"
         src="/background-faqs.jpg"
@@ -82,13 +82,10 @@ export default function Faqs() {
           </>
         }
       />
-      <ul
-        role="list"
-        className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:max-w-none lg:grid-cols-3"
-      >
+      <ul className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:max-w-none lg:grid-cols-3">
         {faqs.map((column, columnIndex) => (
           <li key={columnIndex}>
-            <ul role="list" className="space-y-10">
+            <ul className="space-y-10">
               {column.map((faq, faqIndex) => (
                 <li key={faqIndex}>
                   <p className="text-lg font-semibold leading-6 text-gray-900">

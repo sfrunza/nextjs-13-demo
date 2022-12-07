@@ -119,7 +119,7 @@ export default async function Footer() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className=" font-medium text-white">Services</h3>
-                <ul role="list" className="mt-4 space-y-4">
+                <ul className="mt-4 space-y-4">
                   {navigation.services.map((item) => (
                     <li key={item.name}>
                       <a
@@ -135,7 +135,7 @@ export default async function Footer() {
               </div>
               <div className="mt-12 md:mt-0">
                 <h3 className=" font-medium text-white">Support</h3>
-                <ul role="list" className="mt-4 space-y-4">
+                <ul className="mt-4 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
                       <a
@@ -153,7 +153,7 @@ export default async function Footer() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className=" font-medium text-white">Company</h3>
-                <ul role="list" className="mt-4 space-y-4">
+                <ul className="mt-4 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
                       <a
@@ -169,7 +169,7 @@ export default async function Footer() {
               </div>
               <div className="mt-12 md:mt-0">
                 <h3 className=" font-medium text-white">Legal</h3>
-                <ul role="list" className="mt-4 space-y-4">
+                <ul className="mt-4 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
                       <a

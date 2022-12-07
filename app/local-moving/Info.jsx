@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Info() {
   return (
-    <Section label="boston-local-moving-information">
+    <Section>
       <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
         <SectionHeader title="Boston Local Moving" start />
         <div className="relative z-10 mx-auto max-w-prose  lg:mx-0 lg:max-w-5xl lg:pr-72">
@@ -26,7 +26,7 @@ export default function Info() {
                 your relocation needs are within our scope of service.
               </p>
 
-              <ul role="list">
+              <ul>
                 <li>
                   <b>High-quality local moving services.</b>
                 </li>

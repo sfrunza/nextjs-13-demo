@@ -60,7 +60,7 @@ const tiers = [
 
 export default function Pricing() {
   return (
-    <Section label="phoenix-moving-rates" className="bg-palette-background">
+    <Section className="bg-palette-background">
       <div className="mx-auto max-w-3xl text-center mb-16 sm:mb-20">
         <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900">
           <span className="relative whitespace-nowrap">
@@ -104,7 +104,7 @@ export default function Pricing() {
               <p className="text-sm font-medium text-gray-900">
                 What's included
               </p>
-              <ul role="list" className="mt-6 space-y-4">
+              <ul className="mt-6 space-y-4">
                 {tier.includedFeatures.map((feature) => (
                   <li key={feature} className="flex space-x-3">
                     <CheckIcon
