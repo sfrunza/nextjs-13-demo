@@ -21,8 +21,8 @@ export default function Photos() {
         {[
           '/wrapped-furniture.jpeg',
           '/two-movers-and-tv.jpeg',
-          '/two-movers-and-dresses.jpeg',
-          '/two-movers-packing-kitchen.jpeg',
+          '/items-packed-in-the-truck.jpeg',
+          '/two-movers-disassembling-beds.jpeg',
           '/movers-and-elliptical.jpeg',
         ].map((image, imageIndex) => (
           <div

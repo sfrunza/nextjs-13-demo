@@ -76,7 +76,7 @@ export default async function CityPage({ params }) {
           {/* <Info city={city} /> */}
           <Stats />
           {/* <Services city={city} /> */}
-          <Divider />
+          {/* <Divider /> */}
           {/* <Advantages city={city} /> */}
           <Faqs />
           <CTA />

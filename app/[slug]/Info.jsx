@@ -9,39 +9,45 @@ export default function Info({ city }) {
         <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-prose  lg:max-w-none">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 text-center">
-              Fast, Reliable, and Affordable {city.fullName}
+              Reliable and Professional {city.fullName}
             </h2>
           </div>
           <div className="relative z-10 mx-auto max-w-prose  lg:mx-0 lg:max-w-5xl lg:pr-72">
-            <p className="text-gray-500">
-              <b>Phoenix Moving</b> team is covering end-to-end moving and
-              storage services in <b>{`${city.shortName}, ${city.state}`}</b>{' '}
-              and entire state of Massachusetts.
+            <p className="text-gray-700">
+              Phoenix Moving is a premier moving company that provides
+              high-quality service to customers in{' '}
+              <strong>{`${city.name}, ${city.state}`}</strong> and entire state
+              of Massachusetts.
             </p>
           </div>
           <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-8">
             <div className="relative z-10">
-              <div className="prose prose-indigo mx-auto text-gray-500 lg:max-w-none">
+              <div className="prose prose-indigo mx-auto text-gray-700 lg:max-w-none">
                 <p>
-                  This is possible by hiring a reputable and trusted{' '}
-                  {`${city.shortName} Moving Company`} that provides residential
-                  and commercial moving services, small/large office moves,
-                  packing services, storage solutions and more. We also offer
-                  express interstate moving solutions:
+                  As a{' '}
+                  <strong className="text-gray-700">{`${city.name} Moving Company`}</strong>
+                  , we specialize in long-distance, commercial, and residential
+                  moves, providing a stress-free and hassle-free experience. Our
+                  team of highly-trained and experienced movers will ensure that
+                  your possessions are packed and moved securely and safely. We
+                  take great pride in offering top-notch customer service and a
+                  wide range of moving services. Our services include packing
+                  and unpacking, loading and unloading, and furniture assembly.
+                  We also offer{' '}
+                  <a href="/storage-solutions" className="text-blue-600">
+                    storage solutions
+                  </a>{' '}
+                  for those who need extra space for their belongings.
                 </p>
-                <ul>
-                  <li>Quis elit egestas venenatis mattis dignissim.</li>
-                  <li>
-                    Cras cras lobortis vitae vivamus ultricies facilisis tempus.
-                  </li>
-                  <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
-                </ul>
                 <p>
-                  We provide and manage moving solutions for thousands of
-                  customers every year - from the small move to the large
-                  relocations. Moving to/from{' '}
-                  {`${city.shortName}, ${city.state}`} must be easy and stress
-                  free, convenient and safe!
+                  {`With our competitive rates and flexible payment options, you
+                  can rest assured that when moving to/from
+                  ${city.name} ${city.state}, you're getting the best value
+                  for your money. Contact us today to learn more about our `}
+                  <a href="/local-moving" className="text-blue-600">
+                    services
+                  </a>{' '}
+                  and to get a free quote.
                 </p>
               </div>
               <div className="mx-auto mt-10 flex max-w-prose lg:max-w-none justify-between sm:justify-start">
@@ -67,7 +73,7 @@ export default function Info({ city }) {
             <div className="relative mx-auto mt-12 max-w-prose lg:mt-0 mb-7 lg:mb-0 w-[200px] lg:w-[200px] h-[200px] lg:h-[200px]">
               <Image
                 src={city.icon}
-                alt={`${city.shortName} ${city.state} image`}
+                alt={`${city.name} ${city.state} image`}
                 title={`Boston to ${city.fullName}`}
                 className="object-cover"
                 fill

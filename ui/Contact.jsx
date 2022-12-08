@@ -61,7 +61,7 @@ export default function Contact() {
             <h2 className="text-2xl font-semibold tracking-tight text-gray-900 sm:text-3xl">
               Get in touch
             </h2>
-            <dl className="mt-8  text-gray-500">
+            <dl className="mt-8  text-gray-700">
               <div>
                 <dt className="sr-only">Postal address</dt>
                 <dd>
@@ -78,7 +78,7 @@ export default function Contact() {
                     title="Phoenix Moving Phone"
                   >
                     <PhoneIcon
-                      className="h-6 w-6 flex-shrink-0 text-gray-500"
+                      className="h-6 w-6 flex-shrink-0 text-gray-700"
                       aria-hidden="true"
                     />
                     <span className="ml-3">+1 (508) 315-9458</span>
@@ -94,7 +94,7 @@ export default function Contact() {
                     title="Phoenix Moving Email"
                   >
                     <EnvelopeIcon
-                      className="h-6 w-6 flex-shrink-0 text-gray-500"
+                      className="h-6 w-6 flex-shrink-0 text-gray-700"
                       aria-hidden="true"
                     />
                     <span className="ml-3 break-all">
@@ -104,13 +104,13 @@ export default function Contact() {
                 </dd>
               </div>
             </dl>
-            <p className="mt-8 text-gray-500">Follow us on Social Media</p>
+            <p className="mt-8 text-gray-700">Follow us on Social Media</p>
             <ul className="mt-2 flex space-x-3 sm:space-x-12 flex-wrap">
               {social.map((item) => {
                 return (
                   <li key={item.name}>
                     <a
-                      className="text-gray-500 hover:text-palette-primary-500 transition-all duration-150 ease-in"
+                      className="text-gray-700 hover:text-palette-primary-500 transition-all duration-150 ease-in"
                       href={item.href}
                       title={item.name}
                       target="_blank"

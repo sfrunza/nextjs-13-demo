@@ -13,7 +13,6 @@ const features = [
   {
     name: 'We care about your stuff',
   },
-
   {
     name: 'Clean, fully stocked moving trucks',
   },

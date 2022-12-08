@@ -28,18 +28,18 @@ export default async function Head({ params }) {
     city = await getCity(slug);
   }
 
+  const URL = `https://nextjs-13-demo-psi.vercel.app/${city?.slug}`;
   const title =
     city && city.interstate
-      ? `Movers from Boston to ${city.name} | Boston to ${city.name} moving Company`
-      : `${city?.fullName} - Phoenix Moving Boston (Free Estimate)`;
+      ? `Movers from Boston to ${city?.name} - Phoenix Moving (Free Estimate)`
+      : `${city?.fullName} - Phoenix Moving ${city?.name} (Free Estimate)`;
 
-  const URL = `https://nextjs-13-demo-psi.vercel.app/${city?.slug}`;
   const description =
-    'Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states.';
+    city && city.interstate
+      ? `Professional moving company serving ${city?.name}. We offer a variety of services to meet your needs, including packing, loading, unloading and storage.`
+      : `Professional moving company serving ${city?.name} ${city?.state}. We offer a variety of services to meet your needs, including packing, loading, unloading and storage.`;
 
-  const keywords =
-    'boston to ny moving company, from boston to new york moving, Boston movers, Boston moving company, Boston moving services, moving company in boston, boston moving storage company, Boston relocation company, Boston relocation service, Boston office relocation, ma relocation, massachusets relocation, massachusets relocation company, Massachusetts storage, boston storage company, massachusets moving, massachusets moving company, moving boston storage, moving companies in boston, commercial boston movers, moving packing supplies, student moving discounts, affordable moving company';
-
+  const keywords = `${city?.name} Moving Company, long-distance, commercial, residential moves, stress-free, hassle-free experience, highly-trained and experienced movers, packing and unpacking, loading and unloading, furniture assembly, storage solutions, competitive rates, flexible payment options`;
   return (
     <>
       <meta charSet="UTF-8" />

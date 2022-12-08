@@ -1,8 +1,7 @@
-const URL = 'https://nextjs-13-demo-psi.vercel.app/interstate-moving';
-const title = 'Long Distance Movers - Phoenix Moving Boston (Free Estimate)';
+const URL = 'https://nextjs-13-demo-psi.vercel.app';
+const title = 'Moving and Storage - Phoenix Moving Boston (Free Estimate)';
 const description =
-  'We offer reliable and affordable interstate moving services. Our experienced team will make sure your belongings are safely and securely transported to your destination.';
-
+  'Phoenix Moving offers reliable and secure storage services for your moving needs. We provide flexible storage solutions to accommodate your unique requirements.';
 const keywords =
   'boston to ny moving company, from boston to new york moving, Boston movers, Boston moving company, Boston moving services, moving company in boston, boston moving storage company, Boston relocation company, Boston relocation service, Boston office relocation, ma relocation, massachusets relocation, massachusets relocation company, Massachusetts storage, boston storage company, massachusets moving, massachusets moving company, moving boston storage, moving companies in boston, commercial boston movers, moving packing supplies, student moving discounts, affordable moving company';
 

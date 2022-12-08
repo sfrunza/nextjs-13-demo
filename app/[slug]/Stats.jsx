@@ -2,7 +2,7 @@ import SectionHeader from '@/ui/SectionHeader';
 
 export default function Stats() {
   return (
-    <section className="bg-palette-background pt-12 sm:pt-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-palette-background pt-12 sm:pt-16">
       <SectionHeader
         title="Trusted by thousands of people"
         subtitle="The most Trusted and Reliable Moving Company in Boston"
@@ -12,7 +12,7 @@ export default function Stats() {
           <div className="absolute inset-0 h-1/2 bg-palette-background" />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-4xl">
-              <dl className="rounded-xl bg-white shadow-lg shadow-gray-900/5 sm:grid sm:grid-cols-3">
+              <dl className="rounded-2xl bg-white shadow-lg shadow-gray-900/5 sm:grid sm:grid-cols-3">
                 <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                   <dt className="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">
                     Reliable

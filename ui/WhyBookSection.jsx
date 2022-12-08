@@ -20,11 +20,11 @@ const incentives = [
     name: 'Licensed, Bonded and Insured',
     imageSrc: ClipboardDocumentCheckIcon,
     description:
-      'Phoenix Moving is Fully Licensed and Insured and carries a <a href="#" title="United States Department of Transportation" class="mt-2 text-sm text-blue-600">United States Department of Transportation</a>.',
+      'Phoenix Moving is Fully Licensed and Insured and carries a <a href="#" title="United States Department of Transportation" class="mt-2 text-sm text-blue-600 underline">United States Department of Transportation</a>.',
   },
 ];
 
-export default function Incentive() {
+export default function WhyBookSection() {
   return (
     <Section>
       <SectionHeader title="Why book with Phoenix Moving Boston?" />

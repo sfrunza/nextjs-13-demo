@@ -94,24 +94,24 @@ function Review({
             title="Google"
           />
         </div>
-        <p className="mt-3  leading-7">{text || ''}</p>
+        <p className="mt-3 leading-7">{text || ''}</p>
       </blockquote>
 
-      <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+      <figcaption className="relative mt-6 flex items-center justify-between border-t border-gray-100 pt-6">
         <div>
           <a
-            className="font-display  text-blue-600 font-medium"
+            className="text-blue-600 underline"
             href={author_url}
             target="_blank"
             title={author_name}
           >
             {author_name || ''}
           </a>
-          <div className="mt-1 text-sm text-slate-500">
+          <div className="mt-1 text-sm text-gray-400">
             {relative_time_description || ''}
           </div>
         </div>
-        <div className="overflow-hidden rounded-full bg-slate-50">
+        <div className="overflow-hidden rounded-full bg-gray-50">
           <Image
             className="h-14 w-14 object-cover"
             src={profile_photo_url || ''}

@@ -2,29 +2,25 @@ import Section from '@/ui/Section';
 import SectionHeader from '@/ui/SectionHeader';
 import Image from 'next/image';
 
+const p1 =
+  'Our local moving service provides fast and efficient transportation of your belongings from one residence to another. Our team of experienced movers will ensure that all of your items are transported safely and securely, while providing exceptional customer service. We also provide packing and unpacking services to make your move easier. We know how stressful moving can be, and we`re dedicated to helping you make it as seamless and stress-free as possible. With our local moving service, you can rest assured that your belongings will be delivered safely and on time.';
+
 export default function Info() {
   return (
     <Section>
       <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
         <SectionHeader title="Boston Local Moving" start />
-        <div className="relative z-10 mx-auto max-w-prose  lg:mx-0 lg:max-w-5xl lg:pr-72">
-          <p className="text-gray-500">
-            <b>We are a local moving company in Boston, Massachusetts</b>. If
+        <div className="relative z-10 mx-auto max-w-prose  lg:mx-0 lg:max-w-5xl lg:pr-72 prose prose-indigo ">
+          <p className="text-gray-700">
+            We are a <b>local moving company in Boston, Massachusetts</b>. If
             you're looking for local movers in Boston MA, see if we operate in
             your area, and then contact us for a quote.
           </p>
         </div>
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-8">
           <div className="relative z-10">
-            <div className="prose prose-indigo mx-auto text-gray-500 lg:max-w-none">
-              <p>
-                We service all the biggest and most popular locations in the
-                area, including Boston, Newton, Natick, Brookline, Wellesley,
-                Needham, Cambridge and other. We also perform local services in
-                the entire Greater Boston area and throughout New England. If
-                you're located somewhere along Interstate 95 in Massachusetts,
-                your relocation needs are within our scope of service.
-              </p>
+            <div className="prose prose-indigo mx-auto text-gray-700 lg:max-w-none">
+              <p>{p1}</p>
 
               <ul>
                 <li>

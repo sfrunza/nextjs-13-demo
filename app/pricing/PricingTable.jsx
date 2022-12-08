@@ -77,7 +77,7 @@ export default async function PricingTable() {
                 {data.map((row, rowIndex) => (
                   <tr key={rowIndex} className="border-t border-gray-200">
                     <th
-                      className="py-5 px-4 text-left text-sm font-normal text-gray-500"
+                      className="py-5 px-4 text-left text-sm font-normal text-gray-700"
                       scope="row"
                     >
                       {row.crew}
@@ -85,7 +85,7 @@ export default async function PricingTable() {
                     <td className="py-5 pr-4">
                       <span className="block text-right text-xl font-semibold text-gray-900">
                         ${row.prices[tierIndex]}
-                        {/* <span className="text-sm text-gray-500">/hour</span> */}
+                        {/* <span className="text-sm text-gray-700">/hour</span> */}
                       </span>
                     </td>
                   </tr>
@@ -154,12 +154,12 @@ export default async function PricingTable() {
         </table>
       </div>
       <div className="flex gap-4 justify-between items-baseline flex-col lg:flex-row mt-10">
-        <p className="w-full lg:max-w-[550px] text-sm text-gray-500">
+        <p className="w-full lg:max-w-[550px] text-sm text-gray-700">
           <b>Up to 1 hour Travel Time</b> is applied to all jobs in Metro Boston
           area. (approx 30 min for our movers to get to you address from our
           office plus approx 30 min to get back when the move is finished).
         </p>
-        <p className="w-full lg:max-w-[550px] text-sm text-gray-500">
+        <p className="w-full lg:max-w-[550px] text-sm text-gray-700">
           We have a <b>2 hours minimum Labour Time</b>, plus fixed Travel Time,
           charge policy. After first 2 hours of labor, the move time is prorated
           every 15 min.

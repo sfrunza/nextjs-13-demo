@@ -17,9 +17,9 @@ export default async function CitiesSection() {
               <a
                 href={`/${city.slug}`}
                 title={city.fullName}
-                className="hover:underline text-xs sm:text-sm text-gray-700"
+                className="hover:underline text-xs sm:text-sm text-gray-500"
               >
-                {city.shortName}
+                {city.name}
               </a>
             </div>
           );

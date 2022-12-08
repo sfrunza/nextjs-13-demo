@@ -24,7 +24,7 @@ export default function Item({ item }) {
       </div>
       <div className="px-4 py-4 sm:px-6">
         <p className="text-sm font-semibold text-gray-900">{item.name}</p>
-        <p className="text-sm text-gray-500">{item.size}</p>
+        <p className="text-sm text-gray-400">{item.size}</p>
       </div>
     </div>
   );

@@ -81,13 +81,13 @@ export default function GlobalNav() {
                               href={item.href}
                               title={item.name}
                               className="-m-3 flex items-start rounded-xl p-3 hover:bg-palette-background"
-                              onClick={() => close()}
+                              // onClick={() => close()}
                             >
                               <div>
                                 <p className=" font-medium text-gray-900">
                                   {item.name}
                                 </p>
-                                <p className="mt-1 text-sm text-gray-500">
+                                <p className="mt-1 text-sm text-gray-400">
                                   {item.description}
                                 </p>
                               </div>
@@ -103,7 +103,7 @@ export default function GlobalNav() {
                                 className="-m-3 flex items-center rounded-xl p-3  font-medium text-gray-900 hover:bg-gray-100"
                               >
                                 <item.icon
-                                  className="h-6 w-6 flex-shrink-0 text-gray-400"
+                                  className="h-6 w-6 flex-shrink-0 text-gray-700"
                                   aria-hidden="true"
                                 />
                                 <span className="ml-3">{item.name}</span>

@@ -9,7 +9,7 @@ import Partners from '@/ui/Partners';
 export default function InterstateMoving() {
   return (
     <>
-      <Hero image="/prices.jpg" title="Long Disatnce Movers" />
+      <Hero image="/prices.jpg" title="Long Distance Movers" />
       <Partners />
       <Info />
       {/* <Divider /> */}

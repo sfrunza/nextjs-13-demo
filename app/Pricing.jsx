@@ -70,8 +70,8 @@ export default function Pricing() {
           for everyone.
         </h2>
         <p className="mt-2 sm:text-lg text-gray-700">
-          It doesn't matter what size your business is, our software won't work
-          well for you.
+          Affordable rates on professional moving services tailored to your
+          needs.
         </p>
       </div>
       <div className="mt-12 space-y-4 sm:mt-16 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:mx-auto lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">

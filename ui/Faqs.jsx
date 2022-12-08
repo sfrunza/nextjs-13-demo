@@ -71,13 +71,13 @@ export default function Faqs() {
         subtitle={
           <>
             If you have anything else you want to ask,{' '}
-            <Link
+            <a
               title="Email us"
               href="mailto:info@gophoenixmoving.com"
-              className="text-blue-600"
+              className="text-blue-600 underline"
             >
               reach out to us
-            </Link>
+            </a>
             .
           </>
         }

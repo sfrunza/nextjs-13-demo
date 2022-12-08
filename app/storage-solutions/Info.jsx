@@ -10,6 +10,9 @@ const stats = [
   { label: 'Fully Licensed and Insured', value: '100%' },
 ];
 
+const p1 =
+  'Moving company storage services are ideal for those who need to move and store their belongings in a secure, safe and reliable environment. With these services, customers are able to store their items in state-of-the-art storage facilities, complete with a range of features like climate control, security systems, and 24-hour surveillance. Customers can also choose from a variety of storage sizes, ranging from small lockers to large storage units. Additionally, moving companies provide flexible payment plans and a variety of discounts, making storage services even more cost-effective. With the help of professional movers, customers can rest assured that their belongings are safe and secure in the hands of a reliable moving and storage company.';
+
 export default function Info() {
   return (
     <Section>
@@ -20,7 +23,7 @@ export default function Info() {
               {/* <Map /> */}
               <img src="" />
             </div>
-            <div className="pb-10 text-sm text-gray-500">
+            <div className="pb-10 text-sm text-gray-700">
               <p className="flex items-center">
                 <span className="h-[10px] w-[10px] bg-[#00d866] mr-2" />
                 same/next day delivery
@@ -38,21 +41,28 @@ export default function Info() {
         </div>
 
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
-          <SectionHeader title="Moving and Storage Boston" start />
-          <div className="mt-6 space-y-6 text-gray-500">
+          <SectionHeader
+            title="Storage Solutions for Your Moving Needs"
+            start
+          />
+          <div className="mt-6 space-y-6 text-gray-700 prose prose-indigo">
             <p>
-              Moving across the state? Across the country? We'll get you there!
-              Phoenix Moving here to help with a variety of long-distance
-              services that can take the stress out of your next move. With our
-              long-distance moves, you can expect a quick delivery time to your
-              new home, often times with the same movers who moved the
-              belongings out of your home.
+              For those who need storage services, our company provides
+              convenient, secure, and reliable storage solutions. Our storage
+              facilities are equipped with state-of-the-art security systems,
+              climate control, and fire and theft protection to ensure your
+              belongings are safe. We provide flexible storage options, whether
+              you need short-term or long-term storage, so you can rest assured
+              that your things will be well taken care of. Additionally, our
+              staff are experienced professionals and can assist you in finding
+              the best storage solution that fits your needs and budget.
             </p>
             <p>
-              Unlike other long distance movers who cannot guarantee arrival
-              times, we provide you with an exact date for arrival at your new
-              location which means you can settle into your new home sooner,
-              rather than later.
+              We provide flexible storage options, whether you need short-term
+              or long-term storage, so you can rest assured that your things
+              will be well taken care of. Additionally, our staff are
+              experienced professionals and can assist you in finding the best
+              storage solution that fits your needs and budget.
             </p>
           </div>
 
@@ -64,7 +74,7 @@ export default function Info() {
                   key={stat.label}
                   className="border-t-2 border-gray-100 pt-6"
                 >
-                  <dt className=" font-medium text-gray-500">{stat.label}</dt>
+                  <dt className=" font-medium text-gray-700">{stat.label}</dt>
                   <dd className="text-3xl font-bold tracking-tight text-gray-900">
                     {stat.value}
                   </dd>

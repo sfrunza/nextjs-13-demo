@@ -8,11 +8,11 @@ import Divider from '@/ui/Divider';
 import Faqs from '@/ui/Faqs';
 // import Features from '@/ui/Features';
 import Reviews from '@/ui/Reviews';
-import CallToAction from '@/ui/CallToAction';
+// import CallToAction from '@/ui/CallToAction';
 import Contact from '@/ui/Contact';
 import Script from 'next/script';
 import CitiesSection from '@/ui/CitiesSection';
-import Incentive from '@/ui/Incentive';
+import WhyBookSection from '@/ui/WhyBookSection';
 import Partners from '@/ui/Partners';
 // import InstagramFeeds from '@/ui/InstagramFeed';
 import Photos from '@/ui/Photos';
@@ -33,10 +33,10 @@ const schema1 = {
     'Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states.',
   address: {
     '@type': 'PostalAddress',
+    streetAddress: '18 Lakeview Gardens',
     addressLocality: 'Natick',
     addressRegion: 'MA',
     postalCode: '01760',
-    streetAddress: '18 Lakeview Gardens',
   },
   geo: {
     '@type': 'GeoCoordinates',
@@ -131,6 +131,9 @@ const schema3 = {
   },
 };
 
+const p1 =
+  "Welcome to Joe's Moving Company, a premier moving company that provides high-quality service to customers throughout the United States. We specialize in long-distance, commercial, and residential moves, providing a stress-free and hassle-free experience. Our team of highly-trained and experienced movers will ensure that your possessions are packed and moved securely and safely. We take great pride in offering top-notch customer service and a wide range of moving services. Our services include packing and unpacking, loading and unloading, and furniture assembly. We also offer storage solutions for those who need extra space for their belongings. With our competitive rates and flexible payment options, you can rest assured that you're getting the best value for your money. Contact us today to learn more about our services and to get a free quote.";
+
 export default function Home() {
   return (
     <>
@@ -151,7 +154,7 @@ export default function Home() {
       <Services />
       <Photos />
       <Pricing />
-      <Incentive />
+      <WhyBookSection />
       {/* <Test /> */}
       {/* <Features /> */}
       <CTA />

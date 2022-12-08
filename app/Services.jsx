@@ -35,9 +35,7 @@ export default function Services() {
     <Section>
       <SectionHeader
         title="Phoenix Moving Services"
-        subtitle="Phoenix Moving Boston offers local, residential and commercial, moving
-              services, corporate relocation for busy professionals, and
-              companies as well."
+        subtitle="Phoenix Moving Boston is a premier moving company that provides high-quality service to customers throughout the United States. We specialize in long-distance, commercial, and residential moves, providing a stress-free and hassle-free experience."
       />
       <ul className="mx-auto grid max-w-2xl grid-cols-1 gap-6 text-sm sm:grid-cols-2 md:gap-y-6 lg:max-w-none lg:grid-cols-3">
         {services.map((service) => (

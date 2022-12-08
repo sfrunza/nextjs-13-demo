@@ -72,7 +72,7 @@ export default function MobileMenu({ invert }) {
                           href={item.href}
                           title={item.name}
                           className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
-                          onClick={() => close()}
+                          // onClick={() => close()}
                         >
                           <span className="ml-3  font-medium text-gray-900">
                             {item.name}

@@ -38,25 +38,24 @@ export default function Services({ city }) {
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900">
               Moving Services
             </h2>
-            <p className="mt-2 text-sm sm: text-gray-700">
-              Among all of {city.shortName}, {city.state} moving companies there
-              is good reputable movers and shall we say. Phoenix Moving is fully
+            <p className="mt-2 text-sm text-gray-700">
+              Among all of {city.name}, {city.state} moving companies there is
+              good reputable movers and shall we say. Phoenix Moving is fully
               Licensed and Insured moving company with great reputation and
-              affordable rates. So if you are planning to move in{' '}
-              {city.shortName} you can consider Phoenix Moving as your{' '}
-              {city.shortName} Movers.
+              affordable rates. So if you are planning to move in {city.name}{' '}
+              you can consider Phoenix Moving as your {city.name} Movers.
             </p>
           </div>
           {/* <SectionHeader
             title="Moving Services"
             subtitle={
               <>
-                Among all of {city.shortName}, {city.state} moving companies
+                Among all of {city.name}, {city.state} moving companies
                 there is good reputable movers and shall we say. Phoenix Moving
                 is fully Licensed and Insured moving company with great
                 reputation and affordable rates. So if you are planning to move
-                in {city.shortName} you can consider Phoenix Moving as your{' '}
-                {city.shortName} Movers.
+                in {city.name} you can consider Phoenix Moving as your{' '}
+                {city.name} Movers.
               </>
             }
             start
@@ -65,11 +64,11 @@ export default function Services({ city }) {
             Moving Services
           </p>
           <p className="mt-6  leading-7 text-gray-600">
-            Among all of {city.shortName}, {city.state} moving companies there
+            Among all of {city.name}, {city.state} moving companies there
             is good reputable movers and shall we say. Phoenix Moving is fully
             Licensed and Insured moving company with great reputation and
-            affordable rates. So if you are planning to move in {city.shortName}{' '}
-            you can consider Phoenix Moving as your {city.shortName} Movers.
+            affordable rates. So if you are planning to move in {city.name}{' '}
+            you can consider Phoenix Moving as your {city.name} Movers.
           </p> */}
         </div>
         <div className="mt-20 lg:col-span-2 lg:mt-0">

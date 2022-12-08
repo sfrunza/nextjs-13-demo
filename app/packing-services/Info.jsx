@@ -2,50 +2,51 @@ import Section from '@/ui/Section';
 import SectionHeader from '@/ui/SectionHeader';
 import Image from 'next/image';
 
+const p1 =
+  'Our packing service is an ideal solution for those looking to make their move as stress-free as possible. Our team of experienced professionals will come to your home and carefully pack all of your belongings into sturdy boxes and containers that are designed to protect your items during the move. We will label each box with its contents, so that you can easily find your belongings after the move. Additionally, our packing service allows you to focus on other aspects of your move, such as finding a new home or making travel arrangements. With our packing service, you can rest assured that your items will be securely and safely transported to your new home.';
+
 export default function Info() {
   return (
     <Section>
       <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
         <SectionHeader title="Packing and Unpacking Services" start />
-        <div className="relative z-10 mx-auto max-w-prose lg:mx-0 lg:max-w-5xl lg:pr-72">
-          <p className="text-gray-500">
-            Packing and unpacking can be the most tiresome part of moving. We
-            offer top-notch packing services to reduce the stress of moving. Our
-            packing services are based on the same hourly rates as moving plus
-            cost of packing supplies. If you'd like us to do all, or part of
-            your packing and/or unpacking, please let us know well in advance,
-            since there is a high demand for our packing crews.
-          </p>
+        <div className="relative z-10 mx-auto max-w-prose lg:mx-0 lg:max-w-5xl lg:pr-72 prose prose-indigo">
+          <p className="text-gray-700">{p1}</p>
         </div>
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-8">
           <div className="relative z-10">
-            <div className="prose prose-indigo mx-auto text-gray-500 lg:max-w-none">
+            <div className="prose prose-indigo mx-auto text-gray-700 lg:max-w-none">
               <h3>Full Packing Service</h3>
               <p>
-                Should you hire a full service crew? This is a decision you need
-                to make based on time versus cost. A packing service could add a
-                couple thousand dollars to your moving budget. However, if you
-                need to take two weeks off of work in order to get the house
-                packed and organized, it may be worth the price. Most of the
-                time, we can pack your home in one day. This saves not only
-                time, but the hassle of living with -and out of- boxes.
+                Our full packing and moving service is a comprehensive service
+                package that helps individuals and businesses move their
+                possessions from one location to another. This service includes
+                packing, loading, unloading, and transporting items. It also
+                includes setting up furniture and other items at the
+                destination. With this service, all the stress of packing and
+                moving is taken care of, and you can focus on other aspects of
+                your move.
               </p>
               <h3>Packing Specialty Items</h3>
               <p>
-                If you are on a budget or you want to lower the cost of your
-                move, we offer packing of specialty items, particularly fragile
-                only: kitchen, artwork, mirrors or other breakables or
-                valuables. You can also inquire about our crating services for
-                extra valuable items.
+                Packing specialty items requires careful attention to detail and
+                skill to ensure safe delivery. Specialty items may require
+                custom boxes, specialty wrapping and cushioning materials, as
+                well as specialized labeling. Our movers secure and label all
+                materials to ensure items are not damaged during transit. We
+                take additional care to ensure that any fragile items are
+                properly protected and padded. We also use specialized equipment
+                for heavier items if necessary. Following all packing
+                instructions and taking the extra time to properly package
+                specialty items can help ensure safe and successful delivery.
               </p>
               <h3>Self Packing</h3>
               <p>
-                If you choose to pack yourself, we offer boxes delivery starting
-                at $35.00 in the Greater Boston area when you move with Phoenix
-                Moving, one week notice required. You pay only for the boxes you
-                use, and we will collect any unused boxes on the day of your
-                move. Dont't know how many boxes you need for your move size?
-                Check our PACKAGES.
+                If you choose to pack yourself, we provide packing materials
+                such as boxes, packing tape, and bubble wrap. You pay only for
+                the boxes you use, and we will collect any unused boxes on the
+                day of your move. Dont't know how many boxes you need for your
+                move size? Check our Packages section.
               </p>
             </div>
           </div>
