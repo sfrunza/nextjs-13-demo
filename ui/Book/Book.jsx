@@ -111,14 +111,16 @@ export default function Book() {
       let originZip = values.originZip;
       let destinationZip = values.destinationZip;
       let service = values.service;
-      findTravelTime(
-        originZip,
-        destinationZip,
-        service,
-        activeStep,
-        setActiveStep,
-        actions
-      );
+      if (isLoaded) {
+        findTravelTime(
+          originZip,
+          destinationZip,
+          service,
+          activeStep,
+          setActiveStep,
+          actions
+        );
+      }
     } else {
       setActiveStep(activeStep + 1);
       actions.setTouched({});
