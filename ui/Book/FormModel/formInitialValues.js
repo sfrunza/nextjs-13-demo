@@ -35,10 +35,10 @@ const {
 } = submitFormModel;
 
 export default {
-  [firstName.name]: 'Serg',
-  [lastName.name]: 'Frunza',
-  [email.name]: 'frunza_sergiu@mail.ru',
-  [phone.name]: '(617) 206-0968',
+  [firstName.name]: '',
+  [lastName.name]: '',
+  [email.name]: '',
+  [phone.name]: '',
   [movingDate.name]: '',
   [deliveryDate.name]: '',
   [startTime.name]: 'Any time',
