@@ -5,7 +5,7 @@ export default function Stats() {
     <section className="bg-palette-background pt-12 sm:pt-16">
       <SectionHeader
         title="Trusted by thousands of people"
-        subtitle="The most Trusted and Reliable Moving Company in Boston"
+        subtitle="The most Trusted and Reliable Moving Company in Boston."
       />
       <div className="mt-10 bg-white pb-12 sm:pb-16">
         <div className="relative">

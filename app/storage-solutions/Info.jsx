@@ -1,7 +1,6 @@
-// import Link from 'next/link';
 import Section from '@/ui/Section';
 import SectionHeader from '@/ui/SectionHeader';
-// import Map from './Map';
+import Image from 'next/image';
 
 const stats = [
   { label: 'Affordable Rates and Discounts', value: '100%' },
@@ -17,30 +16,20 @@ export default function Info() {
   return (
     <Section>
       <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
-        <div className="relative py-0">
-          <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0">
-            <div className="relative overflow-hidden rounded-2xl lg:pt-24">
-              {/* <Map /> */}
-              <img src="" />
-            </div>
-            <div className="pb-10 text-sm text-gray-700">
-              <p className="flex items-center">
-                <span className="h-[10px] w-[10px] bg-[#00d866] mr-2" />
-                same/next day delivery
-              </p>
-              <p className="flex items-center">
-                <span className="h-[10px] w-[10px] bg-[#cddc39] mr-2" />
-                1-2 days delivery
-              </p>
-              <p className="flex items-center">
-                <span className="h-[10px] w-[10px] bg-[#ffc107] mr-2" />
-                2+ days delivery
-              </p>
+        <div className="relative sm:py-16 lg:py-0">
+          <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
+            <div className="relative overflow-hidden rounded-2xl pt-64 pb-10 shadow-lg rotate-2 lg:min-h-[350px]">
+              <Image
+                className="absolute inset-0 h-full w-full object-cover"
+                src="/storage-units.webp"
+                alt="Image of a storage facility"
+                fill
+              />
             </div>
           </div>
         </div>
 
-        <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
+        <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 pt-16 lg:pt-0">
           <SectionHeader
             title="Storage Solutions for Your Moving Needs"
             start
@@ -51,11 +40,7 @@ export default function Info() {
               convenient, secure, and reliable storage solutions. Our storage
               facilities are equipped with state-of-the-art security systems,
               climate control, and fire and theft protection to ensure your
-              belongings are safe. We provide flexible storage options, whether
-              you need short-term or long-term storage, so you can rest assured
-              that your things will be well taken care of. Additionally, our
-              staff are experienced professionals and can assist you in finding
-              the best storage solution that fits your needs and budget.
+              belongings are safe.
             </p>
             <p>
               We provide flexible storage options, whether you need short-term

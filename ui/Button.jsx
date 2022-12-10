@@ -45,7 +45,7 @@ const Button = forwardRef(function Button(
     size = 'medium',
     className,
     href,
-    ...props
+    ...rest
   },
   ref
 ) {
@@ -57,9 +57,9 @@ const Button = forwardRef(function Button(
   );
 
   return href ? (
-    <a ref={ref} href={href} className={className} {...props} />
+    <a ref={ref} href={href} className={className} {...rest} />
   ) : (
-    <button ref={ref} className={className} {...props} />
+    <button ref={ref} className={className} {...rest} />
   );
 });
 

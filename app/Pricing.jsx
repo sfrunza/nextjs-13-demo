@@ -139,7 +139,7 @@ export default function Pricing() {
                 />
                 <span className="text-sm text-gray-500">
                   Rate per hour per moving added to your quoted houry rate if
-                  you request it
+                  you request it.
                 </span>
               </p>
             </div>
@@ -164,7 +164,7 @@ export default function Pricing() {
                 />
                 <span className="text-sm text-gray-500">
                   Rate per hour per truck added to your quoted houry rate if you
-                  requested
+                  requested.
                 </span>
               </p>
             </div>

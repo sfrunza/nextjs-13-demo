@@ -20,9 +20,9 @@ export default function Photos() {
       <div className="-mb-10 relative z-[1] flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
         {[
           '/wrapped-furniture.jpeg',
+          '/two-movers-disassembling-beds.jpeg',
           '/two-movers-and-tv.jpeg',
           '/items-packed-in-the-truck.jpeg',
-          '/two-movers-disassembling-beds.jpeg',
           '/movers-and-elliptical.jpeg',
         ].map((image, imageIndex) => (
           <div
