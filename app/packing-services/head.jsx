@@ -1,4 +1,4 @@
-const URL = 'https://nextjs-13-demo-psi.vercel.app/packing-services';
+const URL = `${process.env.NEXT_PUBLIC_MAIN_URL}/packing-services`;
 const title = 'Packing Services - Phoenix Moving Boston (Free Estimate)';
 const description =
   'A professional packing and moving services company. Our experienced team is dedicated to providing the best quality service and customer satisfaction.';

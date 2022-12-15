@@ -3,53 +3,53 @@ export default {
   formField: {
     firstName: {
       name: 'firstName',
-      label: 'First name',
+      label: 'First name*',
       placeholder: 'First name',
       requiredErrorMsg: 'First name is required',
     },
     lastName: {
       name: 'lastName',
-      label: 'Last name',
+      label: 'Last name*',
       placeholder: 'Last name',
       requiredErrorMsg: 'Last name is required',
     },
     email: {
       name: 'email',
-      label: 'Email',
+      label: 'Email*',
       placeholder: 'Email',
       requiredErrorMsg: 'Email is required',
     },
     phone: {
       name: 'phone',
-      label: 'Phone',
+      label: 'Phone*',
       placeholder: 'Phone',
       requiredErrorMsg: 'Phone is required',
     },
     movingDate: {
       name: 'movingDate',
-      label: 'Move date',
+      label: 'Move date*',
       requiredErrorMsg: 'Move date is required',
       invalidErrorMsg: 'Move date is not valid',
     },
     deliveryDate: {
       name: 'deliveryDate',
-      label: 'Delivery date',
+      label: 'Delivery date*',
       requiredErrorMsg: 'Delivery date is required',
       invalidErrorMsg: 'Delivery date is not valid',
     },
     startTime: {
       name: 'startTime',
-      label: 'Start time',
+      label: 'Start time*',
       requiredErrorMsg: 'Start time is required',
     },
     service: {
       name: 'service',
-      label: 'Service',
+      label: 'Service*',
       requiredErrorMsg: 'Service is required',
     },
     size: {
       name: 'size',
-      label: 'Move size',
+      label: 'Move size*',
       requiredErrorMsg: 'Movw size is required',
     },
     additionalInfo: {
@@ -60,14 +60,14 @@ export default {
     },
     referral: {
       name: 'referral',
-      label: 'How did you hear about us?',
+      label: 'How did you hear about us?*',
       requiredErrorMsg: 'Please select one option',
     },
 
     originAddress: {
       name: 'originAddress',
-      label: 'Origin Address',
-      placeholder: '123 Street Name',
+      label: 'Origin Address*',
+      placeholder: '123 Street Name*',
       requiredErrorMsg: 'Address is required',
     },
     originCity: {
@@ -82,13 +82,13 @@ export default {
     },
     originZip: {
       name: 'originZip',
-      label: 'From zip',
+      label: 'From zip*',
       requiredErrorMsg: 'From zip is required',
       invalidErrorMsg: 'Invalid zip',
     },
     originFloor: {
       name: 'originFloor',
-      label: 'Entrance (from)',
+      label: 'Entrance (from)*',
       requiredErrorMsg: 'Floor is required',
     },
     originApt: {
@@ -99,7 +99,7 @@ export default {
 
     destinationAddress: {
       name: 'destinationAddress',
-      label: 'Destination Address',
+      label: 'Destination Address*',
       placeholder: '123 Street Name',
       requiredErrorMsg: 'Address is required',
     },
@@ -115,13 +115,13 @@ export default {
     },
     destinationZip: {
       name: 'destinationZip',
-      label: 'To zip',
+      label: 'To zip*',
       requiredErrorMsg: 'To zip is required',
       invalidErrorMsg: 'Invalid zip',
     },
     destinationFloor: {
       name: 'destinationFloor',
-      label: 'Entrance (to)',
+      label: 'Entrance (to)*',
       requiredErrorMsg: 'Floor is required',
     },
     destinationApt: {

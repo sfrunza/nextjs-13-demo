@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import Script from 'next/script';
 import Hero from '@/ui/Hero';
 import Pricing from './Pricing';
 import CTA from '@/ui/CTA';
@@ -10,25 +11,24 @@ import Faqs from '@/ui/Faqs';
 import Reviews from '@/ui/Reviews';
 // import CallToAction from '@/ui/CallToAction';
 import Contact from '@/ui/Contact';
-import Script from 'next/script';
 import CitiesSection from '@/ui/CitiesSection';
 import WhyBookSection from '@/ui/WhyBookSection';
 import Partners from '@/ui/Partners';
 // import InstagramFeeds from '@/ui/InstagramFeed';
 import Photos from '@/ui/Photos';
 
+const URL = process.env.NEXT_PUBLIC_MAIN_URL;
+
 const schema1 = {
   '@context': 'https://schema.org',
   '@type': 'MovingCompany',
-  '@id': 'https://www.gophoenixmoving.com',
+  '@id': URL,
   name: 'Phoenix Moving | Boston - Chicago from $2950&lrm;. Boston to Chicago Movers',
-  url: 'https://www.gophoenixmoving.com/',
-  logo: 'https://www.gophoenixmoving.com/_next/image?url=%2Flogos%2Flogo.png&w=384&q=75',
-  image: [
-    'https://www.gophoenixmoving.com/_next/image?url=%2Fmover-pushing-dolly.png&w=2048&q=75',
-  ],
+  url: URL,
+  logo: `${URL}/_next/image?url=%2Flogos%2Flogo.png&w=384&q=75`,
+  image: [`${URL}/_next/image?url=%2Fmover-pushing-dolly.png&w=2048&q=75`],
   telephone: '(508) 315-9458',
-  openingHours: 'Mo, Tu, We, Th, Fr, Sa 8am-8pm',
+  openingHours: 'Mo,Tu,We,Th,Fr,Sa,Su 8am-8pm',
   description:
     'Fully Licensed and Insured Reliable Boston Moving Company. Phoenix Movers are professionals and ready to move across MA and other states.',
   address: {
@@ -75,10 +75,10 @@ const schema1 = {
   '@graph': [
     {
       '@type': 'WebPage',
-      '@id': 'https://www.gophoenixmoving.com/#webpage',
-      url: 'https://www.gophoenixmoving.com/',
+      '@id': `${URL}/#webpage`,
+      url: URL,
       name: 'Phoenix Moving | Boston - Chicago from $2950&lrm;. Boston to Chicago Movers',
-      isPartOf: { '@id': 'https://www.gophoenixmoving.com/#website' },
+      isPartOf: { '@id': `${URL}/#website` },
       datePublished: '2022-11-26T10:23:12+00:00',
       dateModified: '2022-11-26T12:13:32+00:00',
       description:
@@ -87,7 +87,7 @@ const schema1 = {
       potentialAction: [
         {
           '@type': 'ReadAction',
-          target: ['https://www.gophoenixmoving.com/'],
+          target: [`${URL}`],
         },
       ],
     },

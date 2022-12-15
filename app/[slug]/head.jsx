@@ -36,8 +36,8 @@ export default async function Head({ params }) {
 
   const description =
     city && city.interstate
-      ? `Professional moving company serving ${city?.name}. We offer a variety of services to meet your needs, including packing, loading, unloading and storage.`
-      : `Professional moving company serving ${city?.name} ${city?.state}. We offer a variety of services to meet your needs, including packing, loading, unloading and storage.`;
+      ? `Reliable Movers from Boston to ${city.name}. The Most Trusted Boston to ${city.name} Moving Company, Get a Free Quote Online (NO Registration Required).`
+      : `Professional Moving Company in ${city?.name} ${city?.state}. The most Reliable ${city?.name} Movers, Get a Free Quote Online (NO Registration Required).`;
 
   const keywords = `${city?.name} Moving Company, long-distance, commercial, residential moves, stress-free, hassle-free experience, highly-trained and experienced movers, packing and unpacking, loading and unloading, furniture assembly, storage solutions, competitive rates, flexible payment options`;
   return (

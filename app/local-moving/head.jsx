@@ -1,4 +1,4 @@
-const URL = 'https://nextjs-13-demo-psi.vercel.app/local-moving';
+const URL = `${process.env.NEXT_PUBLIC_MAIN_URL}/local-moving`;
 const title = 'Local Movers - Phoenix Moving Boston (Free Estimate)';
 const description =
   'We are your local moving experts! Our experienced movers can help you pack, load, and relocate your belongings quickly and safely. Call us today to get started!';

@@ -39,6 +39,7 @@ export default function PhoneInput(props) {
       <input
         {...field}
         {...rest}
+        type="tel"
         placeholder={placeholder}
         onChange={handlePhoneChange}
         className={clsx(

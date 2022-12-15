@@ -43,7 +43,8 @@ export default function Services({ city }) {
               good reputable movers and shall we say. Phoenix Moving is fully
               Licensed and Insured moving company with great reputation and
               affordable rates. So if you are planning to move in {city.name}{' '}
-              you can consider Phoenix Moving as your {city.name} Movers.
+              you can consider Phoenix Moving as your{' '}
+              <strong>{city.name} Movers</strong>.
             </p>
           </div>
           {/* <SectionHeader

@@ -10,10 +10,10 @@ const sizeStyles = {
 
 const baseStyles = {
   solid:
-    'inline-flex justify-center rounded-xl outline-2 outline-offset-2 transition-colors',
-  soft: 'inline-flex justify-center rounded-xl outline-2 outline-offset-2 transition-colors',
+    'inline-flex justify-center rounded-lg outline-2 outline-offset-2 transition-colors',
+  soft: 'inline-flex justify-center rounded-lg outline-2 outline-offset-2 transition-colors',
   outline:
-    'inline-flex justify-center rounded-xl outline-2 outline-offset-2 transition-colors',
+    'inline-flex justify-center rounded-lg outline-2 outline-offset-2 transition-colors',
 };
 
 const variantStyles = {

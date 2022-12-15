@@ -16,7 +16,7 @@ export default function Hero({ image, title, children }) {
           priority
           title={title}
         />
-        <div className="absolute inset-0 bg-gray-900/30 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gray-900/40 mix-blend-multiply" />
 
         {/* <div className="flex gap-6 flex-col-reverse md:flex-row justify-between items-center mx-auto max-w-7xl sm:px-6 lg:px-8"> */}
         {/* <Section className="w-full"> */}
@@ -25,10 +25,13 @@ export default function Hero({ image, title, children }) {
             <Book />
             {/* </div> */}
             {title && (
-              <div className="flex-1 flex items-center justify-center">
-                <h1 className="relative text-center text-white block text-2xl font-semibold tracking-tight sm:text-4xl">
+              <div className="flex-1 flex items-center justify-center flex-col">
+                <h1 className="relative text-center text-white block text-2xl font-semibold sm:text-4xl">
                   {title}
                 </h1>
+                <p className="relative text-center text-gray-300 tracking-[0.3em] font-semibold mt-2">
+                  Make Moving Chill
+                </p>
               </div>
             )}
           </div>

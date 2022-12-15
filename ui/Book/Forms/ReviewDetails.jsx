@@ -27,21 +27,21 @@ export default function ReviewDetails({ values }) {
         </div>
         {values.deliveryDate && (
           <div className="py-2 grid grid-cols-2 gap-4 items-center">
-            <dt className="text-xs text-gray-900">Storage till</dt>
+            <dt className="text-xs text-gray-900">Delivery date</dt>
             <dd className="text-xs text-gray-900">{values.deliveryDate}</dd>
           </div>
         )}
-        {values.deliveryDate && (
+        {values.deliveryDate && !values.isFlatRate && (
           <p className="text-xs text-gray-900 mb-2">
             Delivery rate and time will depend on your final destination and
             date of delivery.
           </p>
         )}
-        <div className="py-2 grid grid-cols-2 gap-4 items-center border-t">
+        <div className="py-2 grid grid-cols-2 gap-4 items-center">
           <dt className="text-xs text-gray-900">Preferred start time</dt>
           <dd className="text-xs text-gray-900">{values.startTime}</dd>
         </div>
-        <div className="py-2 grid grid-cols-2 gap-4 items-center">
+        <div className="py-2 grid grid-cols-2 gap-4 items-center border-t">
           <dt className="text-xs text-gray-900">Origin</dt>
           <dd className="text-xs text-gray-900">
             {oCity}

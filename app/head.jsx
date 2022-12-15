@@ -1,4 +1,4 @@
-const URL = 'https://nextjs-13-demo-psi.vercel.app';
+const URL = process.env.NEXT_PUBLIC_MAIN_URL;
 const title = 'Phoenix Moving - 🚚 Boston Moving Compnay (Free Estimate)';
 const description =
   'Professional moving company serving the Boston area. We provide fast, reliable, and affordable moving services for residential and commercial customers.';

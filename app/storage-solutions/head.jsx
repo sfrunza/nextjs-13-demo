@@ -1,4 +1,4 @@
-const URL = 'https://nextjs-13-demo-psi.vercel.app';
+const URL = `${process.env.NEXT_PUBLIC_MAIN_URL}/storage-solutions`;
 const title = 'Moving and Storage - Phoenix Moving Boston (Free Estimate)';
 const description =
   'Phoenix Moving offers reliable and secure storage services for your moving needs. We provide flexible storage solutions to accommodate your unique requirements.';

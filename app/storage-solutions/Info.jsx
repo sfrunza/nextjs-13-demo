@@ -23,6 +23,7 @@ export default function Info() {
                 className="absolute inset-0 h-full w-full object-cover"
                 src="/storage-units.webp"
                 alt="Image of a storage facility"
+                title="Image of a storage facility"
                 fill
               />
             </div>

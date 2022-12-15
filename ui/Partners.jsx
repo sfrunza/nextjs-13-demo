@@ -25,8 +25,8 @@ export default function Partners() {
               className="flex items-center"
             >
               <Image
-                height={31}
-                width={90}
+                height={27}
+                width={80}
                 className="grayscale hover:grayscale-0 transition-all duration-150 ease-in"
                 src="/partners/google.png"
                 alt="Google logo"
