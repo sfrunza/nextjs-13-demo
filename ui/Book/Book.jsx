@@ -16,6 +16,7 @@ import ContactInfo from './Forms/ContactInfo';
 import ReviewDetails from './Forms/ReviewDetails';
 
 import { findTravelTime } from './utils/findTravelTime';
+import { submitFormToDb } from './utils/submitFormToDb';
 
 const steps = [
   'Get a Quote!',
@@ -106,7 +107,7 @@ export default function Book() {
       console.log('ok');
       window.alert('ok');
       actions.setSubmitting(false);
-      //   submitFormToDb(values, actions, activeStep, setActiveStep);
+      submitFormToDb(values, actions, activeStep, setActiveStep);
     } else if (activeStep === 0) {
       let originZip = values.originZip;
       let destinationZip = values.destinationZip;

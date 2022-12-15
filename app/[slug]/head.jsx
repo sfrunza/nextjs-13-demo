@@ -28,7 +28,7 @@ export default async function Head({ params }) {
     city = await getCity(slug);
   }
 
-  const URL = `https://nextjs-13-demo-psi.vercel.app/${city?.slug}`;
+  const URL = `${process.env.NEXT_PUBLIC_MAIN_URL}/${city?.slug}`;
   const title =
     city && city.interstate
       ? `Movers from Boston to ${city?.name} - Phoenix Moving (Free Estimate)`

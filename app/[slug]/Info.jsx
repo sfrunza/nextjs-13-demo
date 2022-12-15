@@ -22,7 +22,7 @@ export default function Info({ city }) {
           </div>
           <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-8">
             <div className="relative z-10">
-              <div className="prose prose-indigo mx-auto text-gray-700 lg:max-w-none">
+              <div className="prose prose-blue mx-auto text-gray-700 lg:max-w-none">
                 <p>
                   As a{' '}
                   <strong className="text-gray-700">{`${city.name} Moving Company`}</strong>
@@ -34,20 +34,15 @@ export default function Info({ city }) {
                   wide range of moving services. Our services include packing
                   and unpacking, loading and unloading, and furniture assembly.
                   We also offer{' '}
-                  <a href="/storage-solutions" className="text-blue-600">
-                    storage solutions
-                  </a>{' '}
-                  for those who need extra space for their belongings.
+                  <a href="/storage-solutions">storage solutions</a> for those
+                  who need extra space for their belongings.
                 </p>
                 <p>
                   {`With our competitive rates and flexible payment options, you
                   can rest assured that when moving to/from
                   ${city.name} ${city.state}, you're getting the best value
                   for your money. Contact us today to learn more about our `}
-                  <a href="/local-moving" className="text-blue-600">
-                    services
-                  </a>{' '}
-                  and to get a free quote.
+                  <a href="/local-moving">services</a> and to get a free quote.
                 </p>
               </div>
               <div className="mx-auto mt-10 flex max-w-prose lg:max-w-none justify-between sm:justify-start">

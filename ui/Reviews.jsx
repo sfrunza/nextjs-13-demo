@@ -17,3 +17,5 @@ export default async function Reviews() {
     />
   );
 }
+
+// https://mybusiness.googleapis.com/v4/accounts/{accountId}/locations/{locationId}/reviews

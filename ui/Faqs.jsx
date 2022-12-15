@@ -74,7 +74,7 @@ export default function Faqs() {
             <a
               title="Email us"
               href="mailto:info@gophoenixmoving.com"
-              className="text-blue-600 underline"
+              className="text-blue-600 hover:underline"
             >
               reach out to us
             </a>

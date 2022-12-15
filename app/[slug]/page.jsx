@@ -80,9 +80,9 @@ export default async function CityPage({ params }) {
     '@id': URL,
     name: title,
     url: URL,
-    logo: 'https://www.gophoenixmoving.com/_next/image?url=%2Flogos%2Flogo.png&w=384&q=75',
+    logo: `${process.env.NEXT_PUBLIC_MAIN_URL}/_next/image?url=%2Flogos%2Flogo.png&w=384&q=75`,
     image: [
-      'https://www.gophoenixmoving.com/_next/image?url=%2Fmover-pushing-dolly.png&w=2048&q=75',
+      `${process.env.NEXT_PUBLIC_MAIN_URL}/_next/image?url=%2Fmover-pushing-dolly.jpg&w=3840&q=75`,
     ],
     telephone: '(508) 315-9458',
     openingHours: 'Mo,Tu,We,Th,Fr,Sa,Su 8am-8pm',

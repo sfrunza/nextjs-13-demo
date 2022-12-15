@@ -102,7 +102,7 @@ const data = [
 
 const Card = ({ houseSize }) => {
   return (
-    <li className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-2xl bg-white text-center shadow-lg shadow-gray-900/5 border border-gray-200">
+    <li className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-2xl bg-white text-center border border-gray-200">
       <table className="divide-y divide-gray-300">
         <thead>
           <tr>
