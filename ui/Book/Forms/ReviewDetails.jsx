@@ -24,6 +24,9 @@ export default function ReviewDetails(props) {
     : null;
   let isFlatRate = values.isFlatRate;
 
+  // console.log('review page,', values.movingDate);
+  // console.log('review page,', values.deliveryDate);
+
   return (
     <div className="mt-6 p-1">
       <dl className="mt-2">

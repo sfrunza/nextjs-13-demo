@@ -9,6 +9,16 @@ export async function submitFormToDb(
   activeStep,
   setActiveStep
 ) {
+  // console.log('submit function', format(values.movingDate, 'yyyy-MM-dd'));
+  // console.log('submit function', format(values.deliveryDate, 'yyyy-MM-dd'));
+
+  const formattedMovingDate = format(
+    values.movingDate,
+    "yyyy-MM-dd'T'00:00:00"
+  );
+  const formattedDeliveryDate = values.deliveryDate
+    ? format(values.deliveryDate, "yyyy-MM-dd'T'00:00:00")
+    : '';
   const obj = {
     customer: {
       first_name: values.firstName,
@@ -21,8 +31,8 @@ export async function submitFormToDb(
     job: {
       // droppable_id: '1',
       // index: 1,
-      pick_up_date: format(values.movingDate, 'yyyy-MM-ddT00:00:00'),
-      delivery_date: format(values.deliveryDate, 'yyyy-MM-ddT00:00:00'),
+      pick_up_date: formattedMovingDate,
+      delivery_date: formattedDeliveryDate,
       start_time: values.startTime,
       job_size: values.size,
       job_type: values.service,

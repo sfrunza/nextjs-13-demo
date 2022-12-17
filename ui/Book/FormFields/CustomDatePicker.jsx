@@ -32,12 +32,12 @@ export default function CustomDatePicker(props) {
   };
 
   const hanldeChange = (date) => {
-    formikProps.setFieldValue(field.name, date);
-
+    console.log(format(date, "yyyy-MM-dd'T'00:00:00"));
     const formattedDate = format(date, 'MM/dd/yyyy');
     const rateArray = rates.find((r) => r.date === formattedDate);
 
     formikProps.setFieldValue('rates', rateArray.rates);
+    formikProps.setFieldValue(field.name, date);
 
     handleClose();
   };
