@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
-// import Hero from '@/ui/Hero';
+import Hero from '@/ui/Hero';
 import { cities } from '@/lib/citiesData';
 import { states } from '@/lib/statesData';
 import Info from './Info';
@@ -166,10 +166,10 @@ export default async function CityPage({ params }) {
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}
           />
-          {/* <Hero
+          <Hero
             image={'/mover-pushing-dolly.jpg'}
             title={`Movers from Boston to ${city.name}`}
-          /> */}
+          />
           {/* <Info city={city} /> */}
           <Stats />
           {/* <Services city={city} /> */}
@@ -184,10 +184,10 @@ export default async function CityPage({ params }) {
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}
           />
-          {/* <Hero
+          <Hero
             image={'/mover-pushing-dolly.jpg'}
             title={`${city.fullName} - Professional Moving Services`}
-          /> */}
+          />
           <Partners />
           <Info city={city} />
           <Stats />

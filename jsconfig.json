@@ -1,17 +1,17 @@
 {
     "compilerOptions": {
-      // "allowJs": true,
-      // "skipLibCheck": true,
-      // "strict": true,
-      // "forceConsistentCasingInFileNames": true,
-      // "noEmit": true,
-      // "esModuleInterop": true,
-      // "module": "esnext",
-      // "moduleResolution": "node",
-      // "resolveJsonModule": true,
-      // "isolatedModules": true,
-      // "jsx": "preserve",
-      // "incremental": true,
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
       "baseUrl": ".",
       "paths": {
         "@/app/*": ["app/*"],
@@ -19,13 +19,13 @@
         "@/lib/*": ["lib/*"],
         "@/styles/*": ["styles/*"]
       },
-      // "plugins": [
-      //   {
-      //     "name": "next"
-      //   }
-      // ]
+      "plugins": [
+        {
+          "name": "next"
+        }
+      ]
     },
-    // "include": ["next-env.d.js", "**/*.js", "**/*.jsx", ".next/types/**/*.js"],
-    // "exclude": ["node_modules"]
+    "include": ["next-env.d.js", "**/*.js", "**/*.jsx", ".next/types/**/*.js"],
+    "exclude": ["node_modules"]
   }
   
