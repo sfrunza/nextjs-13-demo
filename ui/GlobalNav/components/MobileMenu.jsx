@@ -93,10 +93,9 @@ export default function MobileMenu({ invert }) {
                     </a>
                     {more.map((item) => {
                       return (
-                        <>
+                        <div key={item.name}>
                           {item.href ? (
                             <a
-                              key={item.name}
                               href={item.href}
                               title={item.name}
                               className="font-medium text-gray-900 hover:text-gray-700"
@@ -104,14 +103,11 @@ export default function MobileMenu({ invert }) {
                               {item.name}
                             </a>
                           ) : (
-                            <p
-                              key={item.name}
-                              className="font-medium text-gray-400"
-                            >
+                            <p className="font-medium text-gray-400">
                               {item.name}
                             </p>
                           )}
-                        </>
+                        </div>
                       );
                     })}
                   </div>
