@@ -120,7 +120,7 @@ export default function Contact() {
                 return (
                   <li key={item.name}>
                     <a
-                      className="text-gray-700 hover:text-palette-primary-500 transition-all duration-150 ease-in"
+                      className="text-gray-700 hover:text-palette-primary-500 transition-all duration-150 ease-in relative inline-block group"
                       href={item.href}
                       title={item.name}
                       target="_blank"
@@ -133,6 +133,9 @@ export default function Contact() {
                         }
                         aria-hidden="true"
                       />
+                      <span className="invisible group-hover:visible absolute bottom-10 -left-2 bg-gray-600 rounded-xl py-1 px-2 text-xs text-white z-10">
+                        {item.name}
+                      </span>
                     </a>
                   </li>
                 );

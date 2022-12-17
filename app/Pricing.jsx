@@ -2,6 +2,13 @@ import { CheckIcon } from '@heroicons/react/20/solid';
 import Section from '@/ui/Section';
 import Button from '@/ui/Button';
 
+export async function getData() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BACK_END_API}/prices`, {
+    cache: 'no-store',
+  });
+  return res.json();
+}
+
 function SwirlyDoodle({ className }) {
   return (
     <svg
@@ -19,46 +26,87 @@ function SwirlyDoodle({ className }) {
   );
 }
 
-const tiers = [
-  {
-    name: '2 Movers',
-    href: '#',
-    priceMonthly: 109,
-    description: 'Starting at',
-    includedFeatures: [
-      '2 Professional Movers.',
-      'Clean, fully stocked moving trucks.',
-      'Delicate handling of your stuff.',
-      'All taxes included in the price.',
-    ],
-  },
-  {
-    name: '3 Movers',
-    href: '#',
-    priceMonthly: 149,
-    description: 'Starting at',
-    includedFeatures: [
-      '3 Professional Movers.',
-      'Clean, fully stocked moving trucks.',
-      'Delicate handling of your stuff.',
-      'All taxes included in the price.',
-    ],
-  },
-  {
-    name: '4 Movers',
-    href: '#',
-    priceMonthly: 189,
-    description: 'Starting at',
-    includedFeatures: [
-      '4 Professional Movers.',
-      'Clean, fully stocked moving trucks.',
-      'Delicate handling of your stuff.',
-      'All taxes included in the price.',
-    ],
-  },
-];
+// const tiers = [
+//   {
+//     name: '2 Movers',
+//     href: '#',
+//     priceMonthly: 109,
+//     description: 'Starting at',
+//     includedFeatures: [
+//       '2 Professional Movers.',
+//       'Clean, fully stocked moving trucks.',
+//       'Delicate handling of your stuff.',
+//       'All taxes included in the price.',
+//     ],
+//   },
+//   {
+//     name: '3 Movers',
+//     href: '#',
+//     priceMonthly: 149,
+//     description: 'Starting at',
+//     includedFeatures: [
+//       '3 Professional Movers.',
+//       'Clean, fully stocked moving trucks.',
+//       'Delicate handling of your stuff.',
+//       'All taxes included in the price.',
+//     ],
+//   },
+//   {
+//     name: '4 Movers',
+//     href: '#',
+//     priceMonthly: 189,
+//     description: 'Starting at',
+//     includedFeatures: [
+//       '4 Professional Movers.',
+//       'Clean, fully stocked moving trucks.',
+//       'Delicate handling of your stuff.',
+//       'All taxes included in the price.',
+//     ],
+//   },
+// ];
 
-export default function Pricing() {
+export default async function Pricing() {
+  const prices = await getData();
+
+  const tiers = [
+    {
+      name: '2 Movers',
+      href: '#',
+      priceMonthly: prices[0].two_men[0],
+      description: 'Starting at',
+      includedFeatures: [
+        '2 Professional Movers.',
+        'Clean, fully stocked moving trucks.',
+        'Delicate handling of your stuff.',
+        'All taxes included in the price.',
+      ],
+    },
+    {
+      name: '3 Movers',
+      href: '#',
+      priceMonthly: prices[0].three_men[0],
+      description: 'Starting at',
+      includedFeatures: [
+        '3 Professional Movers.',
+        'Clean, fully stocked moving trucks.',
+        'Delicate handling of your stuff.',
+        'All taxes included in the price.',
+      ],
+    },
+    {
+      name: '4 Movers',
+      href: '#',
+      priceMonthly: prices[0].four_men[0],
+      description: 'Starting at',
+      includedFeatures: [
+        '4 Professional Movers.',
+        'Clean, fully stocked moving trucks.',
+        'Delicate handling of your stuff.',
+        'All taxes included in the price.',
+      ],
+    },
+  ];
+
   return (
     <Section className="bg-palette-background">
       <div className="mx-auto max-w-3xl text-center mb-16 sm:mb-20">
@@ -126,7 +174,7 @@ export default function Pricing() {
               </p>
               <p className="mt-4">
                 <span className="text-4xl font-bold tracking-tight text-gray-900">
-                  $40
+                  ${prices[0].add_men[0]}
                 </span>{' '}
                 <span className=" font-medium text-gray-500">per hour</span>
               </p>
@@ -151,7 +199,7 @@ export default function Pricing() {
               </p>
               <p className="mt-4">
                 <span className="text-4xl font-bold tracking-tight text-gray-900">
-                  $40
+                  ${prices[0].add_truck[0]}
                 </span>{' '}
                 <span className=" font-medium text-gray-500">per hour</span>
               </p>

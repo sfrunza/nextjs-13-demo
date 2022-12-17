@@ -36,7 +36,7 @@ export default function LocalMoveQuote({ values }) {
           <dd className="text-xs font-medium text-gray-700">
             {' '}
             <span className="text-palette-primary-500 text-base">
-              $109
+              {`$${values.rate}`}
             </span>{' '}
             /hour
           </dd>

@@ -38,13 +38,13 @@ export default function Services({ city }) {
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900">
               Moving Services
             </h2>
-            <p className="mt-2 text-sm text-gray-700">
+            <p className="mt-2 text-sm font-light text-gray-900">
               Among all of {city.name}, {city.state} moving companies there is
               good reputable movers and shall we say. Phoenix Moving is fully
               Licensed and Insured moving company with great reputation and
               affordable rates. So if you are planning to move in {city.name}{' '}
               you can consider Phoenix Moving as your{' '}
-              <strong>{city.name} Movers</strong>.
+              <strong className="font-medium">{city.name} Movers</strong>.
             </p>
           </div>
           {/* <SectionHeader

@@ -1,34 +1,22 @@
-// 'use client';
-
 import { useField, useFormikContext } from 'formik';
 import clsx from 'clsx';
 
 export default function SelectField(props) {
   const { label, options } = props;
   const [field, meta] = useField(props);
-  const { value } = field;
+  const { value, name } = field;
   const { touched, error } = meta;
   const isError = touched && Boolean(error);
   const isSuccess = touched && !Boolean(error);
   const formikProps = useFormikContext();
 
   function handleChnage(e) {
-    field.onChange(e);
+    const val = e.target.value;
+    const removeToZip = val.localeCompare('Moving') !== 0;
+    const removeDeliveryDate = val.localeCompare('Moving with Storage') !== 0;
 
-    const removeToZip = e.target.value !== 'Moving';
-
-    const removeDeliveryDate = e.target.value !== 'Moving with Storage';
-
-    if (label === 'Service') {
-      // if (removeToZip) {
-      //   formikProps.setFieldValue(`destinationAddress`, '');
-      //   formikProps.setFieldValue(`destinationCity`, '');
-      //   formikProps.setFieldValue(`destinationState`, '');
-      //   formikProps.setFieldValue(`destinationZip`, '');
-      //   formikProps.setFieldValue(`destinationFloor`, '');
-      //   formikProps.setFieldValue(`destinationApt`, '');
-      // }
-      if (removeDeliveryDate && removeToZip) {
+    if (name === 'service') {
+      if (removeToZip && removeDeliveryDate) {
         formikProps.setFieldValue(`deliveryDate`, '');
         formikProps.setFieldValue(`destinationAddress`, '');
         formikProps.setFieldValue(`destinationCity`, '');
@@ -41,6 +29,7 @@ export default function SelectField(props) {
         formikProps.setFieldValue(`deliveryDate`, '');
       }
     }
+    field.onChange(e);
   }
 
   return (

@@ -1,4 +1,9 @@
-import { DatePickerField, SelectField, ZipField } from '../FormFields';
+import {
+  DatePickerField,
+  SelectField,
+  ZipField,
+  CustomDatePicker,
+} from '../FormFields';
 
 const times = [
   {
@@ -62,15 +67,17 @@ export default function FirstStep(props) {
     },
     showDeliveryDate,
     showDestination,
+    rates
   } = props;
 
   return (
     <div className="mt-6 grid grid-cols-4 gap-4 p-1">
       <div className="col-span-2">
-        <DatePickerField
+        <CustomDatePicker
           name={movingDate.name}
           label={movingDate.label}
-          placeholder="asdasd"
+          placeholder={movingDate.placeholder}
+          rates={rates}
         />
       </div>
 
@@ -109,9 +116,15 @@ export default function FirstStep(props) {
       </div>
       {showDeliveryDate && (
         <div className="col-span-2">
-          <DatePickerField
+          {/* <DatePickerField
             name={deliveryDate.name}
             label={deliveryDate.label}
+          /> */}
+          <CustomDatePicker
+            name={deliveryDate.name}
+            label={deliveryDate.label}
+            placeholder={deliveryDate.placeholder}
+            rates={rates}
           />
         </div>
       )}

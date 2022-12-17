@@ -5,12 +5,7 @@ import { Popover, Transition } from '@headlessui/react';
 import { UserIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 // import Link from 'next/link';
-import {
-  services,
-  callsToAction,
-  resources,
-  recentPosts,
-} from '@/lib/navigation';
+import { services, callsToAction, more, recentPosts } from '@/lib/navigation';
 import Logo from '@/ui/Logo';
 import NavLink from './components/NavLink';
 import NavButton from './components/NavButton';
@@ -136,23 +131,29 @@ export default function GlobalNav() {
                     <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
                       <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                          {resources.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              title={item.name}
-                              className="-m-3 flex items-start rounded-xl p-3 hover:bg-gray-50"
-                            >
-                              <div>
-                                <p className=" font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                {/* <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p> */}
+                          {more.map((item) => {
+                            return (
+                              <div key={item.name}>
+                                {item.href ? (
+                                  <a
+                                    // key={item.name}
+                                    href={item.href}
+                                    title={item.name}
+                                    className="-m-3 flex items-start rounded-xl p-3 hover:bg-gray-50 font-medium text-gray-900"
+                                  >
+                                    {item.name}
+                                  </a>
+                                ) : (
+                                  <p
+                                    // key={item.name}
+                                    className="-m-3 flex items-start rounded-xl p-3 font-medium text-gray-400"
+                                  >
+                                    {item.name}
+                                  </p>
+                                )}
                               </div>
-                            </a>
-                          ))}
+                            );
+                          })}
                         </div>
                         <div className="bg-gray-50 px-5 py-5 sm:px-8 sm:py-8">
                           <div>

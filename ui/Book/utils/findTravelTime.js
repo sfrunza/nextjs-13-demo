@@ -61,7 +61,7 @@ export const findTravelTime = (
         let toHq = 20;
         let timeBetween = 0;
         let distanceBetween = 0;
-        console.log(response);
+        // console.log(response);
         if (
           toZip === '' &&
           isEmptyString(response.destinationAddresses) &&
@@ -79,10 +79,10 @@ export const findTravelTime = (
           actions.setTouched({});
           actions.setSubmitting(false);
 
-          console.log('from HQ', fromHq);
-          console.log('to HQ', toHq);
-          console.log('time between', timeBetween);
-          console.log('distance between', distanceBetween);
+          // console.log('from HQ', fromHq);
+          // console.log('to HQ', toHq);
+          // console.log('time between', timeBetween);
+          // console.log('distance between', distanceBetween);
         }
         //moving and moving with storage
         else if (
@@ -120,10 +120,10 @@ export const findTravelTime = (
           actions.setFieldValue('travelTime', [fromHq, toHq]);
           actions.setFieldValue('timeBetween', timeBetween);
 
-          console.log('from HQ', fromHq);
-          console.log('to HQ', toHq);
-          console.log('time between', timeBetween);
-          console.log('distance between', distanceBetween);
+          // console.log('from HQ', fromHq);
+          // console.log('to HQ', toHq);
+          // console.log('time between', timeBetween);
+          // console.log('distance between', distanceBetween);
 
           setActiveStep(activeStep + 1);
           actions.setTouched({});

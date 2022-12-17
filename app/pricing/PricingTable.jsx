@@ -3,10 +3,9 @@ import Section from '@/ui/Section';
 import clsx from 'clsx';
 
 export async function getData() {
-  const res = await fetch(
-    'https://phoenixmoving-app.herokuapp.com/api/v1/prices',
-    { cache: 'no-store' }
-  );
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BACK_END_API}/prices`, {
+    cache: 'no-store',
+  });
   return res.json();
 }
 

@@ -11,7 +11,13 @@ export default function Info() {
       <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
         <SectionHeader title="Packing and Unpacking Services" start />
         <div className="relative z-10 mx-auto max-w-prose lg:mx-0 lg:max-w-5xl lg:pr-72 prose prose-indigo">
-          <p className="text-gray-700">{p1}</p>
+          <p className="text-gray-700">
+            {p1}
+            <a href="/pricing" className="ml-1">
+              View pricing page
+            </a>
+            .
+          </p>
         </div>
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-8">
           <div className="relative z-10">
@@ -45,8 +51,8 @@ export default function Info() {
                 If you choose to pack yourself, we provide packing materials
                 such as boxes, packing tape, and bubble wrap. You pay only for
                 the boxes you use, and we will collect any unused boxes on the
-                day of your move. Dont't know how many boxes you need for your
-                move size? Check our Packages section.
+                day of your move. Don't know how many boxes you need for your
+                move size? Check our <a href="#packages">Packages section</a>.
               </p>
             </div>
           </div>

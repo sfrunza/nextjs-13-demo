@@ -28,6 +28,9 @@ module.exports = {
         '4xl': '2rem',
         '5xl': '2.5rem',
       },
+      boxShadow: {
+        '3xl': '0 0 1px 0 rgb(0 0 0 / 31%), 0 5px 8px -2px rgb(0 0 0 / 25%);',
+      },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1rem' }],
         sm: ['0.875rem', { lineHeight: '1.5rem' }],

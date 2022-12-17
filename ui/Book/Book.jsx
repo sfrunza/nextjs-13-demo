@@ -19,7 +19,7 @@ import { findTravelTime } from './utils/findTravelTime';
 import { submitFormToDb } from './utils/submitFormToDb';
 
 const steps = [
-  'Get a Quote!',
+  'Swift Estimate!',
   'Fill Move Details',
   'Calculator Result',
   'Fill Addresses',
@@ -37,7 +37,7 @@ const stepsButtons = [
 
 const { formId, formField } = sumbitFormModel;
 
-function _renderStepContent(step, values) {
+function _renderStepContent(step, values, rates) {
   // console.log(values);
   const showDeliveryDate = values.service === 'Moving with Storage';
   const showDestination =
@@ -50,6 +50,7 @@ function _renderStepContent(step, values) {
           formField={formField}
           showDeliveryDate={showDeliveryDate}
           showDestination={showDestination}
+          rates={rates}
         />
       );
     case 1:
@@ -69,13 +70,13 @@ function _renderStepContent(step, values) {
     case 4:
       return <ContactInfo formField={formField} />;
     case 5:
-      return <ReviewDetails values={values} />;
+      return <ReviewDetails values={values} formField={formField} />;
     default:
       return <div>Not Found</div>;
   }
 }
 
-export default function Book() {
+export default function Book({ rates }) {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
   });
@@ -99,7 +100,8 @@ export default function Book() {
     validationSchema[1],
     validationSchema[2],
     validationSchema[3],
-    validationSchema[4]
+    validationSchema[4],
+    validationSchema[5]
   );
 
   function _handleSubmit(values, actions) {
@@ -127,14 +129,6 @@ export default function Book() {
       actions.setTouched({});
       actions.setSubmitting(false);
     }
-
-    // if (isLastStep) {
-    //     submitFormToDb(values, actions, activeStep, setActiveStep);
-    // } else {
-    //   setActiveStep(activeStep + 1);
-    //   actions.setTouched({});
-    //   actions.setSubmitting(false);
-    // }
   }
 
   function _handleBack() {
@@ -143,10 +137,10 @@ export default function Book() {
   return (
     <React.Fragment>
       <Toaster />
-      {/* <div className="relative flex justify-center items-center h-full w-[90%] sm:w-[400px]">
-        <div className="w-full bg-white p-4 overflow-y-auto sm:max-h-[464px] rounded-2xl shadow-lg shadow-gray-900/5"> */}
-      <div className="relative flex justify-center items-center w-full sm:w-[400px]">
-        <div className="w-full bg-white p-4 overflow-y-auto max-h-[525px] rounded-2xl shadow-lg shadow-gray-900/5">
+      <div className="flex justify-center items-center w-full sm:w-[400px]">
+        {/* relative */}
+        <div className="w-full bg-white p-4 rounded-2xl shadow-lg shadow-gray-900/5 overflow-y-auto max-h-[525px]">
+          {/* overflow-y-auto max-h-[525px] */}
           <React.Fragment>
             {activeStep === steps.length ? (
               // <BookSuccess />
@@ -158,11 +152,13 @@ export default function Book() {
                 onSubmit={_handleSubmit}
               >
                 {({ isSubmitting, values, errors }) => {
-                  //   console.log(errors);
+                  // console.log(values);
                   return (
                     <Form id={formId} autoComplete="off">
-                      <p className="text-lg font-bold">{steps[activeStep]}</p>
-                      {_renderStepContent(activeStep, values)}
+                      <p className="text-2xl font-semibold text-center">
+                        {steps[activeStep]}
+                      </p>
+                      {_renderStepContent(activeStep, values, rates)}
                       <div className="flex mt-6 gap-2 justify-between">
                         {activeStep !== 0 && (
                           <Button
@@ -188,6 +184,11 @@ export default function Book() {
                             : stepsButtons[activeStep]}
                         </Button>
                       </div>
+                      {activeStep === 0 && (
+                        <p className="text-gray-500 font-semmibold text-xs text-center mt-2">
+                          Free quote at step 3
+                        </p>
+                      )}
                     </Form>
                   );
                 }}

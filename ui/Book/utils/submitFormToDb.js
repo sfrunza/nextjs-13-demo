@@ -1,5 +1,5 @@
-import moment from 'moment';
 import axios from 'axios';
+import { format } from 'date-fns';
 
 const API = process.env.NEXT_PUBLIC_API_ENDPOINT;
 
@@ -21,8 +21,8 @@ export async function submitFormToDb(
     job: {
       // droppable_id: '1',
       // index: 1,
-      pick_up_date: moment(values.movingDate).format('yyyy-MM-DDT00:00:00'),
-      delivery_date: values.deliveryDate,
+      pick_up_date: format(values.movingDate, 'yyyy-MM-ddT00:00:00'),
+      delivery_date: format(values.deliveryDate, 'yyyy-MM-ddT00:00:00'),
       start_time: values.startTime,
       job_size: values.size,
       job_type: values.service,
@@ -59,13 +59,13 @@ export async function submitFormToDb(
 
   let customer = obj.customer;
   axios.post(`${API}/api/v1/customers`, { customer }).then((response) => {
-    console.log('customer', response);
+    // console.log('customer', response);
     if (response.data.customer) {
       let customerId = response.data.customer.id;
       let job = obj.job;
       job.customer_id = customerId;
       axios.post(`${API}/api/v1/jobs`, { job }).then((response) => {
-        console.log('job', response);
+        // console.log('job', response);
         let jobId = response.data.job.id;
 
         let origin = obj.origin;
@@ -77,7 +77,7 @@ export async function submitFormToDb(
             address,
           })
           .then((response) => {
-            console.log('address origin', response);
+            // console.log('address origin', response);
           })
           .catch((err) => console.log(err));
 
@@ -89,7 +89,7 @@ export async function submitFormToDb(
               address,
             })
             .then((resp) => {
-              console.log('address destination', response);
+              // console.log('address destination', response);
             })
             .catch((err) => console.log(err));
         }

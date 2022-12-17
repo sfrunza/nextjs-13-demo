@@ -20,6 +20,7 @@ const {
     destinationAddress,
     destinationZip,
     destinationFloor,
+    agreed,
   },
 } = submitFormModel;
 
@@ -110,5 +111,10 @@ export default [
     [referral.name]: Yup.string()
       .nullable()
       .required(`${referral.requiredErrorMsg}`),
+  }),
+  Yup.object().shape({
+    [agreed.name]: Yup.bool()
+      .required(`${agreed.requiredErrorMsg}`)
+      .oneOf([true], `${agreed.requiredErrorMsg}`),
   }),
 ];

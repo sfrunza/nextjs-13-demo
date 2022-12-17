@@ -102,7 +102,10 @@ const data = [
 
 const Card = ({ houseSize }) => {
   return (
-    <li className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-2xl bg-white text-center border border-gray-200">
+    <li
+      className="shadow-lg shadow-gray-900/5 sm:shadow-none overflow-hidden mx-4 sm:mx-0 rounded-2xl bg-white border border-gray-200 flex flex-col min-w-[240px] sm:col-span-1"
+      // className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-2xl bg-white text-center border border-gray-200"
+    >
       <table className="divide-y divide-gray-300">
         <thead>
           <tr>
@@ -157,9 +160,12 @@ const Card = ({ houseSize }) => {
 
 export default function Packages() {
   return (
-    <Section>
+    <Section id="packages">
       <SectionHeader title="Packages" />
-      <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <ul
+        className="flex overflow-x-scroll w-full scrollbar pb-6  sm:grid sm:gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        // className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      >
         {data.map((houseSize, i) => (
           <Card key={i} houseSize={houseSize} />
         ))}

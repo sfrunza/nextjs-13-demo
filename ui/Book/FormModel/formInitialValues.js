@@ -31,6 +31,9 @@ const {
     travelTime,
     timeBetween,
     distanceBetween,
+    agreed,
+    rates,
+    rate,
   },
 } = submitFormModel;
 
@@ -65,4 +68,7 @@ export default {
   [travelTime.name]: [],
   [timeBetween.name]: 0,
   [distanceBetween.name]: 0,
+  [agreed.name]: false,
+  [rates.name]: [],
+  [rate.name]: null,
 };

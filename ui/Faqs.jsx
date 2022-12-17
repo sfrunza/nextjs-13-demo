@@ -91,7 +91,9 @@ export default function Faqs() {
                   <p className="text-lg font-semibold leading-6 text-gray-900">
                     {faq.question}
                   </p>
-                  <p className="mt-4 text-sm text-gray-700">{faq.answer}</p>
+                  <p className="mt-4 text-sm font-light text-gray-900">
+                    {faq.answer}
+                  </p>
                 </li>
               ))}
             </ul>

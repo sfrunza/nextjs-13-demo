@@ -2,7 +2,15 @@ import Image from 'next/image';
 import Section from '@/ui/Section';
 import Book from '@/ui/Book';
 
-export default function Hero({ image, title, children }) {
+export async function getData() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BACK_END_API}/rates`, {
+    cache: 'no-store',
+  });
+  return res.json();
+}
+
+export default async function Hero({ image, title, children }) {
+  const rates = await getData();
   return (
     <section className="relative">
       {/* <div className="mx-auto w-full"> */}
@@ -22,7 +30,7 @@ export default function Hero({ image, title, children }) {
         {/* <Section className="w-full"> */}
         <section className="pb-6 pt-20 sm:pb-10 sm:pt-32 relative overflow-hidden w-full flex">
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex-1 flex flex-col-reverse lg:flex-row items-center">
-            <Book />
+            <Book rates={rates} />
             {/* </div> */}
             {title && (
               <div className="flex-1 flex items-center justify-center flex-col">

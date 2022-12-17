@@ -1,4 +1,5 @@
-import { intervalToDuration } from 'date-fns';
+import { format, intervalToDuration } from 'date-fns';
+import CheckBoxField from '../FormFields/CheckBoxField';
 const formatQuote = (quote) => {
   return quote.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 };
@@ -12,23 +13,44 @@ const getDaysDiff = (startDate, endDate, dateFormat = 'YYYY-MM-DD') => {
   return res;
 };
 
-export default function ReviewDetails({ values }) {
+export default function ReviewDetails(props) {
+  const {
+    formField: { agreed },
+    values,
+  } = props;
   let oCity = `${values.originAddress} ${values.originCity}, ${values.originState}`;
   let dCity = values.destinationCity
     ? `${values.destinationAddress} ${values.destinationCity}, ${values.destinationState}`
     : null;
   let isFlatRate = values.isFlatRate;
+
   return (
     <div className="mt-6 p-1">
       <dl className="mt-2">
         <div className="py-2 grid grid-cols-2 gap-4 items-center">
+          <dt className="text-xs text-gray-900">Name</dt>
+          <dd className="text-xs text-gray-900">{`${values.firstName} ${values.lastName}`}</dd>
+        </div>
+        <div className="py-2 grid grid-cols-2 gap-4 items-center">
+          <dt className="text-xs text-gray-900">Email</dt>
+          <dd className="text-xs text-gray-900">{values.email}</dd>
+        </div>
+        <div className="py-2 grid grid-cols-2 gap-4 items-center">
+          <dt className="text-xs text-gray-900">Phone</dt>
+          <dd className="text-xs text-gray-900">{values.phone}</dd>
+        </div>
+        <div className="py-2 grid grid-cols-2 gap-4 items-center border-t">
           <dt className="text-xs text-gray-900">Moving date</dt>
-          <dd className="text-xs text-gray-900">{values.movingDate}</dd>
+          <dd className="text-xs text-gray-900">
+            {format(values.movingDate, 'MMMM dd, yyyy')}
+          </dd>
         </div>
         {values.deliveryDate && (
           <div className="py-2 grid grid-cols-2 gap-4 items-center">
             <dt className="text-xs text-gray-900">Delivery date</dt>
-            <dd className="text-xs text-gray-900">{values.deliveryDate}</dd>
+            <dd className="text-xs text-gray-900">
+              {format(values.deliveryDate, 'MMMM dd, yyyy')}
+            </dd>
           </div>
         )}
         {values.deliveryDate && !values.isFlatRate && (
@@ -93,7 +115,7 @@ export default function ReviewDetails({ values }) {
             <dd className="text-xs text-gray-900">
               {' '}
               <span className="text-palette-primary-500 text-base">
-                $109
+                {`$${values.rate}`}
               </span>{' '}
               /hour
             </dd>
@@ -144,6 +166,10 @@ export default function ReviewDetails({ values }) {
             </dd>
           </div>
         )}
+        <div className="py-2 grid grid-cols-2 gap-4items-center border-b">
+          <dt className="text-xs text-gray-900">Additional info</dt>
+          <dd className="text-xs text-gray-500">{values.additionalInfo}</dd>
+        </div>
         <div className="py-2 sm:py-5 ">
           {!isFlatRate && (
             <p className="mt-1 text-xs text-gray-400 sm:mt-0">
@@ -159,6 +185,12 @@ export default function ReviewDetails({ values }) {
               unpredicetd circumstances.
             </p>
           )}
+        </div>
+        <div>
+          <CheckBoxField name={agreed.name} label={agreed.label} />
+          <p className="mt-4 text-palette-primary-500 uppercase text-xs">
+            No credit card required, no obligation!
+          </p>
         </div>
       </dl>
     </div>

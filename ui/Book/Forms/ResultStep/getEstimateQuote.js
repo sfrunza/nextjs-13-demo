@@ -3,6 +3,7 @@ const roundAmount = (amount, rate) => {
 };
 
 export const getEstimateQuote = (distance, isFlatRate, estimateTime, rate) => {
+  // console.log(rate);
   if (estimateTime.length === 0) return [];
   let estimateQuoteArray = [];
   let oneDollarPerMile = Math.floor(distance / 50) * 50;

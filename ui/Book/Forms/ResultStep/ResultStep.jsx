@@ -15,30 +15,37 @@ const ResultStep = ({ values }) => {
 
   useEffect(() => {
     findCrewSize();
-    calculateJobTime();
   }, []);
+
+  useEffect(() => {
+    calculateJobTime();
+  }, [formikProps.values.rate]);
 
   const findCrewSize = useCallback(() => {
     let crew = 0;
     if (values.destinationFloor === '') {
       crew = getCrewSizeLoadingUnloading(values.size, values.originFloor);
-      console.log('crew Size---> L U ', crew);
+      // console.log('crew Size---> L U ', crew);
     } else if (values.isFlatRate) {
       crew = getCrewSizeFlatRate(
         values.size,
         values.originFloor,
         values.destinationFloor
       );
-      console.log('crew Size--->Flat rate', crew);
+      // console.log('crew Size--->Flat rate', crew);
     } else {
       crew = getCrewSize(
         values.size,
         values.originFloor,
         values.destinationFloor
       );
-      console.log('crew Size---> Normal', crew);
+      // console.log('crew Size---> Normal', crew);
     }
     formikProps.setFieldValue('crewSize', crew);
+    formikProps.setFieldValue(
+      'rate',
+      parseInt(formikProps.values.rates[crew - 2])
+    );
     return crew;
   }, [values]);
 
@@ -59,7 +66,7 @@ const ResultStep = ({ values }) => {
       values.distanceBetween,
       values.isFlatRate,
       jobTime,
-      109
+      values.rate
     );
     formikProps.setFieldValue('estimateQuote', quote);
     return;

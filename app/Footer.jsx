@@ -15,7 +15,7 @@ const navigation = {
   services,
   support: [
     { name: 'Prices', href: '/pricing' },
-    { name: 'FAQ', href: '#' },
+    { name: 'FAQ', href: '/faq' },
     { name: 'Our Work', href: '#' },
   ],
   company: [

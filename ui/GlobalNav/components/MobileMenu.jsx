@@ -3,7 +3,7 @@ import { Popover, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 // import Link from 'next/link';
-import { services, resources } from '@/lib/navigation';
+import { services, more } from '@/lib/navigation';
 import Logo from '@/ui/Logo';
 import Button from '@/ui/Button';
 
@@ -74,7 +74,7 @@ export default function MobileMenu({ invert }) {
                           className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
                           // onClick={() => close()}
                         >
-                          <span className="ml-3  font-medium text-gray-900">
+                          <span className="ml-3 font-medium text-gray-900">
                             {item.name}
                           </span>
                         </a>
@@ -87,29 +87,35 @@ export default function MobileMenu({ invert }) {
                     <a
                       href="/pricing"
                       title="Pricing"
-                      className=" font-medium text-gray-900 hover:text-gray-700"
+                      className="font-medium text-gray-900 hover:text-gray-700"
                     >
                       Pricing
                     </a>
-                    {resources.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        title={item.name}
-                        className=" font-medium text-gray-900 hover:text-gray-700"
-                      >
-                        {item.name}
-                      </a>
-                    ))}
+                    {more.map((item) => {
+                      return (
+                        <>
+                          {item.href ? (
+                            <a
+                              key={item.name}
+                              href={item.href}
+                              title={item.name}
+                              className="font-medium text-gray-900 hover:text-gray-700"
+                            >
+                              {item.name}
+                            </a>
+                          ) : (
+                            <p
+                              key={item.name}
+                              className="font-medium text-gray-400"
+                            >
+                              {item.name}
+                            </p>
+                          )}
+                        </>
+                      );
+                    })}
                   </div>
                   <div>
-                    {/* <a
-                      href="#"
-                      title="Book a move"
-                      className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2  font-medium text-white shadow-sm hover:bg-indigo-700"
-                    >
-                      Book a move
-                    </a> */}
                     <Button
                       href="#"
                       color="primary"
