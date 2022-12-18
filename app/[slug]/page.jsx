@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Script from 'next/script';
 import Hero from '@/ui/Hero';
 import { cities } from '@/lib/citiesData';
-// import { states } from '@/lib/statesData';
+import { states } from '@/lib/statesData';
 import Info from './Info';
 import Faqs from '@/ui/Faqs';
 import Stats from './Stats';
@@ -21,25 +21,39 @@ export async function generateStaticParams() {
     slug: city.slug,
   }));
 
-  // const filterdStates = states.filter((s) => s.cities);
+  const filterdStates = states.filter((s) => s.cities);
 
-  // let arr = [];
+  let arr = [];
 
-  // filterdStates.map((s) => {
-  //   s.cities.map((c) => {
-  //     let gg = { slug: c.slug };
-  //     arr.push(gg);
-  //   });
-  // });
+  filterdStates.map((s) => {
+    s.cities.map((c) => {
+      let gg = { slug: c.slug };
+      arr.push(gg);
+    });
+  });
 
-  // const allSlugs = localCities.concat(arr);
-  // return allSlugs;
-
-  return localCities;
+  const allSlugs = localCities.concat(arr);
+  return allSlugs;
 }
 
 async function getCity(slug) {
-  return cities.find((c) => c.slug === slug);
+  // let localCities = cities.map((city) => ({
+  //   slug: city.slug,
+  // }));
+
+  const filterdStates = states.filter((s) => s.cities);
+
+  let arr = [];
+
+  filterdStates.map((s) => {
+    s.cities.map((c) => {
+      arr.push(c);
+    });
+  });
+
+  const allSlugs = cities.concat(arr);
+  // return allSlugs;
+  return allSlugs.find((c) => c.slug === slug);
 }
 
 // async function getCityState(slug) {
@@ -59,6 +73,8 @@ export default async function CityPage({ params }) {
   const { slug } = params;
   const city = await getCity(slug);
 
+  // console.log(city);
+
   // if (slug.includes('boston-')) {
   //   city = await getCityState(slug);
   // } else {
@@ -66,19 +82,21 @@ export default async function CityPage({ params }) {
   // }
 
   const URL = `${process.env.NEXT_PUBLIC_MAIN_URL}/${city?.slug}`;
-  // const title =
-  //   city && city.interstate
-  //     ? `Movers from Boston to ${city?.name} - Phoenix Moving (Free Estimate)`
-  //     : `${city?.fullName} - Phoenix Moving ${city?.name} (Free Estimate)`;
+  const title = city?.interstate
+    ? `Movers from Boston to ${city?.name} - Phoenix Moving (Free Estimate)`
+    : `${city?.fullName} - Phoenix Moving ${city?.name} (Free Estimate)`;
 
-  const title = `${city?.fullName} - Phoenix Moving ${city?.name} (Free Estimate)`;
+  // const title = `${city?.fullName} - Phoenix Moving ${city?.name} (Free Estimate)`;
 
-  // const description =
-  //   city && city.interstate
-  //     ? `Reliable Movers from Boston to ${city.name}. The Most Trusted Boston to ${city.name} Moving Company, Get a Free Quote Online (NO Registration Required).`
-  //     : `Professional Moving Company in ${city?.name} ${city?.state}. The most Reliable ${city?.name} Movers, Get a Free Quote Online (NO Registration Required).`;
+  const description = city?.interstate
+    ? `Reliable Movers from Boston to ${city.name}. The Most Trusted Boston to ${city.name} Moving Company, Get a Free Quote Online (NO Registration Required).`
+    : `Professional Moving Company in ${city?.name} ${city?.state}. The most Reliable ${city?.name} Movers, Get a Free Quote Online (NO Registration Required).`;
 
-  const description = `Professional Moving Company in ${city?.name} ${city?.state}. The most Reliable ${city?.name} Movers, Get a Free Quote Online (NO Registration Required).`;
+  // const description = `Professional Moving Company in ${city?.name} ${city?.state}. The most Reliable ${city?.name} Movers, Get a Free Quote Online (NO Registration Required).`;
+
+  const heroTitle = city.interstate
+    ? `${city.fullName}`
+    : `${city.fullName} - Professional Moving Services`;
 
   const schema1 = {
     '@context': 'https://schema.org',
@@ -170,14 +188,11 @@ export default async function CityPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}
       />
-      <Hero
-        image={'/mover-pushing-dolly.jpg'}
-        title={`${city.fullName} - Professional Moving Services`}
-      />
+      <Hero image={'/mover-pushing-dolly.jpg'} title={heroTitle} />
       <Partners />
-      <Info city={city} />
+      {city.state && <Info city={city} />}
       <Stats />
-      <Advantages city={city} />
+      {city.state && <Advantages city={city} />}
       <Photos />
       <Services city={city} />
       <Faqs />
