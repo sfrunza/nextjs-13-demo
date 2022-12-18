@@ -2,14 +2,14 @@ import { notFound } from 'next/navigation';
 import Script from 'next/script';
 import Hero from '@/ui/Hero';
 import { cities } from '@/lib/citiesData';
-import { states } from '@/lib/statesData';
+// import { states } from '@/lib/statesData';
 import Info from './Info';
 import Faqs from '@/ui/Faqs';
 import Stats from './Stats';
 import Services from './Services';
 import CTA from '@/ui/CTA';
 import Advantages from './Advantages';
-import Divider from '@/ui/Divider';
+// import Divider from '@/ui/Divider';
 import Partners from '@/ui/Partners';
 import Photos from '@/ui/Photos';
 import Contact from '@/ui/Contact';
@@ -21,58 +21,64 @@ export async function generateStaticParams() {
     slug: city.slug,
   }));
 
-  const filterdStates = states.filter((s) => s.cities);
+  // const filterdStates = states.filter((s) => s.cities);
 
-  let arr = [];
+  // let arr = [];
 
-  filterdStates.map((s) => {
-    s.cities.map((c) => {
-      let gg = { slug: c.slug };
-      arr.push(gg);
-    });
-  });
+  // filterdStates.map((s) => {
+  //   s.cities.map((c) => {
+  //     let gg = { slug: c.slug };
+  //     arr.push(gg);
+  //   });
+  // });
 
-  const allSlugs = localCities.concat(arr);
-  return allSlugs;
+  // const allSlugs = localCities.concat(arr);
+  // return allSlugs;
+
+  return localCities;
 }
 
 async function getCity(slug) {
   return cities.find((c) => c.slug === slug);
 }
 
-async function getCityState(slug) {
-  const filterdStates = states.filter((s) => s.cities && s.cities.length > 0);
-  let interstateCity = null;
-  filterdStates.map((s) => {
-    s.cities.find((c) => {
-      if (c.slug === slug) {
-        interstateCity = c;
-      }
-    });
-  });
-  return interstateCity;
-}
+// async function getCityState(slug) {
+//   const filterdStates = states.filter((s) => s.cities && s.cities.length > 0);
+//   let interstateCity = null;
+//   filterdStates.map((s) => {
+//     s.cities.find((c) => {
+//       if (c.slug === slug) {
+//         interstateCity = c;
+//       }
+//     });
+//   });
+//   return interstateCity;
+// }
 
 export default async function CityPage({ params }) {
   const { slug } = params;
-  let city = {};
+  const city = await getCity(slug);
 
-  if (slug.includes('boston-')) {
-    city = await getCityState(slug);
-  } else {
-    city = await getCity(slug);
-  }
+  // if (slug.includes('boston-')) {
+  //   city = await getCityState(slug);
+  // } else {
+  //   city = await getCity(slug);
+  // }
 
   const URL = `${process.env.NEXT_PUBLIC_MAIN_URL}/${city?.slug}`;
-  const title =
-    city && city.interstate
-      ? `Movers from Boston to ${city?.name} - Phoenix Moving (Free Estimate)`
-      : `${city?.fullName} - Phoenix Moving ${city?.name} (Free Estimate)`;
+  // const title =
+  //   city && city.interstate
+  //     ? `Movers from Boston to ${city?.name} - Phoenix Moving (Free Estimate)`
+  //     : `${city?.fullName} - Phoenix Moving ${city?.name} (Free Estimate)`;
 
-  const description =
-    city && city.interstate
-      ? `Reliable Movers from Boston to ${city.name}. The Most Trusted Boston to ${city.name} Moving Company, Get a Free Quote Online (NO Registration Required).`
-      : `Professional Moving Company in ${city?.name} ${city?.state}. The most Reliable ${city?.name} Movers, Get a Free Quote Online (NO Registration Required).`;
+  const title = `${city?.fullName} - Phoenix Moving ${city?.name} (Free Estimate)`;
+
+  // const description =
+  //   city && city.interstate
+  //     ? `Reliable Movers from Boston to ${city.name}. The Most Trusted Boston to ${city.name} Moving Company, Get a Free Quote Online (NO Registration Required).`
+  //     : `Professional Moving Company in ${city?.name} ${city?.state}. The most Reliable ${city?.name} Movers, Get a Free Quote Online (NO Registration Required).`;
+
+  const description = `Professional Moving Company in ${city?.name} ${city?.state}. The most Reliable ${city?.name} Movers, Get a Free Quote Online (NO Registration Required).`;
 
   const schema1 = {
     '@context': 'https://schema.org',
@@ -160,45 +166,65 @@ export default async function CityPage({ params }) {
 
   return (
     <>
-      {city?.interstate ? (
-        <>
-          <Script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}
-          />
-          <Hero
-            image={'/mover-pushing-dolly.jpg'}
-            title={`Movers from Boston to ${city.name}`}
-          />
-          {/* <Info city={city} /> */}
-          <Stats />
-          {/* <Services city={city} /> */}
-          {/* <Divider /> */}
-          {/* <Advantages city={city} /> */}
-          <Faqs />
-          <CTA />
-        </>
-      ) : (
-        <>
-          <Script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}
-          />
-          <Hero
-            image={'/mover-pushing-dolly.jpg'}
-            title={`${city.fullName} - Professional Moving Services`}
-          />
-          <Partners />
-          <Info city={city} />
-          <Stats />
-          <Advantages city={city} />
-          <Photos />
-          <Services city={city} />
-          <Faqs />
-          <CTA />
-          <Contact />
-        </>
-      )}
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}
+      />
+      <Hero
+        image={'/mover-pushing-dolly.jpg'}
+        title={`${city.fullName} - Professional Moving Services`}
+      />
+      <Partners />
+      <Info city={city} />
+      <Stats />
+      <Advantages city={city} />
+      <Photos />
+      <Services city={city} />
+      <Faqs />
+      <CTA />
+      <Contact />
     </>
   );
 }
+
+// {/* <>
+//   {city?.interstate ? (
+//     <>
+//       <Script
+//         type="application/ld+json"
+//         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}
+//       />
+//       <Hero
+//         image={'/mover-pushing-dolly.jpg'}
+//         title={`Movers from Boston to ${city.name}`}
+//       />
+//       {/* <Info city={city} /> */}
+//       <Stats />
+//       {/* <Services city={city} /> */}
+//       {/* <Divider /> */}
+//       {/* <Advantages city={city} /> */}
+//       <Faqs />
+//       <CTA />
+//     </>
+//   ) : (
+//     <>
+//       <Script
+//         type="application/ld+json"
+//         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}
+//       />
+//       <Hero
+//         image={'/mover-pushing-dolly.jpg'}
+//         title={`${city.fullName} - Professional Moving Services`}
+//       />
+//       <Partners />
+//       <Info city={city} />
+//       <Stats />
+//       <Advantages city={city} />
+//       <Photos />
+//       <Services city={city} />
+//       <Faqs />
+//       <CTA />
+//       <Contact />
+//     </>
+//   )}
+// </>; */}
