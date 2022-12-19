@@ -94,9 +94,9 @@ export default async function CityPage({ params }) {
 
   // const description = `Professional Moving Company in ${city?.name} ${city?.state}. The most Reliable ${city?.name} Movers, Get a Free Quote Online (NO Registration Required).`;
 
-  const heroTitle = city.interstate
-    ? `${city.fullName}`
-    : `Top-rated ${city.fullName}`;
+  const heroTitle = city?.interstate
+    ? `${city?.fullName}`
+    : `Top-rated ${city?.fullName}`;
 
   const schema1 = {
     '@context': 'https://schema.org',

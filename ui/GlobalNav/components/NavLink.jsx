@@ -1,6 +1,6 @@
 // import Link from 'next/link';
 import clsx from 'clsx';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 
 export default function NavLink({
@@ -12,7 +12,7 @@ export default function NavLink({
   setIndex,
 }) {
   return (
-    <Link
+    <a
       key={label}
       href={href}
       className={clsx(
@@ -20,7 +20,7 @@ export default function NavLink({
         {
           'text-gray-900': invert,
           'text-white': !invert,
-        }
+        },
       )}
       onMouseEnter={() => setIndex(index)}
       onMouseLeave={() => setIndex(null)}
@@ -46,6 +46,6 @@ export default function NavLink({
         )}
       </AnimatePresence>
       <span className="relative z-10">{label}</span>
-    </Link>
+    </a>
   );
 }

@@ -91,7 +91,7 @@ export default function InterstatePrices() {
         {cities.map((city, i) => (
           <div
             key={i}
-            className="relative flex items-center space-x-3 rounded-2xl border border-gray-300 bg-white shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400"
+            className="relative flex items-center space-x-3 rounded-2xl border border-gray-300 bg-white shadow-sm hover:border-gray-400"
           >
             {/* <div className="flex-shrink-0"> */}
             {/* <img

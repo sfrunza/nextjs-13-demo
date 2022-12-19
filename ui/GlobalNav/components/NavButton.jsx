@@ -22,7 +22,7 @@ export default function NavButton({
         {
           'text-gray-900': invert,
           'text-white': !invert,
-        }
+        },
       )}
       onMouseEnter={() => setIndex(index)}
       onMouseLeave={() => setIndex(null)}
@@ -49,10 +49,7 @@ export default function NavButton({
       </AnimatePresence>
       <span className="relative z-10">{label}</span>
       <ChevronDownIcon
-        className={classNames(
-          invert ? 'text-gray-900' : 'text-white',
-          'ml-2 h-5 w-5 relative z-10'
-        )}
+        className="ml-2 h-5 w-5 relative z-10"
         aria-hidden="true"
       />
     </Popover.Button>

@@ -21,7 +21,7 @@ export default async function HeroWithBooking({ image, title }) {
             <BookFormWrapper />
             {title && (
               <div className="flex-1 flex items-center justify-center flex-col">
-                <h1 className="relative text-center text-white block text-4xl font-semibold sm:text-5xl">
+                <h1 className="relative text-center text-white block text-3xl font-semibold sm:text-4xl">
                   {title}
                 </h1>
                 <blockquote className="relative text-center text-gray-300 tracking-[0.3em] font-semibold mt-2">

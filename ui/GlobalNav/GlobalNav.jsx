@@ -48,7 +48,7 @@ export default function GlobalNav() {
         {
           'bg-white shadow-sm': active,
           'bg-transparent': !active,
-        }
+        },
       )}
     >
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
@@ -186,16 +186,42 @@ export default function GlobalNav() {
                   <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
                     <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5">
                       <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                        {more.map((item) => {
+                        {more.map((item, i) => {
                           return (
                             <div key={item.name}>
                               {item.href ? (
                                 <a
                                   href={item.href}
                                   title={item.name}
-                                  className="-m-3 flex items-start rounded-xl p-3 hover:bg-gray-50 font-medium text-gray-900"
+                                  className="-m-3 relative flex items-start rounded-xl p-3 font-medium text-gray-900 hover:delay-[0ms]"
+                                  // className=" relative -m-3 flex items-start p-3 hover:delay-[0ms]"
+                                  // onClick={() => close()}
+                                  onMouseEnter={() => setHoveredItemIndex(i)}
+                                  onMouseLeave={() => setHoveredItemIndex(null)}
                                 >
-                                  {item.name}
+                                  <AnimatePresence>
+                                    {hoveredItemIndex === i && (
+                                      <motion.span
+                                        className="absolute inset-0 rounded-lg bg-palette-background"
+                                        layoutId="hoverBackground"
+                                        initial={{ opacity: 0 }}
+                                        animate={{
+                                          opacity: 1,
+                                          transition: { duration: 0.15 },
+                                        }}
+                                        exit={{
+                                          opacity: 0,
+                                          transition: {
+                                            duration: 0.15,
+                                            delay: 0.2,
+                                          },
+                                        }}
+                                      />
+                                    )}
+                                  </AnimatePresence>
+                                  <span className="relative z-10">
+                                    {item.name}
+                                  </span>
                                 </a>
                               ) : (
                                 <p className="-m-3 flex items-start rounded-xl p-3 font-medium text-gray-400">
@@ -250,7 +276,7 @@ export default function GlobalNav() {
                 {
                   'text-palette-primary-500': active,
                   'text-white hover:text-palette-primary-500': !active,
-                }
+                },
               )}
             >
               (508) 315-9458
@@ -265,16 +291,10 @@ export default function GlobalNav() {
                 {
                   'text-gray-900 hover:bg-palette-background': active,
                   'text-white hover:bg-palette-background/20': !active,
-                }
+                },
               )}
             >
-              <UserIcon
-                className={classNames(
-                  active ? 'text-gray-900' : 'text-white',
-                  'h-5 w-5'
-                )}
-                aria-hidden="true"
-              />
+              <UserIcon className="h-5 w-5" aria-hidden="true" />
               <span className="ml-1">Client login</span>
             </a>
             <Button
