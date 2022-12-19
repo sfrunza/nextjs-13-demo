@@ -55,7 +55,7 @@ const cities = [
 
 const features = [
   {
-    name: 'Included Fuel',
+    name: 'Fuel',
     description: 'mileage and tolls',
   },
   {
