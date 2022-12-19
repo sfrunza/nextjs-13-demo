@@ -9,9 +9,9 @@ export default function Info() {
   return (
     <Section>
       <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
-        <SectionHeader title="Boston Local Moving" start />
-        <div className="relative z-10 mx-auto max-w-prose  lg:mx-0 lg:max-w-5xl lg:pr-72 prose prose-indigo ">
-          <p className="text-gray-700">
+        <SectionHeader title="Boston local moving." start />
+        <div className="relative z-10 mx-auto max-w-prose  lg:mx-0 lg:max-w-5xl lg:pr-72 prose prose-blue ">
+          <p className="text-gray-900">
             We are a <b>local moving company in Boston, Massachusetts</b>. If
             you're looking for local movers in Boston MA, see if we operate in
             your area, and then contact us for a quote.
@@ -19,7 +19,7 @@ export default function Info() {
         </div>
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-8">
           <div className="relative z-10">
-            <div className="prose prose-indigo mx-auto text-gray-700 lg:max-w-none">
+            <div className="prose prose-blue mx-auto text-gray-900 lg:max-w-none">
               <p>{p1}</p>
 
               <ul>
@@ -41,7 +41,7 @@ export default function Info() {
                 of moving equipment and materials — our workers are trained and
                 equipped in the best possible way.
               </p>
-              <h3>We're here to help</h3>
+              <h3>We're here to help.</h3>
               <p>
                 The cost of hiring a Boston local moving company is a loss only
                 if you hire the wrong one. The quality and range of services

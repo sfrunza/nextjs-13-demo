@@ -10,7 +10,10 @@ export default function InputField(props) {
 
   return (
     <>
-      <label htmlFor={field} className="block text-xs font-bold text-gray-700">
+      <label
+        htmlFor={field}
+        className="block text-xs font-semibold text-gray-700"
+      >
         {label}
       </label>
       {textArea ? (
@@ -32,7 +35,7 @@ export default function InputField(props) {
           {...field}
           {...rest}
           placeholder={placeholder}
-          type={field.name === "email" ? "email" : "text"}
+          type={field.name === 'email' ? 'email' : 'text'}
           className={clsx(
             'mt-1 block w-full rounded-md border-gray-300 placeholder:text-gray-400 py-2 pl-3 pr-3 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm',
             {

@@ -195,10 +195,9 @@ export default function GlobalNav() {
               href="tel:(508)315-9458"
               title="(508) 315-9458"
               className={clsx(
-                ' font-medium transition-all duration-150 ease-in',
+                'font-medium transition-all duration-150 ease-in text-lg',
                 {
-                  'text-palette-primary-500 hover:text-palette-primary-900':
-                    active,
+                  'text-palette-primary-500': active,
                   'text-white hover:text-palette-primary-500': !active,
                 }
               )}
@@ -229,7 +228,12 @@ export default function GlobalNav() {
               />
               <span className="ml-1">Client login</span>
             </a>
-            <Button className="ml-8" color="secondary" title="Book a move">
+            <Button
+              href="/"
+              className="ml-8"
+              color="secondary"
+              title="Book a move"
+            >
               Book a move
             </Button>
           </div>

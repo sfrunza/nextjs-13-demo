@@ -1,19 +1,23 @@
 import Container from '@/ui/Container';
 import Button from '@/ui/Button';
 import Image from 'next/image';
+import SectionHeader from '@/ui/SectionHeader';
 
 export default function Info({ city }) {
   return (
     <section aria-labelledby={`${city?.fullName} Info`}>
       <Container className="overflow-hidden py-16">
         <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-prose  lg:max-w-none">
+          {/* <div className="mx-auto max-w-prose  lg:max-w-none">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 text-center">
-              Reliable and Professional {city?.fullName}
+              Reliable and Professional {city?.fullName}.
             </h2>
-          </div>
+          </div> */}
+          <SectionHeader
+            title={`Reliable and professional ${city?.fullName}.`}
+          />
           <div className="relative z-10 mx-auto max-w-prose  lg:mx-0 lg:max-w-5xl lg:pr-72">
-            <p className="text-gray-700">
+            <p className="text-gray-900">
               Phoenix Moving is a premier moving company that provides
               high-quality service to customers in{' '}
               <strong>{`${city?.name}, ${city?.state}`}</strong> and entire
@@ -22,10 +26,10 @@ export default function Info({ city }) {
           </div>
           <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-8">
             <div className="relative z-10">
-              <div className="prose prose-blue mx-auto text-gray-700 lg:max-w-none">
+              <div className="prose prose-blue mx-auto text-gray-900 lg:max-w-none">
                 <p>
                   As a{' '}
-                  <strong className="text-gray-700">{`${city?.name} Moving Company`}</strong>
+                  <strong className="text-gray-900">{`${city?.name} Moving Company`}</strong>
                   , we specialize in long-distance, commercial, and residential
                   moves, providing a stress-free and hassle-free experience. Our
                   team of highly-trained and experienced movers will ensure that
@@ -47,7 +51,7 @@ export default function Info({ city }) {
               </div>
               <div className="mx-auto mt-10 flex max-w-prose lg:max-w-none justify-between sm:justify-start">
                 <Button
-                  href="#"
+                  href="/"
                   size="large"
                   color="primary"
                   title="Get a Quote"

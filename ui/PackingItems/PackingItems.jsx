@@ -6,7 +6,7 @@ const items = [
   {
     img: '/packing/blanket.jpg',
     price: 20,
-    name: 'Moving Blanckets',
+    name: 'Moving Blankets',
     size: `72" x 0.2" x 80`,
   },
   {
@@ -50,7 +50,7 @@ const items = [
 export default function PackingItems() {
   return (
     <Section className="bg-palette-background">
-      <SectionHeader title="Packing Supplies" />
+      <SectionHeader title="Packing supplies." />
       <div className="flex overflow-x-scroll w-full scrollbar pb-6">
         {items.map((item) => (
           <Item key={item.name} item={item} />

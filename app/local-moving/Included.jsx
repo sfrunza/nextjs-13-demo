@@ -48,7 +48,7 @@ export default function Included() {
                   className="absolute h-6 w-6 text-green-500"
                   aria-hidden="true"
                 />
-                <p className="ml-9  font-semibold leading-6 text-gray-900">
+                <p className="ml-9 font-semibold leading-6 text-gray-900">
                   {feature.name}
                 </p>
               </dt>

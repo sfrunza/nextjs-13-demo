@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
 // import Link from 'next/link';
 import Section from '@/ui/Section';
+import SectionHeader from '@/ui/SectionHeader';
 
 function SwirlyDoodle({ className }) {
   return (
@@ -94,7 +95,7 @@ function Review({
             title="Google"
           />
         </div>
-        <p className="mt-3 leading-7 text-sm">{text || ''}</p>
+        <p className="mt-3 leading-7 text-sm text-gray-900">{text || ''}</p>
       </blockquote>
 
       <figcaption className="relative mt-6 flex items-center justify-between border-t border-gray-100 pt-6">
@@ -232,7 +233,8 @@ export default function Testimonials({ reviews, totalReviews }) {
       id="reviews"
       className="bg-palette-background"
     >
-      <div className="mx-auto max-w-3xl text-center mb-16 sm:mb-20">
+      <SectionHeader title="What real people say about us." />
+      {/* <div className="mx-auto max-w-3xl text-center mb-16 sm:mb-20">
         <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900">
           What{' '}
           <span className="relative whitespace-nowrap">
@@ -241,7 +243,7 @@ export default function Testimonials({ reviews, totalReviews }) {
           </span>{' '}
           say about us
         </h2>
-      </div>
+      </div> */}
       {reviews && reviews.length > 0 && <ReviewGrid reviews={reviews} />}
       <div className="flex items-center justify-center mt-10">
         <a

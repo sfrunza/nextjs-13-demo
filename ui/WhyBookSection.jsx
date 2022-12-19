@@ -27,7 +27,7 @@ const incentives = [
 export default function WhyBookSection() {
   return (
     <Section>
-      <SectionHeader title="Why book with Phoenix Moving Boston?" />
+      <SectionHeader title="Why book with Phoenix Moving Boston." />
       <div className="mx-auto mt-12 grid max-w-sm grid-cols-1 gap-y-10 gap-x-8 sm:max-w-none lg:grid-cols-3">
         {incentives.map((incentive, i) => (
           <div
@@ -55,20 +55,11 @@ export default function WhyBookSection() {
               </div>
             </div>
             <div className="mt-3 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0">
-              <h3
-                className={
-                  i === 1
-                    ? 'text-xl font-semibold text-gray-900'
-                    : ' font-semibold text-gray-900'
-                }
-              >
+              <h3 className="text-xl font-semibold text-gray-900">
                 {incentive.name}
               </h3>
-              {/* <p className="mt-2 text-sm text-gray-500">
-                    {incentive.description}
-                  </p> */}
               <p
-                className="mt-2 text-sm text-gray-700"
+                className="mt-2 text-sm text-gray-900"
                 dangerouslySetInnerHTML={{
                   __html: incentive.description,
                 }}

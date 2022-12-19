@@ -5,12 +5,10 @@ export default function Advantages({ city }) {
   return (
     <Section>
       <SectionHeader
-        title={`Advantages of Living in ${city?.name}, ${city?.state}`}
+        title={`Advantages of living in ${city?.name} ${city?.state}.`}
         start
       />
-      <div className="prose prose-lg prose-indigo text-gray-700 lg:max-w-none">
-        <p>{city?.description}</p>
-      </div>
+      <p className="prose text-gray-900 max-w-none">{city?.description}</p>
     </Section>
   );
 }

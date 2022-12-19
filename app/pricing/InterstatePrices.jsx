@@ -84,7 +84,7 @@ export default function InterstatePrices() {
   return (
     <Section>
       <SectionHeader
-        title="Our Rates for Common Destinations"
+        title="Our rates for common destinations."
         subtitle="Is based upon the mileage from the origin to the destination, and the cubic footage of your belongings."
       />
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -112,8 +112,10 @@ export default function InterstatePrices() {
                 className="focus:outline-none flex justify-between items-center px-6 py-6"
               >
                 <span className="absolute inset-0" aria-hidden="true" />
-                <p className="text-sm font-medium text-gray-900">{city.name}</p>
-                <p className="truncate text-gray-700">
+                <p className="text-sm font-semibold text-gray-900">
+                  {city.name}
+                </p>
+                <p className="truncate text-gray-900">
                   <span className="text-sm text-gray-400 mr-2">
                     Starting at
                   </span>
@@ -139,7 +141,7 @@ export default function InterstatePrices() {
                 {feature.name}
               </p>
             </dt>
-            <dd className="mt-2 ml-9 text-sm text-gray-700">
+            <dd className="mt-2 ml-9 text-sm font-light text-gray-900">
               {feature.description}
             </dd>
           </div>

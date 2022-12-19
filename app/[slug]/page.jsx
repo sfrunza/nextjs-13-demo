@@ -96,7 +96,7 @@ export default async function CityPage({ params }) {
 
   const heroTitle = city.interstate
     ? `${city.fullName}`
-    : `${city.fullName} - Professional Moving Services`;
+    : `Top-rated ${city.fullName}`;
 
   const schema1 = {
     '@context': 'https://schema.org',

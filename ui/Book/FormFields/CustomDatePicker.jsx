@@ -44,7 +44,10 @@ export default function CustomDatePicker(props) {
 
   return (
     <>
-      <label htmlFor={field} className="block text-xs font-bold text-gray-700">
+      <label
+        htmlFor={field}
+        className="block text-xs font-semibold text-gray-700"
+      >
         {label}
         <input
           {...field}

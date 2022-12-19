@@ -67,7 +67,7 @@ export default function Faqs() {
         title="background image"
       /> */}
       <SectionHeader
-        title="Frequently asked questions"
+        title="Questions? Answers."
         subtitle={
           <>
             If you have anything else you want to ask,{' '}

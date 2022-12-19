@@ -55,6 +55,7 @@ module.exports = {
           primary: { 500: '#7900ff', 900: '#5400b2' },
           secondary: { 500: '#FFC600', 900: '#b28a00' },
           background: '#f5f8fd',
+          footer: '#202124',
         },
       },
       keyframes: ({ theme }) => ({

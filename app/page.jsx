@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import Script from 'next/script';
-import Hero from '@/ui/Hero';
+import HeroWithBooking from '@/ui/HeroWithBooking';
 import Pricing from './Pricing';
 import CTA from '@/ui/CTA';
 import Services from './Services';
@@ -149,7 +149,10 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema3) }}
       />
-      <Hero image={'/mover-pushing-dolly.jpg'} title="Boston Moving Company" />
+      <HeroWithBooking
+        image={'/mover-pushing-dolly.jpg'}
+        title="Boston Moving Company"
+      />
       <Partners />
       <Services />
       <Photos />

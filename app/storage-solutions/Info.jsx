@@ -35,7 +35,7 @@ export default function Info() {
             title="Storage Solutions for Your Moving Needs"
             start
           />
-          <div className="mt-6 space-y-6 text-gray-700 prose prose-indigo">
+          <div className="mt-6 space-y-6 text-gray-900 prose prose-blue">
             <p>
               For those who need storage services, our company provides
               convenient, secure, and reliable storage solutions. Our storage
@@ -60,8 +60,8 @@ export default function Info() {
                   key={stat.label}
                   className="border-t-2 border-gray-100 pt-6"
                 >
-                  <dt className=" font-medium text-gray-700">{stat.label}</dt>
-                  <dd className="text-3xl font-bold tracking-tight text-gray-900">
+                  <dt className="font-semibold text-gray-900">{stat.label}</dt>
+                  <dd className="text-3xl font-semibold tracking-tight text-palette-primary-500">
                     {stat.value}
                   </dd>
                 </div>

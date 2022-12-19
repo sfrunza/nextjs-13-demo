@@ -9,8 +9,8 @@ export default function Info() {
   return (
     <Section>
       <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
-        <SectionHeader title="Packing and Unpacking Services" start />
-        <div className="relative z-10 mx-auto max-w-prose lg:mx-0 lg:max-w-5xl lg:pr-72 prose prose-indigo">
+        <SectionHeader title="Packing and unpacking services." start />
+        <div className="relative z-10 mx-auto max-w-prose lg:mx-0 lg:max-w-5xl lg:pr-72 prose prose-blue">
           <p className="text-gray-700">
             {p1}
             <a href="/pricing" className="ml-1">
@@ -21,8 +21,8 @@ export default function Info() {
         </div>
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-8">
           <div className="relative z-10">
-            <div className="prose prose-indigo mx-auto text-gray-700 lg:max-w-none">
-              <h3>Full Packing Service</h3>
+            <div className="prose prose-blue mx-auto text-gray-900 lg:max-w-none">
+              <h3>Full Packing Service.</h3>
               <p>
                 Our full packing and moving service is a comprehensive service
                 package that helps individuals and businesses move their
@@ -33,7 +33,7 @@ export default function Info() {
                 moving is taken care of, and you can focus on other aspects of
                 your move.
               </p>
-              <h3>Packing Specialty Items</h3>
+              <h3>Packing Specialty Items.</h3>
               <p>
                 Packing specialty items requires careful attention to detail and
                 skill to ensure safe delivery. Specialty items may require
@@ -46,7 +46,7 @@ export default function Info() {
                 instructions and taking the extra time to properly package
                 specialty items can help ensure safe and successful delivery.
               </p>
-              <h3>Self Packing</h3>
+              <h3>Self Packing.</h3>
               <p>
                 If you choose to pack yourself, we provide packing materials
                 such as boxes, packing tape, and bubble wrap. You pay only for

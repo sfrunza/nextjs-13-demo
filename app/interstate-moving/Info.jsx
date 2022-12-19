@@ -22,7 +22,7 @@ export default function Info() {
             <div className="relative overflow-hidden rounded-2xl lg:pt-24">
               <Map />
             </div>
-            <div className="pb-10 text-sm text-gray-700">
+            <div className="pb-10 text-sm text-gray-500">
               <p className="flex items-center">
                 <span className="h-[10px] w-[10px] bg-[#00d866] mr-2" />
                 same/next day delivery
@@ -40,8 +40,8 @@ export default function Info() {
         </div>
 
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
-          <SectionHeader title="Long Distance Interstate Moving" start />
-          <div className="mt-6 space-y-6 text-gray-700 prose prose-indigo ">
+          <SectionHeader title="Long distance Interstate moving." start />
+          <div className="mt-6 space-y-6 text-gray-900 prose prose-blue ">
             <p>
               Moving across the state? Across the country? We'll get you there!
               Phoenix Moving here to help with a variety of long-distance
@@ -66,8 +66,8 @@ export default function Info() {
                   key={stat.label}
                   className="border-t-2 border-gray-100 pt-6"
                 >
-                  <dt className=" font-medium text-gray-700">{stat.label}</dt>
-                  <dd className="text-3xl font-bold tracking-tight text-gray-900">
+                  <dt className="font-semibold text-gray-900">{stat.label}</dt>
+                  <dd className="text-3xl font-semibold tracking-tight text-palette-primary-500">
                     {stat.value}
                   </dd>
                 </div>

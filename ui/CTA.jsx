@@ -31,16 +31,16 @@ export default function CTA() {
             </div>
             <div className="relative">
               <div className="text-center">
-                <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-white">
-                  Get a Moving Quote for your Local Move!
+                <h2 className="text-4xl sm:text-5xl font-medium tracking-tight text-white">
+                  Move with Phoneix Moving Boston.
                 </h2>
-                <p className="mx-auto mt-4 max-w-2xl text-lg text-white">
-                  No credit card required
+                <p className="text-center mt-4 text-lg text-white">
+                  No credit card required.
                 </p>
               </div>
               <div className="mt-8 flex justify-center">
                 <Button
-                  href="#"
+                  href="/"
                   size="large"
                   variant="outline"
                   className="w-full sm:w-auto border-0"

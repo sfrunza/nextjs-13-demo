@@ -111,13 +111,13 @@ const Card = ({ houseSize }) => {
           <tr>
             <th
               scope="col"
-              className="pl-4 py-4 text-left text-xs font-bold text-gray-900"
+              className="pl-4 py-4 text-left text-xs font-semibold text-gray-900"
             >
               {houseSize.apt}
             </th>
             <th
               scope="col"
-              className="pr-4 py-4 text-right text-xs font-bold text-gray-900"
+              className="pr-4 py-4 text-right text-xs font-semibold text-gray-900"
             >
               Qty
             </th>
@@ -161,7 +161,7 @@ const Card = ({ houseSize }) => {
 export default function Packages() {
   return (
     <Section id="packages">
-      <SectionHeader title="Packages" />
+      <SectionHeader title="Packages." />
       <ul
         className="flex overflow-x-scroll w-full scrollbar pb-6  sm:grid sm:gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
         // className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"

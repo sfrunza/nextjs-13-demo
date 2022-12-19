@@ -5,28 +5,28 @@ import { ChevronRightIcon } from '@heroicons/react/24/outline';
 
 const services = [
   {
-    name: 'Local Moving',
+    name: 'Local Moving.',
     href: 'local-moving',
     description:
-      'Phoenix Moving is a perfect soultion for your Boston and surrounding area move',
+      'Phoenix Moving is a perfect soultion for your Boston and surrounding area move.',
   },
   {
-    name: 'Interstate Moving',
+    name: 'Interstate Moving.',
     href: 'interstate-moving',
     description:
-      'Moving across United States with Fully Licensed and Insured Moving Company',
+      'Moving across United States with Fully Licensed and Insured Moving Company.',
   },
   {
-    name: 'Packing Services',
+    name: 'Packing Services.',
     href: 'packing-services',
     description:
-      'Moving Packing Solutions. Phoenix Moving Company provides all kind of boxes and carefully pack your stuff',
+      'Moving Packing Solutions. Phoenix Moving Company provides all kind of boxes and carefully pack your stuff.',
   },
   {
-    name: 'Storage Solutions',
+    name: 'Storage Solutions.',
     href: 'storage-solutions',
     description:
-      'All types of storages for your move with Phoenix Moving Company. Short and Long terms available',
+      'All types of storages for your move with Phoenix Moving Company. Short and Long terms available.',
   },
 ];
 
@@ -34,7 +34,7 @@ export default function Services() {
   return (
     <Section>
       <SectionHeader
-        title="Phoenix Moving Services"
+        title="Moving services."
         subtitle="Phoenix Moving Boston is a premier moving company that provides high-quality service to customers throughout the United States. We specialize in long-distance, commercial, and residential moves, providing a stress-free and hassle-free experience."
       />
       <ul className="mx-auto grid max-w-2xl grid-cols-1 gap-6 text-sm sm:grid-cols-2 md:gap-y-6 lg:max-w-none lg:grid-cols-3">
@@ -50,7 +50,9 @@ export default function Services() {
                 <ChevronRightIcon className="w-4 h-4" />
               </p>
 
-              <p className="mt-2 text-gray-700">{service.description}</p>
+              <p className="mt-2 font-normal text-gray-900">
+                {service.description}
+              </p>
             </a>
           </li>
         ))}

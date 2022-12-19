@@ -86,7 +86,7 @@ const navigation = {
 export default async function Footer() {
   let interCities = await interstateCities(states);
   return (
-    <footer className="bg-gray-900" aria-labelledby="footer-heading">
+    <footer className="bg-palette-footer" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>

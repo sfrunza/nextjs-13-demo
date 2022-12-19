@@ -29,14 +29,14 @@ export default function Services({ city }) {
       label="phoneix-moving-included-services"
       className="bg-palette-background"
     >
-      <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-3 lg:gap-x-12">
+      <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-3 lg:gap-x-12 items-center">
         <div>
           <p className="md:text-lg font-semibold leading-8 tracking-tight text-palette-primary-500">
             Everything you need
           </p>
           <div className="mx-auto max-w-3xl mb-16">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900">
-              Moving Services
+            <h2 className="text-5xl sm:text-3xl font-semibold tracking-tight text-gray-900">
+              Moving services.
             </h2>
             <p className="mt-2 text-sm font-light text-gray-900">
               Among all of {city?.name}, {city?.state} moving companies there is
@@ -73,7 +73,7 @@ export default function Services({ city }) {
           </p> */}
         </div>
         <div className="mt-20 lg:col-span-2 lg:mt-0">
-          <dl className="grid grid-cols-1 gap-12 sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-3">
+          <dl className="grid grid-cols-1 gap-10 sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-3">
             {features.map((feature) => (
               <div key={feature.name} className="relative">
                 <dt>

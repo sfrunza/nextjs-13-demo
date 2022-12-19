@@ -43,7 +43,7 @@ export default async function PricingTable() {
       className="bg-palette-background"
     >
       <SectionHeader
-        title="Phoenix Moving Rates"
+        title="Affordable moving rates."
         subtitle={
           <>
             Our local moving and packing rates are hourly based with 15 minutes
@@ -59,14 +59,20 @@ export default async function PricingTable() {
             <div className="mb-8 px-4">
               <h2
                 // className="text-2xl font-medium leading-6 text-gray-900"
-                className={clsx(
-                  'text-2xl font-medium leading-6 text-gray-900',
-                  {
-                    'text-palette-cyan': tierIndex === 0,
-                    'text-palette-blue': tierIndex === 1,
-                    'text-palette-pink': tierIndex === 2,
-                  }
-                )}
+                // className={clsx(
+                //   'text-2xl font-medium leading-6 text-gray-900',
+                //   {
+                //     'text-palette-cyan': tierIndex === 0,
+                //     'text-palette-blue': tierIndex === 1,
+                //     'text-palette-pink': tierIndex === 2,
+                //   }
+                // )}
+
+                className={clsx('text-lg leading-6 font-medium', {
+                  'text-palette-cyan': tierIndex === 0,
+                  'text-palette-blue': tierIndex === 1,
+                  'text-palette-pink': tierIndex === 2,
+                })}
               >
                 {tier}
               </h2>
@@ -102,7 +108,7 @@ export default async function PricingTable() {
           <thead>
             <tr>
               <th
-                className="px-6 pb-4 text-left text-sm font-medium text-gray-900"
+                className="px-6 pb-4 text-left text-sm text-gray-900"
                 scope="col"
               >
                 <span className="sr-only">Prices</span>
@@ -111,7 +117,7 @@ export default async function PricingTable() {
                 <th
                   key={tier}
                   className={clsx(
-                    'w-1/4 px-6 pb-4 text-left text-lg font-medium leading-6 text-gray-900',
+                    'w-1/4 px-6 pb-4 text-center text-lg leading-6 font-medium',
                     {
                       'text-palette-cyan': i === 0,
                       'text-palette-blue': i === 1,
@@ -130,20 +136,19 @@ export default async function PricingTable() {
               return (
                 <tr key={row.crew}>
                   <th
-                    className="py-8 px-6 text-left align-top font-medium text-gray-900"
+                    className="py-8 px-6 text-left align-top text-2xl font-semibold text-gray-900"
                     scope="row"
                   >
                     {row.crew}
                   </th>
                   {row.prices?.map((price, i) => (
-                    <td key={i} className="h-full py-8 px-6 align-top">
-                      <div className="relative table h-full">
-                        <p>
-                          <span className="text-2xl font-semibold tracking-tight text-gray-900">
-                            ${price}
-                          </span>
-                        </p>
-                      </div>
+                    <td
+                      key={i}
+                      className="h-full py-8 px-6 align-top text-center"
+                    >
+                      <p className="text-2xl tracking-tight text-gray-900">
+                        ${price}
+                      </p>
                     </td>
                   ))}
                 </tr>
@@ -153,15 +158,16 @@ export default async function PricingTable() {
         </table>
       </div>
       <div className="flex gap-4 justify-between items-baseline flex-col lg:flex-row mt-10">
-        <p className="w-full lg:max-w-[550px] text-sm text-gray-700">
-          <b>Up to 1 hour Travel Time</b> is applied to all jobs in Metro Boston
-          area. (approx 30 min for our movers to get to you address from our
-          office plus approx 30 min to get back when the move is finished).
+        <p className="w-full lg:max-w-[550px] text-sm font-light text-gray-900">
+          <b className="font-semibold">Up to 1 hour Travel Time</b> is applied
+          to all jobs in Metro Boston area. (approx 30 min for our movers to get
+          to you address from our office plus approx 30 min to get back when the
+          move is finished).
         </p>
-        <p className="w-full lg:max-w-[550px] text-sm text-gray-700">
-          We have a <b>2 hours minimum Labour Time</b>, plus fixed Travel Time,
-          charge policy. After first 2 hours of labor, the move time is prorated
-          every 15 min.
+        <p className="w-full lg:max-w-[550px] text-sm font-light text-gray-900">
+          We have a <b className="font-semibold">2 hours minimum Labour Time</b>
+          , plus fixed Travel Time, charge policy. After first 2 hours of labor,
+          the move time is prorated every 15 min.
         </p>
       </div>
     </Section>

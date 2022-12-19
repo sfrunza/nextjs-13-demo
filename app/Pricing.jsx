@@ -1,6 +1,7 @@
 import { CheckIcon } from '@heroicons/react/20/solid';
 import Section from '@/ui/Section';
 import Button from '@/ui/Button';
+import SectionHeader from '@/ui/SectionHeader';
 
 export async function getData() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BACK_END_API}/prices`, {
@@ -109,7 +110,7 @@ export default async function Pricing() {
 
   return (
     <Section className="bg-palette-background">
-      <div className="mx-auto max-w-3xl text-center mb-16 sm:mb-20">
+      {/* <div className="mx-auto max-w-3xl text-center mb-16 sm:mb-20">
         <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900">
           <span className="relative whitespace-nowrap">
             <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-palette-primary-500" />
@@ -121,7 +122,12 @@ export default async function Pricing() {
           Affordable rates on professional moving services tailored to your
           needs.
         </p>
-      </div>
+      </div> */}
+      <SectionHeader
+        title="Best prices, for everyone."
+        subtitle="Affordable rates on professional moving services tailored to your
+          needs."
+      />
       <div className="mt-12 space-y-4 sm:mt-16 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:mx-auto lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">
         {tiers.map((tier) => (
           <div
@@ -129,15 +135,15 @@ export default async function Pricing() {
             className="divide-y divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5"
           >
             <div className="p-6">
-              <p className="text-lg font-medium leading-6 text-gray-900">
+              <p className="text-lg font-semibold leading-6 text-gray-900">
                 {tier.name}
               </p>
               <p className="mt-4 text-sm text-gray-500">{tier.description}</p>
               <p className="mt-4">
-                <span className="text-4xl font-bold tracking-tight text-gray-900">
+                <span className="text-4xl font-semibold tracking-tight text-gray-900">
                   ${tier.priceMonthly}
                 </span>{' '}
-                <span className=" font-medium text-gray-500">per hour</span>
+                <span className="text-sm text-gray-500">per hour</span>
               </p>
               <Button
                 href={tier.href}
@@ -149,7 +155,7 @@ export default async function Pricing() {
               </Button>
             </div>
             <div className="px-6 pt-6 pb-8">
-              <p className="text-sm font-medium text-gray-900">
+              <p className="text-sm font-semibold text-gray-900">
                 What's included
               </p>
               <ul className="mt-6 space-y-4">
@@ -159,7 +165,9 @@ export default async function Pricing() {
                       className="h-5 w-5 flex-shrink-0 text-green-500"
                       aria-hidden="true"
                     />
-                    <span className="text-sm text-gray-500">{feature}</span>
+                    <span className="text-sm font-light text-gray-900">
+                      {feature}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -169,14 +177,14 @@ export default async function Pricing() {
         <div className="flex flex-col gap-4 sm:gap-6 justify-between">
           <div className="divide-y h-full divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5">
             <div className="p-6">
-              <p className="text-lg font-medium leading-6 text-gray-900">
+              <p className="text-lg font-semibold leading-6 text-gray-900">
                 Additional mover
               </p>
               <p className="mt-4">
-                <span className="text-4xl font-bold tracking-tight text-gray-900">
+                <span className="text-4xl font-semibold tracking-tight text-gray-900">
                   ${prices[0].add_men[0]}
                 </span>{' '}
-                <span className=" font-medium text-gray-500">per hour</span>
+                <span className="text-sm text-gray-500">per hour</span>
               </p>
             </div>
             <div className="px-6 pt-6 pb-8">
@@ -185,7 +193,7 @@ export default async function Pricing() {
                   className="h-5 w-5 flex-shrink-0 text-green-500"
                   aria-hidden="true"
                 />
-                <span className="text-sm text-gray-500">
+                <span className="text-sm font-light text-gray9500">
                   Rate per hour per moving added to your quoted houry rate if
                   you request it.
                 </span>
@@ -194,14 +202,14 @@ export default async function Pricing() {
           </div>
           <div className="divide-y h-full divide-gray-200 rounded-2xl bg-white shadow-lg shadow-gray-900/5">
             <div className="p-6">
-              <p className="text-lg font-medium leading-6 text-gray-900">
+              <p className="text-lg font-semibold leading-6 text-gray-900">
                 Additional truck
               </p>
               <p className="mt-4">
-                <span className="text-4xl font-bold tracking-tight text-gray-900">
+                <span className="text-4xl font-semibold tracking-tight text-gray-900">
                   ${prices[0].add_truck[0]}
                 </span>{' '}
-                <span className=" font-medium text-gray-500">per hour</span>
+                <span className="text-sm text-gray-500">per hour</span>
               </p>
             </div>
             <div className="px-6 pt-6 pb-8">
@@ -210,7 +218,7 @@ export default async function Pricing() {
                   className="h-5 w-5 flex-shrink-0 text-green-500"
                   aria-hidden="true"
                 />
-                <span className="text-sm text-gray-500">
+                <span className="text-sm font-light text-gray-900">
                   Rate per hour per truck added to your quoted houry rate if you
                   requested.
                 </span>
