@@ -35,7 +35,7 @@ export default function Services({ city }) {
             Everything you need
           </p>
           <div className="mx-auto max-w-3xl mb-16">
-            <h2 className="text-5xl sm:text-3xl font-semibold tracking-tight text-gray-900">
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900">
               Moving services.
             </h2>
             <p className="mt-2 text-sm font-light text-gray-900">

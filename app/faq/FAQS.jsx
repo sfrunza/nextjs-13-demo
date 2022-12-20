@@ -1,5 +1,6 @@
 'use client';
-import { Disclosure } from '@headlessui/react';
+import React from 'react';
+import { Disclosure, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import Section from '@/ui/Section';
 
@@ -72,16 +73,25 @@ export default function FAQS() {
                       <ChevronDownIcon
                         className={classNames(
                           open ? '-rotate-180' : 'rotate-0',
-                          'h-6 w-6 transform text-palette-primary-500'
+                          'h-6 w-6 transform text-palette-primary-500',
                         )}
                         aria-hidden="true"
                       />
                     </span>
                   </Disclosure.Button>
                 </dt>
-                <Disclosure.Panel as="dd" className="mt-2 pr-12">
-                  <p className="font-light text-gray-900">{faq.answer}</p>
-                </Disclosure.Panel>
+                <Transition
+                  enter="transition-all duration-200"
+                  enterFrom="opacity-0 -translate-y-2"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition-all duration-150"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 -translate-y-2"
+                >
+                  <Disclosure.Panel as="dd" className="mt-2 pr-12">
+                    <p className="font-light text-gray-900">{faq.answer}</p>
+                  </Disclosure.Panel>
+                </Transition>
               </>
             )}
           </Disclosure>

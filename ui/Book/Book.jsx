@@ -89,7 +89,7 @@ export default function Book({ rates }) {
 
     const merged = rest.reduce(
       (mergedSchemas, schema) => mergedSchemas.concat(schema),
-      first
+      first,
     );
 
     return merged;
@@ -101,7 +101,7 @@ export default function Book({ rates }) {
     validationSchema[2],
     validationSchema[3],
     validationSchema[4],
-    validationSchema[5]
+    validationSchema[5],
   );
 
   function _handleSubmit(values, actions) {
@@ -121,7 +121,7 @@ export default function Book({ rates }) {
           service,
           activeStep,
           setActiveStep,
-          actions
+          actions,
         );
       }
     } else {
@@ -152,7 +152,7 @@ export default function Book({ rates }) {
                 onSubmit={_handleSubmit}
               >
                 {({ isSubmitting, values, errors }) => {
-                  // console.log(values.movingDate);
+                  console.log(values);
                   // console.log(values.deliveryDate);
                   return (
                     <Form id={formId} autoComplete="off">

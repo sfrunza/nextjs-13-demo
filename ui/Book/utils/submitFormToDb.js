@@ -7,14 +7,14 @@ export async function submitFormToDb(
   values,
   actions,
   activeStep,
-  setActiveStep
+  setActiveStep,
 ) {
   // console.log('submit function', format(values.movingDate, 'yyyy-MM-dd'));
   // console.log('submit function', format(values.deliveryDate, 'yyyy-MM-dd'));
 
   const formattedMovingDate = format(
     values.movingDate,
-    "yyyy-MM-dd'T'00:00:00"
+    "yyyy-MM-dd'T'00:00:00",
   );
   const formattedDeliveryDate = values.deliveryDate
     ? format(values.deliveryDate, "yyyy-MM-dd'T'00:00:00")
@@ -40,7 +40,7 @@ export async function submitFormToDb(
       additional_info: values.additionalInfo,
       is_flat_rate: values.isFlatRate,
       crew_size: values.crewSize,
-      job_rate: 100,
+      job_rate: values.rate,
       time_between: values.timeBetween,
       estimated_time: values.estimateTime,
       travel_time: values.travelTime,

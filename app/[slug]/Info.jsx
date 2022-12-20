@@ -27,20 +27,24 @@ export default function Info({ city }) {
           <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-8">
             <div className="relative z-10">
               <div className="prose prose-blue mx-auto text-gray-900 lg:max-w-none">
-                <p>
-                  As a{' '}
-                  <strong className="text-gray-900">{`${city?.name} Moving Company`}</strong>
-                  , we specialize in long-distance, commercial, and residential
-                  moves, providing a stress-free and hassle-free experience. Our
-                  team of highly-trained and experienced movers will ensure that
-                  your possessions are packed and moved securely and safely. We
-                  take great pride in offering top-notch customer service and a
-                  wide range of moving services. Our services include packing
-                  and unpacking, loading and unloading, and furniture assembly.
-                  We also offer{' '}
-                  <a href="/storage-solutions">storage solutions</a> for those
-                  who need extra space for their belongings.
-                </p>
+                {city?.intro ? (
+                  <p>{city?.intro}</p>
+                ) : (
+                  <p>
+                    As a{' '}
+                    <strong className="text-gray-900">{`${city?.name} Moving Company`}</strong>
+                    , we specialize in long-distance, commercial, and
+                    residential moves, providing a stress-free and hassle-free
+                    experience. Our team of highly-trained and experienced
+                    movers will ensure that your possessions are packed and
+                    moved securely and safely. We take great pride in offering
+                    top-notch customer service and a wide range of moving
+                    services. Our services include packing and unpacking,
+                    loading and unloading, and furniture assembly. We also offer{' '}
+                    <a href="/storage-solutions">storage solutions</a> for those
+                    who need extra space for their belongings.
+                  </p>
+                )}
                 <p>
                   {`With our competitive rates and flexible payment options, you
                   can rest assured that when moving to/from

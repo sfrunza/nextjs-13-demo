@@ -3,10 +3,10 @@ import SectionHeader from '@/ui/SectionHeader';
 import Image from 'next/image';
 
 const stats = [
-  { label: 'Affordable Rates and Discounts', value: '100%' },
-  { label: 'Online and On-site Free Estamates', value: '24/7' },
-  { label: 'Guaranteed Price', value: '100%' },
-  { label: 'Fully Licensed and Insured', value: '100%' },
+  { label: 'Affordable Rates and Discounts.', value: '100%' },
+  { label: 'Online and On-site Free Estamates.', value: '24/7' },
+  { label: 'Guaranteed Price.', value: '100%' },
+  { label: 'Fully Licensed and Insured.', value: '100%' },
 ];
 
 const p1 =
@@ -32,7 +32,7 @@ export default function Info() {
 
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 pt-16 lg:pt-0">
           <SectionHeader
-            title="Storage Solutions for Your Moving Needs"
+            title="Storage solutions for your moving needs."
             start
           />
           <div className="mt-6 space-y-6 text-gray-900 prose prose-blue">
