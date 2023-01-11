@@ -21,7 +21,7 @@ export default function Info() {
             <div className="relative overflow-hidden rounded-2xl pt-64 pb-10 shadow-lg rotate-2 lg:min-h-[350px]">
               <Image
                 className="absolute inset-0 h-full w-full object-cover"
-                src="/storage-units.webp"
+                src="/storage-units.jpg"
                 alt="Image of a storage facility"
                 title="Image of a storage facility"
                 fill

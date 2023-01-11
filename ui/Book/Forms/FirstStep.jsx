@@ -1,9 +1,4 @@
-import {
-  DatePickerField,
-  SelectField,
-  ZipField,
-  CustomDatePicker,
-} from '../FormFields';
+import { SelectField, ZipField, CustomDatePicker } from '../FormFields';
 
 const times = [
   {
@@ -67,7 +62,7 @@ export default function FirstStep(props) {
     },
     showDeliveryDate,
     showDestination,
-    rates
+    rates,
   } = props;
 
   return (

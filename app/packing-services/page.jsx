@@ -11,7 +11,7 @@ import Partners from '@/ui/Partners';
 export default function PackingServices() {
   return (
     <>
-      <Hero image="/prices.jpg" title="Packing Services & Supplies" />
+      <Hero image="/services.jpeg" title="Packing Services & Supplies" />
       <Partners />
       <Info />
       <PackingItems />

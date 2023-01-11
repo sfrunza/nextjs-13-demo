@@ -32,7 +32,7 @@ export default function MobileMenu({ invert }) {
               invert,
             'hover:text-gray-500 text-white bg-transparent stroke-white':
               !invert,
-          }
+          },
         )}
       >
         <span className="sr-only">Open menu</span>
@@ -123,11 +123,13 @@ export default function MobileMenu({ invert }) {
                     <p className="mt-6 text-center  font-medium text-gray-500">
                       Existing customer?{' '}
                       <a
-                        href="#"
-                        title="Sign in"
+                        href="https://www.gophoenixmoving.com/login"
+                        target="_blank"
+                        rel="nofollow"
+                        title="Client login"
                         className="text-indigo-600 hover:text-indigo-500"
                       >
-                        Sign in
+                        Client login
                       </a>
                     </p>
                   </div>

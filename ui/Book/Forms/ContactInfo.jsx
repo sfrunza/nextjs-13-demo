@@ -70,6 +70,7 @@ export default function ContactInfo(props) {
           placeholder={additionalInfo.placeholder}
           rows="3"
           textArea
+          optional
         />
       </div>
       <div className="col-span-4">

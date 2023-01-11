@@ -52,22 +52,11 @@ export default async function PricingTable() {
           </>
         }
       />
-      {/* xs to lg */}
       <div className="space-y-12 lg:hidden">
         {tiers.map((tier, tierIndex) => (
           <section key={tier}>
             <div className="mb-8 px-4">
               <h2
-                // className="text-2xl font-medium leading-6 text-gray-900"
-                // className={clsx(
-                //   'text-2xl font-medium leading-6 text-gray-900',
-                //   {
-                //     'text-palette-cyan': tierIndex === 0,
-                //     'text-palette-blue': tierIndex === 1,
-                //     'text-palette-pink': tierIndex === 2,
-                //   }
-                // )}
-
                 className={clsx('text-lg leading-6 font-medium', {
                   'text-palette-cyan': tierIndex === 0,
                   'text-palette-blue': tierIndex === 1,
@@ -90,7 +79,6 @@ export default async function PricingTable() {
                     <td className="py-5 pr-4">
                       <span className="block text-right text-xl font-semibold text-gray-900">
                         ${row.prices[tierIndex]}
-                        {/* <span className="text-sm text-gray-700">/hour</span> */}
                       </span>
                     </td>
                   </tr>
@@ -122,7 +110,7 @@ export default async function PricingTable() {
                       'text-palette-cyan': i === 0,
                       'text-palette-blue': i === 1,
                       'text-palette-pink': i === 2,
-                    }
+                    },
                   )}
                   scope="col"
                 >
@@ -136,7 +124,7 @@ export default async function PricingTable() {
               return (
                 <tr key={row.crew}>
                   <th
-                    className="py-8 px-6 text-left align-top text-2xl font-semibold text-gray-900"
+                    className="py-8 px-6 text-left align-top text-lg font-semibold text-gray-900"
                     scope="row"
                   >
                     {row.crew}

@@ -1,6 +1,6 @@
 import Divider from '@/ui/Divider';
 import Hero from '@/ui/Hero';
-import CallToAction from '@/ui/CallToAction';
+// import CallToAction from '@/ui/CallToAction';
 import InterstatePrices from './InterstatePrices';
 import PricingTable from './PricingTable';
 import PackingItems from '@/ui/PackingItems';

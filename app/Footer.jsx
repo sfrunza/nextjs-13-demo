@@ -186,7 +186,7 @@ export default async function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-t border-gray-700 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
+        <div className="border-t border-gray-500 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
           <div>
             <h3 className=" font-medium text-white">© Copyright</h3>
             <p className="mt-2  text-gray-300">
@@ -207,7 +207,7 @@ export default async function Footer() {
             </p>
           </div>
         </div>
-        <div className="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+        <div className="mt-8 border-t border-gray-500 pt-8 md:flex md:items-center md:justify-between">
           <p className="mt-8  text-gray-400 md:order-1 md:mt-0">
             &copy; 2022 Phoenix Moving, Inc. Make moving chill
           </p>

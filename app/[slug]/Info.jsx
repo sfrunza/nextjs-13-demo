@@ -8,11 +8,6 @@ export default function Info({ city }) {
     <section aria-labelledby={`${city?.fullName} Info`}>
       <Container className="overflow-hidden py-16">
         <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
-          {/* <div className="mx-auto max-w-prose  lg:max-w-none">
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 text-center">
-              Reliable and Professional {city?.fullName}.
-            </h2>
-          </div> */}
           <SectionHeader
             title={`Reliable and professional ${city?.fullName}.`}
           />
@@ -73,12 +68,12 @@ export default function Info({ city }) {
                 </Button>
               </div>
             </div>
-            <div className="relative mx-auto mt-12 max-w-prose lg:mt-0 mb-7 lg:mb-0 w-[200px] lg:w-[200px] h-[200px] lg:h-[200px]">
+            <div className="relative mx-auto mt-12 max-w-prose lg:mt-0 mb-7 lg:mb-0 w-[200px] lg:w-[300px] h-[200px] lg:h-[300px]">
               <Image
                 src={city?.icon}
                 alt={`${city?.name} ${city?.state} image`}
                 title={`Boston to ${city?.fullName}`}
-                className="object-cover"
+                className="object-contain"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />

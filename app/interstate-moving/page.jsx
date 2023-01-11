@@ -5,16 +5,19 @@ import Locations from './Locations';
 import CallToAction from '@/ui/CallToAction';
 import Photos from '@/ui/Photos';
 import Partners from '@/ui/Partners';
+import InterstatePrices from '../pricing/InterstatePrices';
 
 export default function InterstateMoving() {
   return (
     <>
-      <Hero image="/prices.jpg" title="Long Distance Movers" />
+      <Hero image="/interstate.jpeg" title="Long Distance Movers" />
       <Partners />
       <Info />
       {/* <Divider /> */}
       <Photos />
       <Locations />
+      <Divider />
+      <InterstatePrices />
       <CallToAction />
     </>
   );

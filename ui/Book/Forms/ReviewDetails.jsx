@@ -1,5 +1,6 @@
 import { format, intervalToDuration } from 'date-fns';
 import CheckBoxField from '../FormFields/CheckBoxField';
+
 const formatQuote = (quote) => {
   return quote.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 };

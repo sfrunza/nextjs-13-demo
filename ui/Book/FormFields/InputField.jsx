@@ -2,7 +2,7 @@ import { useField } from 'formik';
 import clsx from 'clsx';
 
 export default function InputField(props) {
-  const { label, placeholder, textArea, ...rest } = props;
+  const { label, placeholder, textArea, optional, ...rest } = props;
   const [field, meta] = useField(props);
   const { touched, error } = meta;
   const isError = touched && Boolean(error);
@@ -12,9 +12,12 @@ export default function InputField(props) {
     <>
       <label
         htmlFor={field}
-        className="block text-xs font-semibold text-gray-700"
+        className="flex justify-between text-xs font-semibold text-gray-700"
       >
         {label}
+        {optional && (
+          <span className="text-gray-400 font-normal">Optional</span>
+        )}
       </label>
       {textArea ? (
         <textarea
@@ -27,7 +30,7 @@ export default function InputField(props) {
             {
               'border-red-500 bg-red-50': isError,
               'border-green-500 bg-green-50': isSuccess,
-            }
+            },
           )}
         />
       ) : (
@@ -41,7 +44,7 @@ export default function InputField(props) {
             {
               'border-red-500 bg-red-50': isError,
               'border-green-500 bg-green-50': isSuccess,
-            }
+            },
           )}
         />
       )}

@@ -11,16 +11,9 @@ import NavLink from './components/NavLink';
 import NavButton from './components/NavButton';
 import MobileMenu from './components/MobileMenu';
 import Button from '@/ui/Button';
-import { AnimatePresence, motion } from 'framer-motion';
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
 
 export default function GlobalNav() {
   const [active, setActive] = useState(false);
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [hoveredItemIndex, setHoveredItemIndex] = useState(null);
 
   const changeBackground = () => {
     // console.log(window.scrollY);
@@ -37,10 +30,6 @@ export default function GlobalNav() {
     window.addEventListener('scroll', changeBackground);
   }, []);
 
-  const setIndex = (i) => {
-    setHoveredIndex(i);
-  };
-
   return (
     <Popover
       className={clsx(
@@ -51,42 +40,37 @@ export default function GlobalNav() {
         },
       )}
     >
-      <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
-        <div className="flex items-center justify-between py-3 xl:justify-start xl:space-x-4">
+      <div
+        // className="mx-auto max-w-screen-xl px-4 sm:px-6"
+        className="px-6 lg:px-8 max-w-screen-xl m-auto transition-all ease-in-out duration-300"
+      >
+        <div
+          // className="flex items-center justify-between py-2 xl:justify-start xl:space-x-4"
+          className={clsx(
+            'flex items-center justify-between xl:justify-start xl:space-x-4 transition-all ease-in-out duration-300',
+            {
+              'py-2': active,
+              'py-3': !active,
+            },
+          )}
+        >
           <div className="flex justify-start lg:w-0 md:flex-[0.5] xl:flex-1">
             <Logo invert={active} />
           </div>
           <div className="-my-2 -mr-2 lg:hidden">
             <MobileMenu invert={active} />
           </div>
-          <Popover.Group as="nav" className="hidden space-x-8 lg:flex">
-            <NavLink
-              label="Home"
-              href="/"
-              invert={active}
-              index={0}
-              hoveredIndex={hoveredIndex}
-              setIndex={setIndex}
-            />
+          <Popover.Group as="nav" className="hidden space-x-6 lg:flex">
+            <NavLink label="Home" href="/" invert={active} />
             <Popover className="relative">
-              {({ close }) => (
+              {({ close, open }) => (
                 <>
                   <NavButton
                     label="Services"
                     invert={active}
-                    index={1}
-                    hoveredIndex={hoveredIndex}
-                    setIndex={setIndex}
+                    open={open}
+                    menu={services}
                   />
-                  {/* <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-200"
-                    enterFrom="opacity-0 translate-y-1"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in duration-150"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 translate-y-1"
-                  > */}
                   <Popover.Panel className="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
                     <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5">
                       <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
@@ -95,39 +79,15 @@ export default function GlobalNav() {
                             key={item.name}
                             href={item.href}
                             title={item.name}
-                            className=" relative -m-3 flex items-start p-3 hover:delay-[0ms]"
+                            className=" relative -m-3 items-start p-3 rounded-lg hover:bg-palette-background"
                             // onClick={() => close()}
-                            onMouseEnter={() => setHoveredItemIndex(i)}
-                            onMouseLeave={() => setHoveredItemIndex(null)}
                           >
-                            <AnimatePresence>
-                              {hoveredItemIndex === i && (
-                                <motion.span
-                                  className="absolute inset-0 rounded-lg bg-palette-background"
-                                  layoutId="hoverBackground"
-                                  initial={{ opacity: 0 }}
-                                  animate={{
-                                    opacity: 1,
-                                    transition: { duration: 0.15 },
-                                  }}
-                                  exit={{
-                                    opacity: 0,
-                                    transition: {
-                                      duration: 0.15,
-                                      delay: 0.2,
-                                    },
-                                  }}
-                                />
-                              )}
-                            </AnimatePresence>
-                            <div className="relative z-10">
-                              <p className="font-medium text-gray-900">
-                                {item.name}
-                              </p>
-                              <p className="mt-1 text-sm text-gray-400">
-                                {item.description}
-                              </p>
-                            </div>
+                            <p className="font-medium text-gray-900">
+                              {item.name}
+                            </p>
+                            <p className="text-sm font-normal text-gray-400">
+                              {item.description}
+                            </p>
                           </a>
                         ))}
                       </div>
@@ -150,18 +110,10 @@ export default function GlobalNav() {
                       </div>
                     </div>
                   </Popover.Panel>
-                  {/* </Transition> */}
                 </>
               )}
             </Popover>
-            <NavLink
-              label="Pricing"
-              href="/pricing"
-              invert={active}
-              index={2}
-              hoveredIndex={hoveredIndex}
-              setIndex={setIndex}
-            />
+            <NavLink label="Pricing" href="pricing" invert={active} />
 
             <Popover className="relative">
               {({ open, close }) => (
@@ -169,20 +121,9 @@ export default function GlobalNav() {
                   <NavButton
                     label="More"
                     invert={active}
-                    index={3}
-                    hoveredIndex={hoveredIndex}
-                    setIndex={setIndex}
+                    open={open}
+                    menu={more}
                   />
-
-                  {/* <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-200"
-                    enterFrom="opacity-0 translate-y-1"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in duration-150"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 translate-y-1"
-                  > */}
                   <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
                     <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5">
                       <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
@@ -193,38 +134,13 @@ export default function GlobalNav() {
                                 <a
                                   href={item.href}
                                   title={item.name}
-                                  className="-m-3 relative flex items-start rounded-xl p-3 font-medium text-gray-900 hover:delay-[0ms]"
-                                  // className=" relative -m-3 flex items-start p-3 hover:delay-[0ms]"
+                                  className="-m-3 flex items-start p-3 font-medium text-gray-900 rounded-lg hover:bg-palette-background"
                                   // onClick={() => close()}
-                                  onMouseEnter={() => setHoveredItemIndex(i)}
-                                  onMouseLeave={() => setHoveredItemIndex(null)}
                                 >
-                                  <AnimatePresence>
-                                    {hoveredItemIndex === i && (
-                                      <motion.span
-                                        className="absolute inset-0 rounded-lg bg-palette-background"
-                                        layoutId="hoverBackground"
-                                        initial={{ opacity: 0 }}
-                                        animate={{
-                                          opacity: 1,
-                                          transition: { duration: 0.15 },
-                                        }}
-                                        exit={{
-                                          opacity: 0,
-                                          transition: {
-                                            duration: 0.15,
-                                            delay: 0.2,
-                                          },
-                                        }}
-                                      />
-                                    )}
-                                  </AnimatePresence>
-                                  <span className="relative z-10">
-                                    {item.name}
-                                  </span>
+                                  {item.name}
                                 </a>
                               ) : (
-                                <p className="-m-3 flex items-start rounded-xl p-3 font-medium text-gray-400">
+                                <p className="-m-3 flex items-start rounded-lg p-3 font-medium text-gray-400">
                                   {item.name}
                                 </p>
                               )}
@@ -264,7 +180,6 @@ export default function GlobalNav() {
                       </div>
                     </div>
                   </Popover.Panel>
-                  {/* </Transition> */}
                 </>
               )}
             </Popover>
@@ -282,9 +197,11 @@ export default function GlobalNav() {
               (508) 315-9458
             </a>
           </Popover.Group>
-          <div className="hidden items-center justify-end lg:flex lg:flex-1 lg:w-0">
+          <div className="hidden items-center justify-end gap-1 lg:flex lg:flex-1 lg:w-0">
             <a
-              href="#"
+              href="https://www.gophoenixmoving.com/login"
+              target="_blank"
+              rel="nofollow"
               title="Client Login"
               className={clsx(
                 'group px-3 py-2 inline-flex items-center rounded-lg font-medium transition-colors duration-150 ease-in',
@@ -299,9 +216,10 @@ export default function GlobalNav() {
             </a>
             <Button
               href="/"
-              className="ml-8 hidden xl:flex"
+              className="hidden xl:flex"
               color="secondary"
               title="Book a move"
+              size="small"
             >
               Book a move
             </Button>

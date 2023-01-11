@@ -34,22 +34,10 @@ const cities = [
     url: '#',
   },
   {
-    name: 'Austin, TX',
-    price: 3600,
-    imageUrl: '',
-    url: '#',
-  },
-  {
     name: 'Chicago, IL',
     price: 3200,
     imageUrl: '',
     url: '/boston-chicago-movers',
-  },
-  {
-    name: 'Los Angeles, CA',
-    price: 8900,
-    imageUrl: '',
-    url: '/boston-los-angeles-movers',
   },
 ];
 

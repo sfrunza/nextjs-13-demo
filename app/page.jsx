@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import Script from 'next/script';
+// import Script from 'next/script';
 import HeroWithBooking from '@/ui/HeroWithBooking';
 import Pricing from './Pricing';
 import CTA from '@/ui/CTA';
@@ -137,7 +137,7 @@ const p1 =
 export default function Home() {
   return (
     <>
-      <Script
+      {/* <Script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}
       />
@@ -148,7 +148,7 @@ export default function Home() {
       <Script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema3) }}
-      />
+      /> */}
       <HeroWithBooking
         image={'/mover-pushing-dolly.jpg'}
         title="Boston Moving Company"

@@ -12,7 +12,7 @@ import Photos from '@/ui/Photos';
 export default function LocalMoving() {
   return (
     <>
-      <Hero image="/two-movers-and-dresser.jpg" title="Boston Local Movers" />
+      <Hero image="/two-movers-and-dolly.jpeg" title="Boston Local Movers" />
       <Included />
       <Info />
       {/* <Divider /> */}

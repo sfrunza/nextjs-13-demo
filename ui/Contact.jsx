@@ -67,128 +67,73 @@ export default function Contact() {
     <section className="bg-palette-background shadow-lg">
       <Container className="flex flex-col lg:flex-row">
         <div className="py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 xl:pr-12 w-full">
-          <div className="mx-auto max-w-md">
-            <h2 className="text-2xl font-semibold tracking-tight text-gray-900 sm:text-3xl">
-              Get in touch.
-            </h2>
-            <dl className="mt-8 text-gray-900">
-              <div>
-                <dt className="sr-only">Postal address</dt>
-                <dd>
-                  <p>18 Lakeview Gardens</p>
-                  <p>Natick, MA 01760</p>
-                </dd>
-              </div>
-              <div className="mt-6">
-                <dt className="sr-only">Phone number</dt>
-                <dd className="flex">
+          <h2 className="text-2xl font-semibold tracking-tight text-gray-900 sm:text-3xl">
+            Get in touch.
+          </h2>
+          <div className="flex gap-10 flex-col sm:flex-row justify-between mt-4">
+            <div>
+              <p className="text-lg font-medium">Address</p>
+              <p className="text-gray-500 mt-2 text-base">
+                18 Lakeview Gardens <br />
+                Natick, MA 01760
+              </p>
+            </div>
+            <div>
+              <p className="text-lg font-medium">Phone</p>
+              <a
+                href="tel:(508)315-9458"
+                className="flex items-center text-gray-500 mt-2 text-base"
+                title="Phoenix Moving Phone"
+              >
+                <PhoneIcon
+                  className="h-6 w-6 flex-shrink-0 text-gray-500"
+                  aria-hidden="true"
+                />
+                <span className="ml-3">+1 (508) 315-9458</span>
+              </a>
+            </div>
+            <div>
+              <p className="text-lg font-medium">Email</p>
+              <a
+                href="mailto:info@gophoenixmoving.com"
+                className="flex items-center text-gray-500 mt-2 text-base"
+                title="Phoenix Moving Email"
+              >
+                <EnvelopeIcon
+                  className="h-6 w-6 flex-shrink-0 text-gray-500"
+                  aria-hidden="true"
+                />
+                <span className="ml-3 break-all">info@gophoenixmoving.com</span>
+              </a>
+            </div>
+          </div>
+          <p className="mt-8 text-gray-900">Follow us on Social Media</p>
+          <ul className="mt-2 flex space-x-3 sm:space-x-6 flex-wrap items-center">
+            {social.map((item, i) => {
+              return (
+                <li key={item.name}>
                   <a
-                    href="tel:(508)315-9458"
-                    className="flex items-center"
-                    title="Phoenix Moving Phone"
+                    className="text-gray-500 hover:text-palette-primary-500 transition-all duration-150 ease-in relative inline-block group"
+                    href={item.href}
+                    title={item.name}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <PhoneIcon
-                      className="h-6 w-6 flex-shrink-0 text-gray-700"
+                    <span className="sr-only">{item.name}</span>
+                    <item.icon
+                      className={
+                        i === social.length - 1 ? 'h-9 w-9' : 'h-7 w-7'
+                      }
                       aria-hidden="true"
                     />
-                    <span className="ml-3">+1 (508) 315-9458</span>
-                  </a>
-                </dd>
-              </div>
-              <div className="mt-3">
-                <dt className="sr-only">Email</dt>
-                <dd className="flex">
-                  <a
-                    href="mailto:info@gophoenixmoving.com"
-                    className="flex items-center"
-                    title="Phoenix Moving Email"
-                  >
-                    <EnvelopeIcon
-                      className="h-6 w-6 flex-shrink-0 text-gray-700"
-                      aria-hidden="true"
-                    />
-                    <span className="ml-3 break-all">
-                      info@gophoenixmoving.com
+                    <span className="invisible group-hover:visible absolute bottom-10 -left-2 bg-gray-600 rounded-xl py-1 px-2 text-xs text-white z-10">
+                      {item.name}
                     </span>
                   </a>
-                </dd>
-              </div>
-            </dl>
-            <p className="mt-8 text-gray-900">Follow us on Social Media</p>
-            <ul className="mt-2 flex space-x-3 sm:space-x-6 flex-wrap items-center">
-              {social.map((item, i) => {
-                return (
-                  <li key={item.name}>
-                    <a
-                      className="text-gray-500 hover:text-palette-primary-500 transition-all duration-150 ease-in relative inline-block group"
-                      href={item.href}
-                      title={item.name}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span className="sr-only">{item.name}</span>
-                      <item.icon
-                        className={
-                          i === social.length - 1 ? 'h-9 w-9' : 'h-7 w-7'
-                        }
-                        aria-hidden="true"
-                      />
-                      <span className="invisible group-hover:visible absolute bottom-10 -left-2 bg-gray-600 rounded-xl py-1 px-2 text-xs text-white z-10">
-                        {item.name}
-                      </span>
-                    </a>
-                  </li>
-                );
-              })}
-              {/* <a
-                href="https://twitter.com/phoenix_moving?ref_src=twsrc%5Etfw"
-                class="twitter-follow-button"
-                data-show-count="false"
-              >
-                Follow @phoenix_moving
-              </a> */}
-              {/* <li>
-                <a
-                  href="https://www.facebook.com/like.php?u=https%3A%2F%2Fnextjs-13-demo-psi.vercel.app%2F"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Share on Facebook
-                </a>
-              </li> */}
-              {/*
-              <li>
-                <a
-                  href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fnextjs-13-demo-psi.vercel.app%2F"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Share on Twitter
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/sharing/share-offsite/&url=https%3A%2F%2Fnextjs-13-demo-psi.vercel.app%2F"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Share on LinkedIn
-                </a>
-              </li> */}
-            </ul>
-          </div>
-        </div>
-        <div className="lg:col-span-3 w-full flex justify-center items-center">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6632.333964508115!2d-71.3619223197594!3d42.29110984850568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e387680ffe9aeb%3A0x4651b1e640f15b41!2sPhoenix%20Moving%20%26%20Storage!5e0!3m2!1sen!2sus!4v1669569264639!5m2!1sen!2sus"
-            height={400}
-            style={{ border: 0 }}
-            allowFullScreen={false}
-            className="w-full"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Phoenix Moving location on map"
-          ></iframe>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </Container>
     </section>

@@ -1,10 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
-
-User-agent: Googlebot
-Disallow: /admin
-
+# *
 User-agent: *
 Allow: /
 
-Sitemap: https://www.gophoenixmoving.com/sitemap.xml
+# Host
+Host: https://nextjs-13-demo-psi.vercel.app/
 
+# Sitemaps
+Sitemap: https://nextjs-13-demo-psi.vercel.app/sitemap.xml

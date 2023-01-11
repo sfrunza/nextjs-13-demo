@@ -32,7 +32,7 @@ export default function CustomDatePicker(props) {
   };
 
   const hanldeChange = (date) => {
-    console.log(format(date, "yyyy-MM-dd'T'00:00:00"));
+    // console.log(format(date, "yyyy-MM-dd'T'00:00:00"));
     const formattedDate = format(date, 'MM/dd/yyyy');
     const rateArray = rates.find((r) => r.date === formattedDate);
 

@@ -152,7 +152,7 @@ export default function Book({ rates }) {
                 onSubmit={_handleSubmit}
               >
                 {({ isSubmitting, values, errors }) => {
-                  console.log(values);
+                  // console.log(values);
                   // console.log(values.deliveryDate);
                   return (
                     <Form id={formId} autoComplete="off">

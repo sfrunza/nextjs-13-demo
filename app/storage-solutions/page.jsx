@@ -5,7 +5,7 @@ import Info from './Info';
 export default function StorageSolutions() {
   return (
     <>
-      <Hero image="/prices.jpg" title="Moving and Storage" />
+      <Hero image="/storage-services-main.jpg" title="Moving and Storage" />
       <Partners />
       <Info />
     </>

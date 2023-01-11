@@ -20,6 +20,7 @@ export default function Addresses({ formField, values, showDestination }) {
           name={originApt.name}
           label={originApt.label}
           placeholder={originApt.placeholder}
+          optional
         />
       </div>
 
@@ -48,6 +49,7 @@ export default function Addresses({ formField, values, showDestination }) {
               name={destinationApt.name}
               label={destinationApt.label}
               placeholder={destinationApt.placeholder}
+              optional
             />
           </div>
           <div className="col-span-5">

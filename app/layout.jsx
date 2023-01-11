@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <head />
       <body>
         <GlobalNav />
-        <main className="mt-[-66px]">{children}</main>
+        <main className="mt-[-72px]">{children}</main>
         <Footer />
       </body>
     </html>

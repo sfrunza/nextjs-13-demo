@@ -6,14 +6,20 @@ export async function getCity(slug) {
 }
 
 export async function getCityState(slug) {
-  const filterdStates = states.filter((s) => s.cities && s.cities.length > 0);
+  // const filterdStates = states.filter((s) => s.cities && s.cities.length > 0);
   let interstateCity = null;
-  filterdStates.map((s) => {
-    s.cities.find((c) => {
-      if (c.slug === slug) {
-        interstateCity = c;
-      }
-    });
+  states.map((s) => {
+    if (s.slug && s.slug === slug) {
+      interstateCity = s;
+    }
+
+    if (s.cities) {
+      s.cities.find((c) => {
+        if (c.slug === slug) {
+          interstateCity = c;
+        }
+      });
+    }
   });
   return interstateCity;
 }

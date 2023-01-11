@@ -16,7 +16,7 @@ export default function PopularCities() {
       <div
         onClick={() => handleOpen()}
         className={clsx('pt-6 w-full hover:cursor-pointer', {
-          'border-b border-gray-700': !open,
+          'border-b border-gray-500': !open,
         })}
       >
         <div className="w-full pb-4">
@@ -25,7 +25,7 @@ export default function PopularCities() {
             <ChevronDownIcon
               className={classNames(
                 open ? '-rotate-180' : 'rotate-0',
-                'h-4 w-4 transform'
+                'h-4 w-4 transform',
               )}
             />
           </p>
@@ -33,10 +33,10 @@ export default function PopularCities() {
       </div>
       <div
         className={clsx(
-          'pb-4 grid grid-cols-3 gap-1 md:grid-cols-6 border-b border-gray-700',
+          'pb-4 grid grid-cols-3 gap-1 md:grid-cols-6 border-b border-gray-500',
           {
             hidden: !open,
-          }
+          },
         )}
       >
         {cities.map((city) => {

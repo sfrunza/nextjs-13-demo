@@ -12,8 +12,6 @@ export default async function HeroWithBooking({ image, title }) {
           fill
           priority
           title={title}
-          blurDataURL="data:..." // automatically provided
-          placeholder="blur" // Optional blur-up while loading
         />
         <div className="absolute inset-0 bg-gray-900/40 mix-blend-multiply" />
         <div className="pb-6 pt-20 sm:pb-10 sm:pt-32 relative overflow-hidden w-full flex">
